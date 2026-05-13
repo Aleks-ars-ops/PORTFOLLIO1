@@ -72,7 +72,6 @@
         .btn-green { background: var(--gradient-green); color: white; }
         .btn-green:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(50, 205, 50, 0.4); }
         
-        /* Навигация */
         .navbar { background: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
         .nav-logo { font-size: 1.5rem; font-weight: 800; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
@@ -83,13 +82,11 @@
         .nav-menu a:hover, .nav-menu a.active { color: var(--primary-blue); }
         @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 15px; } .nav-menu { justify-content: center; } }
         
-        /* Верхняя контактная полоса */
         .top-contacts { background: var(--gradient-rainbow); padding: 15px 0; color: white; }
         .top-contacts-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
         .contact-info-top { display: flex; flex-wrap: wrap; gap: 15px; }
         .contact-info-top div { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 30px; font-size: 0.9rem; }
         
-        /* Герой */
         .hero-top { display: flex; align-items: center; gap: 40px; padding: 40px 0; background: linear-gradient(135deg, rgba(65,105,225,0.1), rgba(255,68,68,0.1), rgba(255,215,0,0.1), rgba(50,205,50,0.1)); border-radius: 0 0 50px 50px; }
         @media (max-width: 992px) { .hero-top { flex-direction: column; text-align: center; } }
         .hero-left { flex: 1; }
@@ -102,7 +99,6 @@
         .hero-actions { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
         @media (max-width: 768px) { .hero-actions { justify-content: center; } }
         
-        /* Блок о себе */
         .about-section { text-align: center; padding: 60px 0; background: linear-gradient(135deg, rgba(65,105,225,0.05), rgba(255,68,68,0.05), rgba(255,215,0,0.05), rgba(50,205,50,0.05)); border-radius: 50px; margin: 40px 0; }
         .about-description { background: white; padding: 30px; border-radius: 30px; box-shadow: var(--card-shadow); max-width: 900px; margin: 0 auto; border-left: 5px solid var(--primary-blue); border-right: 5px solid var(--primary-red); }
         .stats { display: flex; justify-content: center; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
@@ -112,7 +108,6 @@
         .tech-icon { font-size: 2.5rem; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: var(--transition); }
         .tech-icon:hover { transform: translateY(-10px); }
         
-        /* Услуги */
         .services { background: white; border-radius: 50px; padding: 60px 30px; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
         .service-card { background: white; border-radius: var(--border-radius); padding: 25px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition); }
@@ -125,7 +120,6 @@
         .service-features i { color: var(--primary-green); }
         .service-actions .btn { width: 100%; }
         
-        /* Блок разработки под ключ */
         .dev-section { background: linear-gradient(135deg, rgba(65,105,225,0.1), rgba(255,68,68,0.1), rgba(255,215,0,0.1), rgba(50,205,50,0.1)); border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
         .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
         .dev-card { background: white; border-radius: var(--border-radius); padding: 30px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); }
@@ -137,7 +131,6 @@
         .dev-features i { color: var(--primary-green); }
         .dev-card .btn { margin-top: 20px; }
         
-        /* Блок DeepSeek — ИСПРАВЛЕННЫЙ */
         .deepseek-section {
             background: linear-gradient(135deg, rgba(65,105,225,0.15), rgba(255,68,68,0.15), rgba(255,215,0,0.15), rgba(50,205,50,0.15));
             border-radius: 50px;
@@ -193,7 +186,6 @@
             margin-bottom: 15px;
         }
         
-        /* Примеры работ */
         .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
         .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
         .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); }
@@ -201,7 +193,6 @@
         .example-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
         .example-link { display: inline-block; margin-top: 15px; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
         
-        /* Таблица прайса */
         .price-table-section { background: white; border-radius: 24px; padding: 30px; margin: 40px 0; overflow-x: auto; box-shadow: var(--card-shadow); }
         .price-table { width: 100%; border-collapse: collapse; }
         .price-table th { background: var(--gradient-blue); color: white; padding: 15px; font-weight: 600; }
@@ -210,7 +201,6 @@
         .category-row { background: #f0f2f5; font-weight: 700; }
         .price-cell { font-weight: 700; color: var(--primary-blue); }
         
-        /* Калькулятор */
         .calculator-section { background: white; border-radius: 24px; padding: 35px; margin: 40px 0; box-shadow: var(--card-shadow); }
         .calculator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-bottom: 30px; }
         .calc-group { display: flex; flex-direction: column; gap: 8px; }
@@ -219,13 +209,11 @@
         .calc-total { text-align: center; padding: 25px; background: linear-gradient(135deg, #f0f4ff, #e8edff); border-radius: 20px; }
         .calc-total .total-price { font-size: 2rem; font-weight: 800; color: var(--primary-blue); }
         
-        /* Поддержка */
         .support { background: var(--gradient-rainbow); padding: 60px 0; border-radius: 50px; margin: 40px 0; }
         .support-banner { background: white; border-radius: var(--border-radius); padding: 40px; text-align: center; }
         .support-features { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
         .support-features div { background: var(--gradient-rainbow); color: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; }
         
-        /* Форма */
         .contact-form-section { background: white; border-radius: var(--border-radius); padding: 40px; box-shadow: var(--card-shadow); border: 3px solid var(--primary-blue); margin: 40px 0; }
         .contact-form { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 30px; }
         @media (max-width: 768px) { .contact-form { grid-template-columns: 1fr; } }
@@ -237,7 +225,6 @@
         .checkbox-group { grid-column: span 2; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         @media (max-width: 768px) { .checkbox-group { grid-column: span 1; } }
         
-        /* Футер */
         .footer { background: white; padding: 50px 0 20px; border-radius: 50px 50px 0 0; margin-top: 40px; box-shadow: 0 -5px 30px rgba(0,0,0,0.05); }
         .messengers-bottom { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
         .messenger-item { display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; transition: var(--transition); }
@@ -248,7 +235,7 @@
         .footer-contacts a:hover { color: var(--primary-blue); }
         .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #eee; }
         
-        .notification { position: fixed; bottom: 20px; right: 20px; background: var(--gradient-rainbow); color: white; padding: 12px 24px; border-radius: 50px; z-index: 2000; transform: translateX(200%); transition: 0.3s; }
+        .notification { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #0a254e; padding: 12px 24px; border-radius: 50px; z-index: 2000; transform: translateX(200%); transition: 0.3s; font-weight: 600; }
         .notification.show { transform: translateX(0); }
         
         @media (max-width: 768px) { .stats { gap: 20px; } .stat-item { padding: 15px; min-width: 120px; } .stat-number { font-size: 1.8rem; } }
@@ -348,7 +335,6 @@
     </div>
 </div>
 
-<!-- Блок DeepSeek — ИСПРАВЛЕННЫЙ -->
 <div class="container" id="deepseek">
     <div class="deepseek-section">
         <div class="deepseek-header" style="text-align:center;">
@@ -365,7 +351,6 @@
     </div>
 </div>
 
-<!-- Примеры работ -->
 <div class="container" id="portfolio-examples">
     <div class="portfolio-examples">
         <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты, которые я сделала</p></div>
@@ -376,7 +361,6 @@
     </div>
 </div>
 
-<!-- Таблица прайса -->
 <div class="container" id="price">
     <div class="price-table-section">
         <h3 style="text-align:center;">📋 Полный прайс-лист</h3>
@@ -445,19 +429,84 @@
     <p>Отвечаю в течение 20 минут в рабочее время</p>
     <div class="contact-form-section">
         <h3 style="text-align:center;">Оставьте заявку на консультацию</h3>
-        <form class="contact-form" id="contactForm">
-            <div class="form-group"><label>Ваше имя *</label><input type="text" id="name" required></div>
-            <div class="form-group"><label>Телефон *</label><input type="tel" id="phone" required></div>
-            <div class="form-group"><label>Email *</label><input type="email" id="email" required></div>
-            <div class="form-group"><label>Тип проекта</label><select id="projectType"><option value="visa">Сайт-визитка</option><option value="landing">Лендинг</option><option value="shop">Интернет-магазин</option><option value="texts">Продающие тексты</option><option value="deepseek">Сайт с DeepSeek</option><option value="other">Другое</option></select></div>
-            <div class="form-group"><label>Бюджет проекта</label><select id="budget"><option value="30">до 30 000 ₽</option><option value="50">30-50 000 ₽</option><option value="100">50-100 000 ₽</option><option value="more">более 100 000 ₽</option></select></div>
-            <div class="form-group"><label>Сроки</label><select id="deadlineSelect"><option value="urgent">срочно (до 3 дней)</option><option value="standard">стандартно (до 7 дней)</option><option value="not-urgent">не срочно (до 14 дней)</option></select></div>
-            <div class="checkbox-group"><input type="checkbox" id="needTexts"><label for="needTexts">Нужны продающие тексты (от 500 ₽)</label></div>
-            <div class="form-group" style="grid-column:span 1;"><label>Комментарий</label><textarea id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea></div>
-            <div class="file-upload" id="fileUpload"><i class="fas fa-cloud-upload-alt"></i><p>Прикрепить техническое задание или макет</p><input type="file" id="taskFile" style="display:none;"></div>
-            <div id="fileName" style="margin-top:10px; color:var(--primary-blue); text-align:center; grid-column:span 2;"></div>
-            <div class="checkbox-group"><input type="checkbox" id="agreement" required><label for="agreement">Согласие на обработку персональных данных</label></div>
-            <button type="submit" class="btn btn-blue" style="grid-column:span 2;"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+        
+        <!-- ФОРМА С ОТПРАВКОЙ НА ПОЧТУ ЧЕРЕЗ FORMSUBMIT -->
+        <form class="contact-form" action="https://formsubmit.co/aleksa.romanyuk31@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Новая заявка с сайта ALEXSA">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-group">
+                <label>Ваше имя *</label>
+                <input type="text" name="Имя" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Телефон *</label>
+                <input type="tel" name="Телефон" id="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email *</label>
+                <input type="email" name="Email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Тип проекта</label>
+                <select name="Тип проекта" id="projectType">
+                    <option value="visa">Сайт-визитка</option>
+                    <option value="landing">Лендинг</option>
+                    <option value="shop">Интернет-магазин</option>
+                    <option value="texts">Продающие тексты</option>
+                    <option value="deepseek">Сайт с DeepSeek</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Бюджет проекта</label>
+                <select name="Бюджет" id="budget">
+                    <option value="30">до 30 000 ₽</option>
+                    <option value="50">30-50 000 ₽</option>
+                    <option value="100">50-100 000 ₽</option>
+                    <option value="more">более 100 000 ₽</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Сроки</label>
+                <select name="Сроки" id="deadlineSelect">
+                    <option value="urgent">срочно (до 3 дней)</option>
+                    <option value="standard">стандартно (до 7 дней)</option>
+                    <option value="not-urgent">не срочно (до 14 дней)</option>
+                </select>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" name="Нужны продающие тексты" id="needTexts" value="Да">
+                <label for="needTexts">Нужны продающие тексты (от 500 ₽)</label>
+            </div>
+
+            <div class="form-group" style="grid-column: span 1;">
+                <label>Комментарий</label>
+                <textarea name="Комментарий" id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea>
+            </div>
+
+            <div class="file-upload" id="fileUpload">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Прикрепить техническое задание или макет</p>
+                <input type="file" id="taskFile" name="attachment" style="display: none;">
+            </div>
+            <div id="fileName" style="margin-top: 10px; color: var(--primary-blue); text-align: center; grid-column: span 2;"></div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="agreement" required>
+                <label for="agreement">Согласие на обработку персональных данных</label>
+            </div>
+
+            <button type="submit" class="btn btn-blue" style="grid-column: span 2;">
+                <i class="fas fa-paper-plane"></i> Отправить заявку
+            </button>
         </form>
     </div>
 </div>
@@ -503,10 +552,12 @@
         let total = parseInt(serviceSelect.value) * parseInt(quantityInput.value) * parseFloat(urgentSelect.value);
         totalSpan.innerText = total.toLocaleString() + ' ₽';
     }
-    serviceSelect.addEventListener('change', updateCalc);
-    quantityInput.addEventListener('input', () => { quantityValue.innerText = quantityInput.value; updateCalc(); });
-    urgentSelect.addEventListener('change', updateCalc);
-    updateCalc();
+    if (serviceSelect) {
+        serviceSelect.addEventListener('change', updateCalc);
+        quantityInput.addEventListener('input', () => { quantityValue.innerText = quantityInput.value; updateCalc(); });
+        urgentSelect.addEventListener('change', updateCalc);
+        updateCalc();
+    }
 
     // Загрузка файла
     const fileUpload = document.getElementById('fileUpload');
@@ -519,20 +570,33 @@
         });
     }
 
-    // Отправка формы
+    // Уведомление об отправке (FormSubmit сам перенаправит на страницу "спасибо")
     const contactForm = document.getElementById('contactForm');
     const notif = document.getElementById('notification');
-    function showMsg(msg) { notif.innerText = msg; notif.classList.add('show'); setTimeout(() => notif.classList.remove('show'), 3000); }
+    function showMsg(msg, isError = false) {
+        notif.innerText = msg;
+        notif.style.background = isError ? '#e74c3c' : 'linear-gradient(135deg, #ffd700, #ffed4e)';
+        notif.style.color = isError ? 'white' : '#0a254e';
+        notif.classList.add('show');
+        setTimeout(() => notif.classList.remove('show'), 4000);
+    }
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('name').value;
-            if (!name) { showMsg('Заполните имя'); return; }
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            if (!name || !phone || !email) {
+                showMsg('❌ Заполните имя, телефон и email!', true);
+                return;
+            }
             showMsg('✅ Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
-            contactForm.reset();
-            if (fileName) fileName.innerHTML = '';
+            setTimeout(() => {
+                e.target.submit();
+            }, 1500);
         });
     }
 </script>
+
 </body>
 </html>
