@@ -686,7 +686,7 @@
             font-size: 0.9rem;
         }
 
-        /* Блок разработки с DeepSeek */
+        /* Блок разработки сайтов под ключ */
         .dev-section {
             padding: 60px 0;
             background: linear-gradient(135deg, rgba(65, 105, 225, 0.1), rgba(255, 68, 68, 0.1), rgba(255, 215, 0, 0.1), rgba(50, 205, 50, 0.1));
@@ -768,7 +768,7 @@
             margin-top: 20px;
         }
 
-        /* Блок DeepSeek */
+        /* Блок DeepSeek (исправлены кнопки) */
         .deepseek-section {
             padding: 60px 0;
             background: linear-gradient(135deg, rgba(65, 105, 225, 0.15), rgba(255, 68, 68, 0.15), rgba(255, 215, 0, 0.15), rgba(50, 205, 50, 0.15));
@@ -816,6 +816,9 @@
             border: 3px solid transparent;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .deepseek-card:hover {
@@ -850,6 +853,7 @@
             list-style: none;
             margin: 25px 0;
             text-align: left;
+            flex-grow: 1;
         }
 
         .deepseek-features li {
@@ -865,6 +869,7 @@
 
         .deepseek-card .btn {
             margin-top: 20px;
+            align-self: center;
         }
 
         .deepseek-badge {
@@ -1359,7 +1364,7 @@
         </div>
     </div>
 
-    <!-- Навигация (добавлены пункты Прайс и Калькулятор) -->
+    <!-- Навигация -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="nav-logo">ALEXSA</a>
@@ -1367,9 +1372,9 @@
                 <li><a href="#home" class="active">Главная</a></li>
                 <li><a href="#about">Обо мне</a></li>
                 <li><a href="#services">Услуги</a></li>
+                <li><a href="#deepseek">DeepSeek</a></li>
                 <li><a href="#price">Прайс</a></li>
                 <li><a href="#calculator">Калькулятор</a></li>
-                <li><a href="#deepseek">DeepSeek</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </div>
@@ -1384,15 +1389,9 @@
                     <span class="logo-text">ALEXSA-Веб-Разработчик</span>
                 </div>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn btn-blue">
-                        <i class="fas fa-calculator"></i> Рассчитать
-                    </a>
-                    <a href="#contact" class="btn btn-red">
-                        <i class="fas fa-comments"></i> Консультация
-                    </a>
-                    <a href="https://github.com/Aleks-ars-ops" class="btn btn-yellow" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+                    <a href="#contact" class="btn btn-blue"><i class="fas fa-calculator"></i> Рассчитать</a>
+                    <a href="#contact" class="btn btn-red"><i class="fas fa-comments"></i> Консультация</a>
+                    <a href="https://github.com/Aleks-ars-ops" class="btn btn-yellow" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
             <div class="hero-right">
@@ -1413,18 +1412,9 @@
             </div>
 
             <div class="stats">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="5">0</span>
-                    <span class="stat-label">лет опыта</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="45">0</span>
-                    <span class="stat-label">проектов</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="65">0</span>
-                    <span class="stat-label">клиентов</span>
-                </div>
+                <div class="stat-item"><span class="stat-number" data-target="5">0</span><span class="stat-label">лет опыта</span></div>
+                <div class="stat-item"><span class="stat-number" data-target="45">0</span><span class="stat-label">проектов</span></div>
+                <div class="stat-item"><span class="stat-number" data-target="65">0</span><span class="stat-label">клиентов</span></div>
             </div>
 
             <div class="tech-stack">
@@ -1444,9 +1434,7 @@
                 <h2>Мои услуги</h2>
                 <p>Комплексные решения для вашего бизнеса</p>
             </div>
-
             <div class="services-grid">
-                <!-- Разработка сайта-визитки -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-id-card"></i></div>
                     <h3>Разработка сайта-визитки</h3>
@@ -1462,7 +1450,6 @@
                     <div class="service-actions"><a href="#contact" class="btn btn-blue">Заказать</a></div>
                 </div>
 
-                <!-- Разработка лендинга -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-bullseye"></i></div>
                     <h3>Разработка лендинга</h3>
@@ -1478,7 +1465,6 @@
                     <div class="service-actions"><a href="#contact" class="btn btn-red">Заказать</a></div>
                 </div>
 
-                <!-- Разработка интернет-магазина -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
                     <h3>Разработка интернет-магазина</h3>
@@ -1494,7 +1480,6 @@
                     <div class="service-actions"><a href="#contact" class="btn btn-green">Заказать</a></div>
                 </div>
 
-                <!-- Создание сайта под ключ -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-key"></i></div>
                     <h3>Создание сайта под ключ</h3>
@@ -1510,7 +1495,6 @@
                     <div class="service-actions"><a href="#contact" class="btn btn-blue">Заказать</a></div>
                 </div>
 
-                <!-- Техническая поддержка -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-headset"></i></div>
                     <h3>Техническая поддержка</h3>
@@ -1526,7 +1510,6 @@
                     <div class="service-actions"><a href="#contact" class="btn btn-yellow">Заказать</a></div>
                 </div>
 
-                <!-- Написание продающих текстов -->
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
                     <h3>Написание продающих текстов</h3>
@@ -1591,96 +1574,6 @@
                     </ul>
                     <a href="#contact" class="btn btn-green">Заказать</a>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ТАБЛИЦА ПРАЙС-ЛИСТ (опущена вниз, после DeepSeek) -->
-    <div class="container" id="price">
-        <div class="price-table-section">
-            <h3>📋 Полный прайс-лист</h3>
-            <table class="price-table">
-                <thead>
-                    <tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr>
-                </thead>
-                <tbody>
-                    <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong></td></tr>
-                    <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
-                    <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
-                    <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
-                    <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
-                    <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
-                    <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
-                    <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></td></tr>
-                    <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
-                    <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></td></tr>
-                    <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                    <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></td></tr>
-                    <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
-                    <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong></td></tr>
-                    <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
-                    <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
-                    <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
-                    
-                    <tr class="category-row"><td colspan="4"><strong>🔥 КОМПЛЕКТ</strong></td></tr>
-                    <tr><td>«Всё включено»</td><td class="price-cell">62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- КАЛЬКУЛЯТОР (опущен вниз, после прайса) -->
-    <div class="container" id="calculator">
-        <div class="calculator-section">
-            <h3>💰 Калькулятор стоимости</h3>
-            <div class="calculator-grid">
-                <div class="calc-group">
-                    <label>Тип услуги</label>
-                    <select id="serviceType">
-                        <option value="300">1 фото (обработка)</option>
-                        <option value="1200">5 фото (обработка)</option>
-                        <option value="3000">15 фото (обработка)</option>
-                        <option value="1000">Текст для 1 канала</option>
-                        <option value="2500">Тексты на 4 канала</option>
-                        <option value="1500">1 пост (текст+визуал)</option>
-                        <option value="6000">5 постов пакетом</option>
-                        <option value="400">1 нейрофото</option>
-                        <option value="25000">Сайт-визитка</option>
-                        <option value="42000">Сайт под ключ</option>
-                    </select>
-                </div>
-                <div class="calc-group">
-                    <label>Количество: <span id="quantityValue">1</span></label>
-                    <input type="range" id="quantity" min="1" max="10" value="1" step="1">
-                </div>
-                <div class="calc-group">
-                    <label>Срочность</label>
-                    <select id="urgent">
-                        <option value="1">Обычный срок</option>
-                        <option value="1.3">Срочно (+30%)</option>
-                        <option value="1.5">Очень срочно (+50%)</option>
-                    </select>
-                </div>
-            </div>
-            <div class="calc-total">
-                <h4>Примерная стоимость</h4>
-                <div class="total-price" id="totalPrice">300 ₽</div>
-                <p>Точная стоимость после обсуждения деталей</p>
             </div>
         </div>
     </div>
@@ -1754,6 +1647,87 @@
         </div>
     </div>
 
+    <!-- ТАБЛИЦА ПРАЙС-ЛИСТ (ПОСЛЕ DEEPSEEK) -->
+    <div class="container" id="price">
+        <div class="price-table-section">
+            <h3>📋 Полный прайс-лист</h3>
+            <table class="price-table">
+                <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr></thead>
+                <tbody>
+                    <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong></td></tr>
+                    <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
+                    <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
+                    <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
+                    <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
+                    <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
+                    <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
+                    <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></td></tr>
+                    <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
+                    <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></td></tr>
+                    <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></td></tr>
+                    <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
+                    <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong></td></tr>
+                    <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
+                    <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
+                    <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
+                    <tr class="category-row"><td colspan="4"><strong>🔥 КОМПЛЕКТ</strong></td></tr>
+                    <tr><td>«Всё включено»</td><td class="price-cell">62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- КАЛЬКУЛЯТОР (ПОСЛЕ ПРАЙСА) -->
+    <div class="container" id="calculator">
+        <div class="calculator-section">
+            <h3>💰 Калькулятор стоимости</h3>
+            <div class="calculator-grid">
+                <div class="calc-group">
+                    <label>Тип услуги</label>
+                    <select id="serviceType">
+                        <option value="300">1 фото (обработка)</option>
+                        <option value="1200">5 фото (обработка)</option>
+                        <option value="3000">15 фото (обработка)</option>
+                        <option value="1000">Текст для 1 канала</option>
+                        <option value="2500">Тексты на 4 канала</option>
+                        <option value="1500">1 пост (текст+визуал)</option>
+                        <option value="6000">5 постов пакетом</option>
+                        <option value="400">1 нейрофото</option>
+                        <option value="25000">Сайт-визитка</option>
+                        <option value="42000">Сайт под ключ</option>
+                    </select>
+                </div>
+                <div class="calc-group">
+                    <label>Количество: <span id="quantityValue">1</span></label>
+                    <input type="range" id="quantity" min="1" max="10" value="1" step="1">
+                </div>
+                <div class="calc-group">
+                    <label>Срочность</label>
+                    <select id="urgent">
+                        <option value="1">Обычный срок</option>
+                        <option value="1.3">Срочно (+30%)</option>
+                        <option value="1.5">Очень срочно (+50%)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calc-total">
+                <h4>Примерная стоимость</h4>
+                <div class="total-price" id="totalPrice">300 ₽</div>
+                <p>Точная стоимость после обсуждения деталей</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Секция поддержки -->
     <div class="container">
         <div class="support">
@@ -1773,72 +1747,21 @@
     <div class="container" id="contact">
         <h2>Обратная связь</h2>
         <p>Отвечаю в течение 20 минут в рабочее время</p>
-
         <div class="contact-form-section">
             <h3 style="text-align: center; margin-bottom: 30px;">Оставьте заявку на консультацию</h3>
-            
             <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label>Ваше имя *</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label>Телефон *</label>
-                    <input type="tel" id="phone" required>
-                </div>
-                <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Тип проекта</label>
-                    <select id="projectType">
-                        <option value="visa">Сайт-визитка</option>
-                        <option value="landing">Лендинг</option>
-                        <option value="shop">Интернет-магазин</option>
-                        <option value="texts">Продающие тексты</option>
-                        <option value="deepseek">Сайт с DeepSeek</option>
-                        <option value="other">Другое</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Бюджет проекта</label>
-                    <select id="budget">
-                        <option value="30">до 30 000 ₽</option>
-                        <option value="50">30-50 000 ₽</option>
-                        <option value="100">50-100 000 ₽</option>
-                        <option value="more">более 100 000 ₽</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Сроки</label>
-                    <select id="deadlineSelect">
-                        <option value="urgent">срочно (до 3 дней)</option>
-                        <option value="standard">стандартно (до 7 дней)</option>
-                        <option value="not-urgent">не срочно (до 14 дней)</option>
-                    </select>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="needTexts">
-                    <label for="needTexts">Нужны продающие тексты (от 500 ₽)</label>
-                </div>
-                <div class="form-group" style="grid-column: span 1;">
-                    <label>Комментарий</label>
-                    <textarea id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea>
-                </div>
-                <div class="file-upload" id="fileUpload">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <p>Прикрепить техническое задание или макет</p>
-                    <input type="file" id="taskFile" style="display: none;">
-                </div>
+                <div class="form-group"><label>Ваше имя *</label><input type="text" id="name" required></div>
+                <div class="form-group"><label>Телефон *</label><input type="tel" id="phone" required></div>
+                <div class="form-group"><label>Email *</label><input type="email" id="email" required></div>
+                <div class="form-group"><label>Тип проекта</label><select id="projectType"><option value="visa">Сайт-визитка</option><option value="landing">Лендинг</option><option value="shop">Интернет-магазин</option><option value="texts">Продающие тексты</option><option value="deepseek">Сайт с DeepSeek</option><option value="other">Другое</option></select></div>
+                <div class="form-group"><label>Бюджет проекта</label><select id="budget"><option value="30">до 30 000 ₽</option><option value="50">30-50 000 ₽</option><option value="100">50-100 000 ₽</option><option value="more">более 100 000 ₽</option></select></div>
+                <div class="form-group"><label>Сроки</label><select id="deadlineSelect"><option value="urgent">срочно (до 3 дней)</option><option value="standard">стандартно (до 7 дней)</option><option value="not-urgent">не срочно (до 14 дней)</option></select></div>
+                <div class="checkbox-group"><input type="checkbox" id="needTexts"><label for="needTexts">Нужны продающие тексты (от 500 ₽)</label></div>
+                <div class="form-group" style="grid-column: span 1;"><label>Комментарий</label><textarea id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea></div>
+                <div class="file-upload" id="fileUpload"><i class="fas fa-cloud-upload-alt"></i><p>Прикрепить техническое задание или макет</p><input type="file" id="taskFile" style="display: none;"></div>
                 <div id="fileName" style="margin-top: 10px; color: var(--primary-blue); text-align: center; grid-column: span 1;"></div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="agreement" required>
-                    <label for="agreement">Согласие на обработку персональных данных</label>
-                </div>
-                <button type="submit" class="btn btn-blue" style="width: 100%; grid-column: span 1;">
-                    <i class="fas fa-paper-plane"></i> Отправить заявку
-                </button>
+                <div class="checkbox-group"><input type="checkbox" id="agreement" required><label for="agreement">Согласие на обработку персональных данных</label></div>
+                <button type="submit" class="btn btn-blue" style="width: 100%; grid-column: span 1;"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
             </form>
         </div>
     </div>
@@ -1847,31 +1770,15 @@
     <footer class="footer">
         <div class="container">
             <div class="messengers-bottom">
-                <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank">
-                    <div class="messenger-icon"><i class="fab fa-telegram"></i></div>
-                    <span class="messenger-name">Telegram</span>
-                </a>
-                <a href="#" class="messenger-item" target="_blank">
-                    <div class="messenger-icon"><i class="fab fa-maxcdn"></i></div>
-                    <span class="messenger-name">MAX</span>
-                </a>
-                <a href="https://imo.im/imoid_Mic1QeodnK" class="messenger-item" target="_blank">
-                    <div class="messenger-icon"><i class="fas fa-comment"></i></div>
-                    <span class="messenger-name">IMO</span>
-                </a>
+                <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fab fa-telegram"></i></div><span class="messenger-name">Telegram</span></a>
+                <a href="#" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fab fa-maxcdn"></i></div><span class="messenger-name">MAX</span></a>
+                <a href="https://imo.im/imoid_Mic1QeodnK" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fas fa-comment"></i></div><span class="messenger-name">IMO</span></a>
             </div>
-
             <div class="footer-grid">
                 <div class="footer-info">
-                    <div class="logo" style="justify-content: flex-start;">
-                        <i class="fas fa-rocket logo-icon" style="font-size: 2.5rem;"></i>
-                        <span class="logo-text" style="font-size: 2rem;">ALEXSA</span>
-                    </div>
-                    <p>Работаю по всей России</p>
-                    <p>Работаю с DeepSeek</p>
-                    <p>Пишу продающие тексты от 500 ₽</p>
+                    <div class="logo" style="justify-content: flex-start;"><i class="fas fa-rocket logo-icon" style="font-size: 2.5rem;"></i><span class="logo-text" style="font-size: 2rem;">ALEXSA</span></div>
+                    <p>Работаю по всей России</p><p>Работаю с DeepSeek</p><p>Пишу продающие тексты от 500 ₽</p>
                 </div>
-
                 <div class="footer-contacts">
                     <h3>Контакты</h3>
                     <a href="tel:+79112870694"><i class="fas fa-phone"></i> 8-911-287-06-94 (Александра)</a>
@@ -1881,10 +1788,7 @@
                     <p><i class="fas fa-bolt"></i> Отвечаю за 20 минут</p>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 ALEXSA-Веб-Разработчик. Все права защищены.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2024 ALEXSA-Веб-Разработчик. Все права защищены.</p></div>
         </div>
     </footer>
 
@@ -1898,7 +1802,6 @@
                 this.animateStats();
                 this.setupCalculator();
             },
-
             animateStats() {
                 const stats = document.querySelectorAll('.stat-number');
                 stats.forEach(stat => {
@@ -1908,51 +1811,28 @@
                     const timer = setInterval(() => {
                         current += increment;
                         stat.textContent = Math.floor(current);
-                        if (current >= target) {
-                            stat.textContent = target;
-                            clearInterval(timer);
-                        }
+                        if (current >= target) { stat.textContent = target; clearInterval(timer); }
                     }, 20);
                 });
             },
-
             setupFileUpload() {
                 const fileUpload = document.getElementById('fileUpload');
                 const fileInput = document.getElementById('taskFile');
                 const fileName = document.getElementById('fileName');
                 if (!fileUpload || !fileInput || !fileName) return;
                 fileUpload.addEventListener('click', () => fileInput.click());
-                fileInput.addEventListener('change', (e) => {
-                    if (e.target.files.length > 0) {
-                        fileName.innerHTML = `<span><i class="fas fa-file"></i> ${e.target.files[0].name}</span>`;
-                    }
-                });
-                fileUpload.addEventListener('dragover', (e) => {
-                    e.preventDefault();
-                    fileUpload.style.borderColor = 'var(--primary-blue)';
-                });
-                fileUpload.addEventListener('dragleave', () => {
-                    fileUpload.style.borderColor = '';
-                });
-                fileUpload.addEventListener('drop', (e) => {
-                    e.preventDefault();
-                    fileUpload.style.borderColor = '';
-                    if (e.dataTransfer.files.length > 0) {
-                        fileInput.files = e.dataTransfer.files;
-                        fileName.innerHTML = `<span><i class="fas fa-file"></i> ${e.dataTransfer.files[0].name}</span>`;
-                    }
-                });
+                fileInput.addEventListener('change', (e) => { if (e.target.files.length > 0) fileName.innerHTML = `<span><i class="fas fa-file"></i> ${e.target.files[0].name}</span>`; });
+                fileUpload.addEventListener('dragover', (e) => { e.preventDefault(); fileUpload.style.borderColor = 'var(--primary-blue)'; });
+                fileUpload.addEventListener('dragleave', () => { fileUpload.style.borderColor = ''; });
+                fileUpload.addEventListener('drop', (e) => { e.preventDefault(); fileUpload.style.borderColor = ''; if (e.dataTransfer.files.length > 0) { fileInput.files = e.dataTransfer.files; fileName.innerHTML = `<span><i class="fas fa-file"></i> ${e.dataTransfer.files[0].name}</span>`; } });
             },
-
             setupCalculator() {
                 const serviceSelect = document.getElementById('serviceType');
                 const quantityInput = document.getElementById('quantity');
                 const quantityValue = document.getElementById('quantityValue');
                 const urgentSelect = document.getElementById('urgent');
                 const totalSpan = document.getElementById('totalPrice');
-
                 if (!serviceSelect) return;
-
                 const updateCalculator = () => {
                     let basePrice = parseInt(serviceSelect.value) || 0;
                     let quantity = parseInt(quantityInput.value);
@@ -1960,44 +1840,19 @@
                     let total = basePrice * quantity * urgent;
                     totalSpan.innerText = total.toLocaleString() + ' ₽';
                 };
-
                 serviceSelect.addEventListener('change', updateCalculator);
-                quantityInput.addEventListener('input', () => {
-                    quantityValue.innerText = quantityInput.value;
-                    updateCalculator();
-                });
+                quantityInput.addEventListener('input', () => { quantityValue.innerText = quantityInput.value; updateCalculator(); });
                 urgentSelect.addEventListener('change', updateCalculator);
                 updateCalculator();
             },
-
-            sendOrderToContacts(formData) {
-                const orderInfo = { ...formData, date: new Date().toLocaleString(), orderId: 'REQ-' + Math.floor(Math.random() * 10000) };
-                console.log('Заявка отправлена:', orderInfo);
-                return orderInfo;
-            },
-
-            showNotification(message) {
-                const notification = document.getElementById('notification');
-                notification.textContent = message;
-                notification.classList.add('show');
-                setTimeout(() => notification.classList.remove('show'), 3000);
-            },
-
+            sendOrderToContacts(formData) { const orderInfo = { ...formData, date: new Date().toLocaleString(), orderId: 'REQ-' + Math.floor(Math.random() * 10000) }; console.log('Заявка отправлена:', orderInfo); return orderInfo; },
+            showNotification(message) { const notification = document.getElementById('notification'); notification.textContent = message; notification.classList.add('show'); setTimeout(() => notification.classList.remove('show'), 3000); },
             setupFormSubmission() {
                 const contactForm = document.getElementById('contactForm');
                 if (contactForm) {
                     contactForm.addEventListener('submit', (e) => {
                         e.preventDefault();
-                        const formData = {
-                            name: document.getElementById('name').value,
-                            phone: document.getElementById('phone').value,
-                            email: document.getElementById('email').value,
-                            projectType: document.getElementById('projectType').value,
-                            budget: document.getElementById('budget').value,
-                            deadline: document.getElementById('deadlineSelect').value,
-                            needTexts: document.getElementById('needTexts').checked,
-                            comment: document.getElementById('comment').value
-                        };
+                        const formData = { name: document.getElementById('name').value, phone: document.getElementById('phone').value, email: document.getElementById('email').value, projectType: document.getElementById('projectType').value, budget: document.getElementById('budget').value, deadline: document.getElementById('deadlineSelect').value, needTexts: document.getElementById('needTexts').checked, comment: document.getElementById('comment').value };
                         this.sendOrderToContacts(formData);
                         this.showNotification('Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
                         e.target.reset();
@@ -2006,7 +1861,6 @@
                 }
             }
         };
-
         document.addEventListener('DOMContentLoaded', () => App.init());
     </script>
 </body>
