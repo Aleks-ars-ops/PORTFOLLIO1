@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
     <title>ALEXSA-Веб-Разработчик — Создание сайтов с DeepSeek</title>
     
-    <!-- SEO Meta Tags -->
     <meta name="description" content="Профессиональная разработка сайтов с использованием DeepSeek. 5 лет опыта, 45 проектов. Бесплатная техподдержка 4 дня. Продающие тексты.">
     <meta name="keywords" content="веб разработчик, создание сайтов, создание сайтов с deepseek, заказать сайт, лендинг под ключ, интернет магазин под ключ">
     <meta name="author" content="ALEXSA-Веб-Разработчик">
@@ -16,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* ===== ВАШ ОРИГИНАЛЬНЫЙ ДИЗАЙН ===== */
         :root {
             --primary-blue: #4169E1;
             --primary-red: #FF4444;
@@ -139,27 +137,69 @@
         .dev-features i { color: var(--primary-green); }
         .dev-card .btn { margin-top: 20px; }
         
-        /* Блок DeepSeek (кнопки ровные) */
-        .deepseek-section { background: linear-gradient(135deg, rgba(65,105,225,0.15), rgba(255,68,68,0.15), rgba(255,215,0,0.15), rgba(50,205,50,0.15)); border-radius: 50px; padding: 60px 30px; margin: 40px 0; border: 2px solid var(--gradient-rainbow); }
-        .deepseek-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .deepseek-card { background: white; border-radius: var(--border-radius); padding: 30px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); display: flex; flex-direction: column; height: 100%; }
+        /* Блок DeepSeek — ИСПРАВЛЕННЫЙ */
+        .deepseek-section {
+            background: linear-gradient(135deg, rgba(65,105,225,0.15), rgba(255,68,68,0.15), rgba(255,215,0,0.15), rgba(50,205,50,0.15));
+            border-radius: 50px;
+            padding: 60px 30px;
+            margin: 40px 0;
+            border: 2px solid var(--gradient-rainbow);
+        }
+        .deepseek-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .deepseek-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px 25px;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            text-align: center;
+        }
         .deepseek-card:hover { transform: translateY(-10px); }
-        .deepseek-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
+        .deepseek-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px; }
+        .deepseek-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .deepseek-card p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
         .deepseek-price { font-size: 1.6rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
-        .deepseek-features { list-style: none; margin: 20px 0; text-align: left; flex-grow: 1; }
-        .deepseek-features li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.9rem; }
-        .deepseek-features i { color: var(--primary-green); }
-        .deepseek-card .btn { margin-top: 20px; align-self: center; width: auto; }
-        .deepseek-badge { background: var(--gradient-rainbow); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 15px; }
+        .deepseek-features {
+            list-style: none;
+            margin: 20px 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .deepseek-features li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: #444;
+        }
+        .deepseek-features i { color: var(--primary-green); width: 20px; }
+        .deepseek-card .btn { margin-top: 20px; align-self: center; width: auto; min-width: 160px; }
+        .deepseek-badge {
+            background: var(--gradient-rainbow);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
         
-        /* ПРИМЕРЫ РАБОТ (НОВЫЙ БЛОК) */
+        /* Примеры работ */
         .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
         .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
         .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); }
         .example-card:hover { transform: translateY(-10px); }
         .example-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
         .example-link { display: inline-block; margin-top: 15px; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
-        .example-link:hover { text-decoration: underline; }
         
         /* Таблица прайса */
         .price-table-section { background: white; border-radius: 24px; padding: 30px; margin: 40px 0; overflow-x: auto; box-shadow: var(--card-shadow); }
@@ -168,7 +208,6 @@
         .price-table td { padding: 12px 15px; border-bottom: 1px solid #eee; color: #444; }
         .price-table tr:hover td { background: #f8f9ff; }
         .category-row { background: #f0f2f5; font-weight: 700; }
-        .category-row td { font-weight: 700; color: var(--dark); }
         .price-cell { font-weight: 700; color: var(--primary-blue); }
         
         /* Калькулятор */
@@ -309,6 +348,7 @@
     </div>
 </div>
 
+<!-- Блок DeepSeek — ИСПРАВЛЕННЫЙ -->
 <div class="container" id="deepseek">
     <div class="deepseek-section">
         <div class="deepseek-header" style="text-align:center;">
@@ -325,28 +365,18 @@
     </div>
 </div>
 
-<!-- ПРИМЕРЫ РАБОТ (НОВЫЙ БЛОК) -->
+<!-- Примеры работ -->
 <div class="container" id="portfolio-examples">
     <div class="portfolio-examples">
         <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты, которые я сделала</p></div>
         <div class="examples-grid">
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Юлия — Курсовые работы</h3>
-                <p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p>
-                <a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-camera"></i></div>
-                <h3>Татьяна — Фоторедактор</h3>
-                <p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p>
-                <a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
+            <div class="example-card"><div class="example-icon"><i class="fas fa-graduation-cap"></i></div><h3>Юлия — Курсовые работы</h3><p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p><a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a></div>
+            <div class="example-card"><div class="example-icon"><i class="fas fa-camera"></i></div><h3>Татьяна — Фоторедактор</h3><p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p><a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a></div>
         </div>
     </div>
 </div>
 
-<!-- ТАБЛИЦА ПРАЙСА (БЕЗ КОМПЛЕКТА) -->
+<!-- Таблица прайса -->
 <div class="container" id="price">
     <div class="price-table-section">
         <h3 style="text-align:center;">📋 Полный прайс-лист</h3>
@@ -489,7 +519,7 @@
         });
     }
 
-    // Отправка формы (имитация — для реальной отправки нужно настроить)
+    // Отправка формы
     const contactForm = document.getElementById('contactForm');
     const notif = document.getElementById('notification');
     function showMsg(msg) { notif.innerText = msg; notif.classList.add('show'); setTimeout(() => notif.classList.remove('show'), 3000); }
