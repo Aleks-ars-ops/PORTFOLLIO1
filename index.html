@@ -167,23 +167,12 @@
             flex-grow: 1;
         }
         .deepseek-features li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
-            font-size: 0.85rem;
-            color: #444;
+            display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.85rem; color: #444;
         }
         .deepseek-features i { color: var(--primary-green); width: 20px; }
         .deepseek-card .btn { margin-top: 20px; align-self: center; width: auto; min-width: 160px; }
         .deepseek-badge {
-            background: var(--gradient-rainbow);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 15px;
+            background: var(--gradient-rainbow); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 15px;
         }
         
         .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
@@ -430,83 +419,23 @@
     <div class="contact-form-section">
         <h3 style="text-align:center;">Оставьте заявку на консультацию</h3>
         
-        <!-- ФОРМА С ОТПРАВКОЙ НА ПОЧТУ ЧЕРЕЗ FORMSUBMIT -->
         <form class="contact-form" action="https://formsubmit.co/aleksa.romanyuk31@gmail.com" method="POST">
             <input type="hidden" name="_subject" value="Новая заявка с сайта ALEXSA">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             
-            <div class="form-group">
-                <label>Ваше имя *</label>
-                <input type="text" name="Имя" id="name" required>
-            </div>
-
-            <div class="form-group">
-                <label>Телефон *</label>
-                <input type="tel" name="Телефон" id="phone" required>
-            </div>
-
-            <div class="form-group">
-                <label>Email *</label>
-                <input type="email" name="Email" id="email" required>
-            </div>
-
-            <div class="form-group">
-                <label>Тип проекта</label>
-                <select name="Тип проекта" id="projectType">
-                    <option value="visa">Сайт-визитка</option>
-                    <option value="landing">Лендинг</option>
-                    <option value="shop">Интернет-магазин</option>
-                    <option value="texts">Продающие тексты</option>
-                    <option value="deepseek">Сайт с DeepSeek</option>
-                    <option value="other">Другое</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>Бюджет проекта</label>
-                <select name="Бюджет" id="budget">
-                    <option value="30">до 30 000 ₽</option>
-                    <option value="50">30-50 000 ₽</option>
-                    <option value="100">50-100 000 ₽</option>
-                    <option value="more">более 100 000 ₽</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>Сроки</label>
-                <select name="Сроки" id="deadlineSelect">
-                    <option value="urgent">срочно (до 3 дней)</option>
-                    <option value="standard">стандартно (до 7 дней)</option>
-                    <option value="not-urgent">не срочно (до 14 дней)</option>
-                </select>
-            </div>
-
-            <div class="checkbox-group">
-                <input type="checkbox" name="Нужны продающие тексты" id="needTexts" value="Да">
-                <label for="needTexts">Нужны продающие тексты (от 500 ₽)</label>
-            </div>
-
-            <div class="form-group" style="grid-column: span 1;">
-                <label>Комментарий</label>
-                <textarea name="Комментарий" id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea>
-            </div>
-
-            <div class="file-upload" id="fileUpload">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <p>Прикрепить техническое задание или макет</p>
-                <input type="file" id="taskFile" name="attachment" style="display: none;">
-            </div>
+            <div class="form-group"><label>Ваше имя *</label><input type="text" name="Имя" id="name" required></div>
+            <div class="form-group"><label>Телефон *</label><input type="tel" name="Телефон" id="phone" required></div>
+            <div class="form-group"><label>Email *</label><input type="email" name="Email" id="email" required></div>
+            <div class="form-group"><label>Тип проекта</label><select name="Тип проекта" id="projectType"><option value="visa">Сайт-визитка</option><option value="landing">Лендинг</option><option value="shop">Интернет-магазин</option><option value="texts">Продающие тексты</option><option value="deepseek">Сайт с DeepSeek</option><option value="other">Другое</option></select></div>
+            <div class="form-group"><label>Бюджет проекта</label><select name="Бюджет" id="budget"><option value="30">до 30 000 ₽</option><option value="50">30-50 000 ₽</option><option value="100">50-100 000 ₽</option><option value="more">более 100 000 ₽</option></select></div>
+            <div class="form-group"><label>Сроки</label><select name="Сроки" id="deadlineSelect"><option value="urgent">срочно (до 3 дней)</option><option value="standard">стандартно (до 7 дней)</option><option value="not-urgent">не срочно (до 14 дней)</option></select></div>
+            <div class="checkbox-group"><input type="checkbox" name="Нужны продающие тексты" id="needTexts" value="Да"><label for="needTexts">Нужны продающие тексты (от 500 ₽)</label></div>
+            <div class="form-group" style="grid-column: span 1;"><label>Комментарий</label><textarea name="Комментарий" id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea></div>
+            <div class="file-upload" id="fileUpload"><i class="fas fa-cloud-upload-alt"></i><p>Прикрепить техническое задание или макет</p><input type="file" id="taskFile" name="attachment" style="display: none;"></div>
             <div id="fileName" style="margin-top: 10px; color: var(--primary-blue); text-align: center; grid-column: span 2;"></div>
-
-            <div class="checkbox-group">
-                <input type="checkbox" id="agreement" required>
-                <label for="agreement">Согласие на обработку персональных данных</label>
-            </div>
-
-            <button type="submit" class="btn btn-blue" style="grid-column: span 2;">
-                <i class="fas fa-paper-plane"></i> Отправить заявку
-            </button>
+            <div class="checkbox-group"><input type="checkbox" id="agreement" required><label for="agreement">Согласие на обработку персональных данных</label></div>
+            <button type="submit" class="btn btn-blue" style="grid-column: span 2;"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
         </form>
     </div>
 </div>
@@ -514,9 +443,14 @@
 <footer class="footer">
     <div class="container">
         <div class="messengers-bottom">
-            <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fab fa-telegram"></i></div><span>Telegram</span></a>
-            <a href="#" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fab fa-maxcdn"></i></div><span>MAX</span></a>
-            <a href="https://imo.im/imoid_Mic1QeodnK" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fas fa-comment"></i></div><span>IMO</span></a>
+            <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank">
+                <div class="messenger-icon"><i class="fab fa-telegram"></i></div>
+                <span>Telegram</span>
+            </a>
+            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="messenger-item" target="_blank">
+                <div class="messenger-icon"><i class="fas fa-comment"></i></div>
+                <span>IMO</span>
+            </a>
         </div>
         <div class="footer-grid">
             <div><div class="logo" style="justify-content:flex-start;"><i class="fas fa-rocket" style="font-size:2rem;"></i><span class="logo-text" style="font-size:1.5rem;">ALEXSA</span></div><p>Работаю по всей России</p><p>Работаю с DeepSeek</p><p>Пишу продающие тексты от 500 ₽</p></div>
@@ -570,7 +504,7 @@
         });
     }
 
-    // Уведомление об отправке (FormSubmit сам перенаправит на страницу "спасибо")
+    // Уведомление об отправке
     const contactForm = document.getElementById('contactForm');
     const notif = document.getElementById('notification');
     function showMsg(msg, isError = false) {
