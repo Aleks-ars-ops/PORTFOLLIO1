@@ -356,29 +356,29 @@
         <table class="price-table">
             <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr></thead>
             <tbody>
-                <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong></tr>
                 <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></tr>
                 <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
                 <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></tr>
                 <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
                 <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
                 <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></tr>
                 <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></tr>
                 <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></tr>
                 <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
                 <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong></tr>
                 <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
                 <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
                 <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
@@ -459,10 +459,9 @@
 <div class="notification" id="notification"></div>
 
 <script>
-    // ========== TELEGRAM НАСТРОЙКИ (ГОТОВЫЙ БОТ) ==========
+    // TELEGRAM НАСТРОЙКИ
     const TELEGRAM_BOT_TOKEN = '7808838517:AAGVcI9Fj7lUJQD_HG0HHgLMCvvBBLp9aN8';
     const TELEGRAM_CHAT_ID = '5933076648';
-    // =====================================================
 
     // Анимация статистики
     const stats = document.querySelectorAll('.stat-number');
@@ -505,9 +504,10 @@
         });
     }
 
-    // ОТПРАВКА В TELEGRAM
+    // Отправка в Telegram
     const contactForm = document.getElementById('contactForm');
     const notif = document.getElementById('notification');
+    
     function showMsg(msg, isError = false) {
         notif.innerText = msg;
         notif.style.background = isError ? '#e74c3c' : 'linear-gradient(135deg, #ffd700, #ffed4e)';
@@ -516,65 +516,41 @@
         setTimeout(() => notif.classList.remove('show'), 5000);
     }
 
-    async function sendToTelegram(message) {
-        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
-        try {
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
-                    text: message,
-                    parse_mode: 'HTML'
-                })
-            });
-            return response.ok;
-        } catch (error) {
-            console.error('Telegram error:', error);
-            return false;
-        }
-    }
-
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
             const projectType = document.getElementById('projectType').value;
             const budget = document.getElementById('budget').value;
             const deadline = document.getElementById('deadlineSelect').value;
             const needTexts = document.getElementById('needTexts').checked ? '✅ Да' : '❌ Нет';
-            const comment = document.getElementById('comment').value || 'Нет комментария';
+            const comment = document.getElementById('comment').value.trim() || 'Нет комментария';
             
             if (!name || !phone || !email) {
                 showMsg('❌ Заполните имя, телефон и email!', true);
                 return;
             }
             
-            const message = `
-🚀 <b>НОВАЯ ЗАЯВКА С САЙТА ALEXSA</b>
-    
-👤 <b>Имя:</b> ${name}
-📞 <b>Телефон:</b> ${phone}
-📧 <b>Email:</b> ${email}
-📌 <b>Тип проекта:</b> ${projectType}
-💰 <b>Бюджет:</b> ${budget}
-⏱ <b>Сроки:</b> ${deadline}
-✍️ <b>Продающие тексты:</b> ${needTexts}
-💬 <b>Комментарий:</b> ${comment}
-⏰ <b>Время:</b> ${new Date().toLocaleString()}
-            `;
+            const message = `🚀 НОВАЯ ЗАЯВКА С САЙТА ALEXSA%0A%0A👤 Имя: ${name}%0A📞 Телефон: ${phone}%0A📧 Email: ${email}%0A📌 Тип проекта: ${projectType}%0A💰 Бюджет: ${budget}%0A⏱ Сроки: ${deadline}%0A✍️ Продающие тексты: ${needTexts}%0A💬 Комментарий: ${comment}%0A⏰ Время: ${new Date().toLocaleString()}`;
             
             showMsg('⏳ Отправка заявки...');
-            const success = await sendToTelegram(message);
             
-            if (success) {
-                showMsg('✅ Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
-                contactForm.reset();
-                if (fileName) fileName.innerHTML = '';
-            } else {
+            try {
+                const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${message}`;
+                const response = await fetch(url);
+                const result = await response.json();
+                
+                if (result.ok) {
+                    showMsg('✅ Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
+                    contactForm.reset();
+                    if (fileName) fileName.innerHTML = '';
+                } else {
+                    showMsg('❌ Ошибка отправки. Попробуйте позвонить: 8-911-287-06-94', true);
+                }
+            } catch (error) {
                 showMsg('❌ Ошибка отправки. Попробуйте позвонить: 8-911-287-06-94', true);
             }
         });
