@@ -18,6 +18,7 @@
             --primary-red: #FF4444;
             --primary-yellow: #FFD700;
             --primary-green: #32CD32;
+            --primary-lightblue: #87CEEB;
             --dark: #1a2a3a;
             --light: #F7F9FC;
             --text-dark: #1a2a3a;
@@ -26,6 +27,7 @@
             --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
             --border-radius: 20px;
+            --gradient-blue: linear-gradient(135deg, #4169E1, #6495ED);
         }
 
         body {
@@ -65,7 +67,7 @@
             left: 0;
             width: 70px;
             height: 4px;
-            background: linear-gradient(135deg, #4169E1, #6495ED);
+            background: var(--gradient-blue);
             border-radius: 4px;
         }
 
@@ -77,11 +79,6 @@
         .section-header h2::after {
             left: 50%;
             transform: translateX(-50%);
-        }
-
-        .section-header p {
-            color: #666;
-            margin-top: 15px;
         }
 
         .btn {
@@ -100,7 +97,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #4169E1, #6495ED);
+            background: var(--gradient-blue);
             color: white;
             box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
         }
@@ -112,16 +109,17 @@
 
         .btn-secondary {
             background: transparent;
-            border: 2px solid #4169E1;
-            color: #4169E1;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
         }
 
         .btn-secondary:hover {
-            background: #4169E1;
+            background: var(--primary-blue);
             color: white;
             transform: translateY(-3px);
         }
 
+        /* Шапка */
         .navbar {
             background: white;
             padding: 15px 0;
@@ -142,7 +140,7 @@
         .logo {
             font-size: 1.6rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #4169E1, #6495ED);
+            background: var(--gradient-blue);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
@@ -163,7 +161,7 @@
         }
 
         .nav-menu a:hover {
-            color: #4169E1;
+            color: var(--primary-blue);
         }
 
         /* Герой */
@@ -216,41 +214,110 @@
             font-weight: 800;
         }
 
-        /* Таблица услуг */
-        .services-table {
-            width: 100%;
-            overflow-x: auto;
+        /* КРАСИВАЯ ТАБЛИЦА УСЛУГ */
+        .services-table-wrapper {
+            background: white;
+            border-radius: 24px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .service-category {
+            background: linear-gradient(135deg, #4169E1, #6495ED);
+            color: white;
+        }
+
+        .service-category td {
+            font-weight: 700;
+            padding: 15px 20px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
         }
 
         th {
-            background: linear-gradient(135deg, #4169E1, #6495ED);
-            color: white;
-            padding: 15px;
-            font-weight: 600;
+            background: #f0f2f5;
+            padding: 15px 20px;
+            text-align: left;
+            font-weight: 700;
+            color: var(--dark);
         }
 
         td {
-            padding: 12px 15px;
+            padding: 12px 20px;
             border-bottom: 1px solid #eee;
-            color: #333;
+            color: #444;
         }
 
-        tr:hover {
-            background: #f5f5f5;
+        tr:hover td {
+            background: #f8f9ff;
         }
 
-        .service-category {
-            background: #f0f0f0;
+        .price {
             font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        /* КАЛЬКУЛЯТОР */
+        .calculator {
+            background: white;
+            border-radius: 24px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .calculator h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .calc-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .calc-group label {
+            font-weight: 600;
+            color: #555;
+        }
+
+        select, input {
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .calc-total {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #f0f4ff, #e8edff);
+            border-radius: 20px;
+        }
+
+        .total-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
         }
 
         /* Преимущества */
@@ -276,7 +343,7 @@
 
         .advantage-card i {
             font-size: 2.5rem;
-            color: #4169E1;
+            color: var(--primary-blue);
             margin-bottom: 15px;
         }
 
@@ -306,7 +373,7 @@
         }
 
         .footer a:hover {
-            color: #4169E1;
+            color: var(--primary-blue);
         }
 
         .contact-item {
@@ -335,7 +402,7 @@
         }
 
         .social-link:hover {
-            background: #4169E1;
+            background: var(--primary-blue);
             transform: translateY(-3px);
         }
 
@@ -347,15 +414,15 @@
         }
 
         @media (max-width: 768px) {
-            .nav-menu {
-                justify-content: center;
-            }
             .hero h1 {
                 font-size: 2rem;
             }
             th, td {
-                padding: 8px 10px;
+                padding: 8px 12px;
                 font-size: 0.85rem;
+            }
+            .calculator-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -368,6 +435,7 @@
         <ul class="nav-menu">
             <li><a href="#home">Главная</a></li>
             <li><a href="#services">Услуги</a></li>
+            <li><a href="#calculator">Калькулятор</a></li>
             <li><a href="#advantages">Почему я</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
@@ -380,7 +448,7 @@
             <h1>ALEXSA<br>Веб-разработчик</h1>
             <p>Создаю сайты под ключ, пишу продающие тексты, обрабатываю фото, делаю нейрофотосессии, презентации и карточки для маркетплейсов. Работаю по всей России.</p>
             <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary"><i class="fas fa-calculator"></i> Все услуги</a>
+                <a href="#services" class="btn btn-primary"><i class="fas fa-list"></i> Все услуги</a>
                 <a href="#contact" class="btn btn-secondary"><i class="fas fa-comments"></i> Связаться</a>
             </div>
         </div>
@@ -398,49 +466,99 @@
             <h2>Услуги и цены</h2>
             <p>Полный спектр услуг для вашего бизнеса</p>
         </div>
-        <div class="services-table">
+        <div class="services-table-wrapper">
             <table>
                 <thead>
-                    <tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr>
+                    <tr>
+                        <th>Услуга</th>
+                        <th>Цена</th>
+                        <th>Срок</th>
+                        <th>Примечание</th>
+                    </tr>
                 </thead>
                 <tbody>
-                    <tr class="service-category"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong></td></tr>
-                    <tr><td>1 фото</td><td>300 ₽</td><td>2-4 ч</td><td></td></tr>
-                    <tr><td>5 фото</td><td>1 200 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>15 фото</td><td>3 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-camera"></i> 📸 РЕДАКТИРОВАНИЕ ФОТО</td></tr>
+                    <tr><td>1 фото</td><td class="price">300 ₽</td><td>2-4 ч</td><td></td></tr>
+                    <tr><td>5 фото</td><td class="price">1 200 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>15 фото</td><td class="price">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
-                    <tr><td>Текст для 1 канала</td><td>1 000 ₽</td><td>3-5 ч</td><td></td></tr>
-                    <tr><td>Тексты на все каналы (4 шт)</td><td>2 500 ₽</td><td>1 день</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-pen-fancy"></i> ✍️ ПРОДАЮЩИЕ ТЕКСТЫ</td></tr>
+                    <tr><td>Текст для 1 канала</td><td class="price">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
+                    <tr><td>Тексты на все каналы (4 шт)</td><td class="price">2 500 ₽</td><td>1 день</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
-                    <tr><td>1 пост (текст)</td><td>800 ₽</td><td>2-3 ч</td><td></td></tr>
-                    <tr><td>1 пост (текст+визуал)</td><td>1 500 ₽</td><td>4-5 ч</td><td></td></tr>
-                    <tr><td>5 постов пакетом</td><td>6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fab fa-instagram"></i> 📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</td></tr>
+                    <tr><td>1 пост (текст)</td><td class="price">800 ₽</td><td>2-3 ч</td><td></td></tr>
+                    <tr><td>1 пост (текст+визуал)</td><td class="price">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
+                    <tr><td>5 постов пакетом</td><td class="price">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></td></tr>
-                    <tr><td>1 фото</td><td>400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
-                    <tr><td>5 фото</td><td>1 500 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>10 фото</td><td>2 500 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-robot"></i> 🤖 НЕЙРОФОТОСЕССИЯ</td></tr>
+                    <tr><td>1 фото</td><td class="price">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
+                    <tr><td>5 фото</td><td class="price">1 500 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>10 фото</td><td class="price">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></td></tr>
-                    <tr><td>Текстовая</td><td>2 000 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>Визуальная</td><td>4 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                    <tr><td>Под ключ</td><td>6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-chart-line"></i> 📊 ПРЕЗЕНТАЦИЯ</td></tr>
+                    <tr><td>Текстовая</td><td class="price">2 000 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>Визуальная</td><td class="price">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr><td>Под ключ</td><td class="price">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></td></tr>
-                    <tr><td>1 карточка</td><td>1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
-                    <tr><td>5 карточек</td><td>6 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-store"></i> 🛍 КАРТОЧКИ MARKETPLACE</td></tr>
+                    <tr><td>1 карточка</td><td class="price">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
+                    <tr><td>5 карточек</td><td class="price">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>🌐 САЙТЫ</strong></td></tr>
-                    <tr><td>Сайт-визитка / Лендинг</td><td>25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
-                    <tr><td>Сайт под ключ</td><td>42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
-                    <tr><td>Интернет-магазин</td><td>от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-globe"></i> 🌐 САЙТЫ</td></tr>
+                    <tr><td>Сайт-визитка / Лендинг</td><td class="price">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
+                    <tr><td>Сайт под ключ</td><td class="price">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
+                    <tr><td>Интернет-магазин</td><td class="price">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><strong>🔥 КОМПЛЕКТ</strong></td></tr>
-                    <tr><td>«Всё включено»</td><td>62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
+                    <tr class="service-category"><td colspan="4"><i class="fas fa-gem"></i> 🔥 КОМПЛЕКТ</td></tr>
+                    <tr><td>«Всё включено»</td><td class="price">62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</section>
+
+<section id="calculator">
+    <div class="container">
+        <div class="section-header">
+            <h2>Калькулятор стоимости</h2>
+            <p>Рассчитайте примерную цену вашего заказа</p>
+        </div>
+        <div class="calculator">
+            <div class="calculator-grid">
+                <div class="calc-group">
+                    <label>Тип услуги</label>
+                    <select id="serviceType">
+                        <option value="photo1">1 фото (обработка)</option>
+                        <option value="photo5">5 фото (обработка)</option>
+                        <option value="photo15">15 фото (обработка)</option>
+                        <option value="text1">Текст для 1 канала</option>
+                        <option value="text4">Тексты на 4 канала</option>
+                        <option value="post1">1 пост (текст+визуал)</option>
+                        <option value="post5">5 постов пакетом</option>
+                        <option value="neuro1">1 нейрофото</option>
+                        <option value="site">Сайт-визитка</option>
+                        <option value="sitekey">Сайт под ключ</option>
+                    </select>
+                </div>
+                <div class="calc-group">
+                    <label>Количество: <span id="quantityValue">1</span></label>
+                    <input type="range" id="quantity" min="1" max="10" value="1" step="1">
+                </div>
+                <div class="calc-group">
+                    <label>Срочность</label>
+                    <select id="urgent">
+                        <option value="1">Обычный срок</option>
+                        <option value="1.3">Срочно (+30%)</option>
+                        <option value="1.5">Очень срочно (+50%)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="calc-total">
+                <h4>Примерная стоимость</h4>
+                <div class="total-price" id="totalPrice">0 ₽</div>
+                <p>Точная стоимость после обсуждения деталей</p>
+            </div>
         </div>
     </div>
 </section>
@@ -453,7 +571,7 @@
         </div>
         <div class="advantages-grid">
             <div class="advantage-card"><i class="fas fa-clock"></i><h3>Соблюдение сроков</h3><p>Всегда сдаю работу вовремя</p></div>
-            <div class="advantage-card"><i class="fas fa-chart-line"></i><h3>Высокое качество</h3><p>Детальная проработка</p></div>
+            <div class="advantage-card"><i class="fas fa-chart-line"></i><h3>Высокое качество</h3><p>Детальная проработка каждого проекта</p></div>
             <div class="advantage-card"><i class="fas fa-headset"></i><h3>Поддержка</h3><p>4 дня бесплатно после сдачи</p></div>
             <div class="advantage-card"><i class="fas fa-ruble-sign"></i><h3>Честные цены</h3><p>Без скрытых платежей</p></div>
         </div>
@@ -484,5 +602,37 @@
     </div>
 </footer>
 
+<script>
+    const prices = {
+        photo1: 300, photo5: 1200, photo15: 3000,
+        text1: 1000, text4: 2500,
+        post1: 1500, post5: 6000,
+        neuro1: 400,
+        site: 25000, sitekey: 42000
+    };
+
+    const serviceSelect = document.getElementById('serviceType');
+    const quantityInput = document.getElementById('quantity');
+    const quantityValue = document.getElementById('quantityValue');
+    const urgentSelect = document.getElementById('urgent');
+    const totalSpan = document.getElementById('totalPrice');
+
+    function updateCalculator() {
+        let basePrice = prices[serviceSelect.value] || 0;
+        let quantity = parseInt(quantityInput.value);
+        let urgent = parseFloat(urgentSelect.value);
+        let total = basePrice * quantity * urgent;
+        totalSpan.innerText = total.toLocaleString() + ' ₽';
+    }
+
+    serviceSelect.addEventListener('change', updateCalculator);
+    quantityInput.addEventListener('input', () => {
+        quantityValue.innerText = quantityInput.value;
+        updateCalculator();
+    });
+    urgentSelect.addEventListener('change', updateCalculator);
+    
+    updateCalculator();
+</script>
 </body>
 </html>
