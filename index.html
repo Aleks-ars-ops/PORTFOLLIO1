@@ -419,20 +419,16 @@
     <div class="contact-form-section">
         <h3 style="text-align:center;">Оставьте заявку на консультацию</h3>
         
-        <form class="contact-form" action="https://formsubmit.co/aleksa.romanyuk31@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Новая заявка с сайта ALEXSA">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            
-            <div class="form-group"><label>Ваше имя *</label><input type="text" name="Имя" id="name" required></div>
-            <div class="form-group"><label>Телефон *</label><input type="tel" name="Телефон" id="phone" required></div>
-            <div class="form-group"><label>Email *</label><input type="email" name="Email" id="email" required></div>
-            <div class="form-group"><label>Тип проекта</label><select name="Тип проекта" id="projectType"><option value="visa">Сайт-визитка</option><option value="landing">Лендинг</option><option value="shop">Интернет-магазин</option><option value="texts">Продающие тексты</option><option value="deepseek">Сайт с DeepSeek</option><option value="other">Другое</option></select></div>
-            <div class="form-group"><label>Бюджет проекта</label><select name="Бюджет" id="budget"><option value="30">до 30 000 ₽</option><option value="50">30-50 000 ₽</option><option value="100">50-100 000 ₽</option><option value="more">более 100 000 ₽</option></select></div>
-            <div class="form-group"><label>Сроки</label><select name="Сроки" id="deadlineSelect"><option value="urgent">срочно (до 3 дней)</option><option value="standard">стандартно (до 7 дней)</option><option value="not-urgent">не срочно (до 14 дней)</option></select></div>
-            <div class="checkbox-group"><input type="checkbox" name="Нужны продающие тексты" id="needTexts" value="Да"><label for="needTexts">Нужны продающие тексты (от 500 ₽)</label></div>
-            <div class="form-group" style="grid-column: span 1;"><label>Комментарий</label><textarea name="Комментарий" id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea></div>
-            <div class="file-upload" id="fileUpload"><i class="fas fa-cloud-upload-alt"></i><p>Прикрепить техническое задание или макет</p><input type="file" id="taskFile" name="attachment" style="display: none;"></div>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group"><label>Ваше имя *</label><input type="text" id="name" required></div>
+            <div class="form-group"><label>Телефон *</label><input type="tel" id="phone" required></div>
+            <div class="form-group"><label>Email *</label><input type="email" id="email" required></div>
+            <div class="form-group"><label>Тип проекта</label><select id="projectType"><option value="Сайт-визитка">Сайт-визитка</option><option value="Лендинг">Лендинг</option><option value="Интернет-магазин">Интернет-магазин</option><option value="Продающие тексты">Продающие тексты</option><option value="Сайт с DeepSeek">Сайт с DeepSeek</option><option value="Другое">Другое</option></select></div>
+            <div class="form-group"><label>Бюджет проекта</label><select id="budget"><option value="до 30 000 ₽">до 30 000 ₽</option><option value="30-50 000 ₽">30-50 000 ₽</option><option value="50-100 000 ₽">50-100 000 ₽</option><option value="более 100 000 ₽">более 100 000 ₽</option></select></div>
+            <div class="form-group"><label>Сроки</label><select id="deadlineSelect"><option value="срочно (до 3 дней)">срочно (до 3 дней)</option><option value="стандартно (до 7 дней)">стандартно (до 7 дней)</option><option value="не срочно (до 14 дней)">не срочно (до 14 дней)</option></select></div>
+            <div class="checkbox-group"><input type="checkbox" id="needTexts"><label for="needTexts">Нужны продающие тексты (от 500 ₽)</label></div>
+            <div class="form-group" style="grid-column: span 1;"><label>Комментарий</label><textarea id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea></div>
+            <div class="file-upload" id="fileUpload"><i class="fas fa-cloud-upload-alt"></i><p>Прикрепить техническое задание или макет</p><input type="file" id="taskFile" style="display: none;"></div>
             <div id="fileName" style="margin-top: 10px; color: var(--primary-blue); text-align: center; grid-column: span 2;"></div>
             <div class="checkbox-group"><input type="checkbox" id="agreement" required><label for="agreement">Согласие на обработку персональных данных</label></div>
             <button type="submit" class="btn btn-blue" style="grid-column: span 2;"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
@@ -463,6 +459,11 @@
 <div class="notification" id="notification"></div>
 
 <script>
+    // ========== TELEGRAM НАСТРОЙКИ (ГОТОВЫЙ БОТ) ==========
+    const TELEGRAM_BOT_TOKEN = '7808838517:AAGVcI9Fj7lUJQD_HG0HHgLMCvvBBLp9aN8';
+    const TELEGRAM_CHAT_ID = '5933076648';
+    // =====================================================
+
     // Анимация статистики
     const stats = document.querySelectorAll('.stat-number');
     stats.forEach(stat => {
@@ -504,7 +505,7 @@
         });
     }
 
-    // Уведомление об отправке
+    // ОТПРАВКА В TELEGRAM
     const contactForm = document.getElementById('contactForm');
     const notif = document.getElementById('notification');
     function showMsg(msg, isError = false) {
@@ -512,22 +513,70 @@
         notif.style.background = isError ? '#e74c3c' : 'linear-gradient(135deg, #ffd700, #ffed4e)';
         notif.style.color = isError ? 'white' : '#0a254e';
         notif.classList.add('show');
-        setTimeout(() => notif.classList.remove('show'), 4000);
+        setTimeout(() => notif.classList.remove('show'), 5000);
     }
+
+    async function sendToTelegram(message) {
+        const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: TELEGRAM_CHAT_ID,
+                    text: message,
+                    parse_mode: 'HTML'
+                })
+            });
+            return response.ok;
+        } catch (error) {
+            console.error('Telegram error:', error);
+            return false;
+        }
+    }
+
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const email = document.getElementById('email').value;
+            const projectType = document.getElementById('projectType').value;
+            const budget = document.getElementById('budget').value;
+            const deadline = document.getElementById('deadlineSelect').value;
+            const needTexts = document.getElementById('needTexts').checked ? '✅ Да' : '❌ Нет';
+            const comment = document.getElementById('comment').value || 'Нет комментария';
+            
             if (!name || !phone || !email) {
                 showMsg('❌ Заполните имя, телефон и email!', true);
                 return;
             }
-            showMsg('✅ Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
-            setTimeout(() => {
-                e.target.submit();
-            }, 1500);
+            
+            const message = `
+🚀 <b>НОВАЯ ЗАЯВКА С САЙТА ALEXSA</b>
+    
+👤 <b>Имя:</b> ${name}
+📞 <b>Телефон:</b> ${phone}
+📧 <b>Email:</b> ${email}
+📌 <b>Тип проекта:</b> ${projectType}
+💰 <b>Бюджет:</b> ${budget}
+⏱ <b>Сроки:</b> ${deadline}
+✍️ <b>Продающие тексты:</b> ${needTexts}
+💬 <b>Комментарий:</b> ${comment}
+⏰ <b>Время:</b> ${new Date().toLocaleString()}
+            `;
+            
+            showMsg('⏳ Отправка заявки...');
+            const success = await sendToTelegram(message);
+            
+            if (success) {
+                showMsg('✅ Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
+                contactForm.reset();
+                if (fileName) fileName.innerHTML = '';
+            } else {
+                showMsg('❌ Ошибка отправки. Попробуйте позвонить: 8-911-287-06-94', true);
+            }
         });
     }
 </script>
