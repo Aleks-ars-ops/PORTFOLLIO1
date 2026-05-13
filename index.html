@@ -2,17 +2,19 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>ALEXSA — Веб-разработчик | Создание сайтов под ключ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>ALEXSA-Веб-Разработчик</title>
+
+    <meta name="description" content="Профессиональная разработка сайтов под ключ с использованием DeepSeek. 5 лет опыта, 45 проектов. Бесплатная техподдержка 4 дня.">
+    <meta name="keywords" content="веб разработчик, создание сайтов, заказать сайт, лендинг под ключ, интернет магазин под ключ">
+    <meta name="author" content="ALEXSA-Веб-Разработчик">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         :root {
             --primary-blue: #4169E1;
             --primary-red: #FF4444;
@@ -22,17 +24,29 @@
             --light: #F7F9FC;
             --text-dark: #2C3E50;
             --card-bg: #FFFFFF;
-            --card-shadow: 0 15px 35px rgba(65, 105, 225, 0.1);
+            --card-shadow: 0 15px 35px rgba(65, 105, 225, 0.2);
             --transition: all 0.3s ease;
             --border-radius: 20px;
             --gradient-blue: linear-gradient(135deg, #4169E1, #6495ED);
+            --gradient-rainbow: linear-gradient(135deg, #4169E1, #FF4444, #FFD700, #32CD32);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
-            background: var(--light);
+            background: linear-gradient(135deg, #f0f8ff, #fff0f0);
             overflow-x: hidden;
         }
 
@@ -84,14 +98,14 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            padding: 14px 32px;
+            padding: 12px 28px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
             transition: var(--transition);
             cursor: pointer;
             border: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .btn-primary {
@@ -117,7 +131,7 @@
             transform: translateY(-3px);
         }
 
-        /* Шапка */
+        /* Навигация */
         .navbar {
             background: white;
             padding: 15px 0;
@@ -136,9 +150,9 @@
         }
 
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            background: var(--gradient-blue);
+            background: var(--gradient-rainbow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
@@ -176,6 +190,9 @@
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 20px;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
@@ -212,13 +229,33 @@
             font-weight: 800;
         }
 
-        /* ТАБЛИЦА УСЛУГ */
+        /* Технологии */
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: var(--transition);
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Таблица услуг */
         .services-table-wrapper {
             background: white;
             border-radius: 24px;
             box-shadow: var(--card-shadow);
             overflow-x: auto;
-            margin-top: 20px;
         }
 
         table {
@@ -259,7 +296,7 @@
             color: var(--primary-blue);
         }
 
-        /* КАЛЬКУЛЯТОР */
+        /* Калькулятор */
         .calculator {
             background: white;
             border-radius: 24px;
@@ -341,7 +378,9 @@
 
         .advantage-card i {
             font-size: 2.5rem;
-            color: var(--primary-blue);
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 15px;
         }
 
@@ -422,6 +461,9 @@
             .calculator-grid {
                 grid-template-columns: 1fr;
             }
+            .nav-menu {
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -444,7 +486,7 @@
     <div class="container">
         <div class="hero-content">
             <h1>ALEXSA<br>Веб-разработчик</h1>
-            <p>Создаю сайты под ключ, пишу продающие тексты, обрабатываю фото, делаю нейрофотосессии, презентации и карточки для маркетплейсов. Работаю по всей России.</p>
+            <p>Создаю сайты под ключ, пишу продающие тексты, обрабатываю фото, делаю нейрофотосессии, презентации и карточки для маркетплейсов. Работаю по всей России. Использую возможности DeepSeek для создания уникального контента.</p>
             <div class="hero-buttons">
                 <a href="#services" class="btn btn-primary"><i class="fas fa-list"></i> Все услуги</a>
                 <a href="#contact" class="btn btn-secondary"><i class="fas fa-comments"></i> Связаться</a>
@@ -454,6 +496,12 @@
             <div class="stat-card"><div class="stat-number">5 лет</div><div>опыта</div></div>
             <div class="stat-card"><div class="stat-number">45+</div><div>проектов</div></div>
             <div class="stat-card"><div class="stat-number">65+</div><div>клиентов</div></div>
+        </div>
+        <div class="tech-stack">
+            <i class="fab fa-html5 tech-icon" title="HTML5"></i>
+            <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
+            <i class="fab fa-js tech-icon" title="JavaScript"></i>
+            <i class="fas fa-robot tech-icon" title="DeepSeek"></i>
         </div>
     </div>
 </section>
@@ -527,16 +575,16 @@
                 <div class="calc-group">
                     <label>Тип услуги</label>
                     <select id="serviceType">
-                        <option value="photo1">1 фото (обработка)</option>
-                        <option value="photo5">5 фото (обработка)</option>
-                        <option value="photo15">15 фото (обработка)</option>
-                        <option value="text1">Текст для 1 канала</option>
-                        <option value="text4">Тексты на 4 канала</option>
-                        <option value="post1">1 пост (текст+визуал)</option>
-                        <option value="post5">5 постов пакетом</option>
-                        <option value="neuro1">1 нейрофото</option>
-                        <option value="site">Сайт-визитка</option>
-                        <option value="sitekey">Сайт под ключ</option>
+                        <option value="300">1 фото (обработка)</option>
+                        <option value="1200">5 фото (обработка)</option>
+                        <option value="3000">15 фото (обработка)</option>
+                        <option value="1000">Текст для 1 канала</option>
+                        <option value="2500">Тексты на 4 канала</option>
+                        <option value="1500">1 пост (текст+визуал)</option>
+                        <option value="6000">5 постов пакетом</option>
+                        <option value="400">1 нейрофото</option>
+                        <option value="25000">Сайт-визитка</option>
+                        <option value="42000">Сайт под ключ</option>
                     </select>
                 </div>
                 <div class="calc-group">
@@ -554,7 +602,7 @@
             </div>
             <div class="calc-total">
                 <h4>Примерная стоимость</h4>
-                <div class="total-price" id="totalPrice">0 ₽</div>
+                <div class="total-price" id="totalPrice">300 ₽</div>
                 <p>Точная стоимость после обсуждения деталей</p>
             </div>
         </div>
@@ -601,14 +649,6 @@
 </footer>
 
 <script>
-    const prices = {
-        photo1: 300, photo5: 1200, photo15: 3000,
-        text1: 1000, text4: 2500,
-        post1: 1500, post5: 6000,
-        neuro1: 400,
-        site: 25000, sitekey: 42000
-    };
-
     const serviceSelect = document.getElementById('serviceType');
     const quantityInput = document.getElementById('quantity');
     const quantityValue = document.getElementById('quantityValue');
@@ -616,7 +656,7 @@
     const totalSpan = document.getElementById('totalPrice');
 
     function updateCalculator() {
-        let basePrice = prices[serviceSelect.value] || 0;
+        let basePrice = parseInt(serviceSelect.value) || 0;
         let quantity = parseInt(quantityInput.value);
         let urgent = parseFloat(urgentSelect.value);
         let total = basePrice * quantity * urgent;
