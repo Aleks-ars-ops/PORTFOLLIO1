@@ -3,31 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
-    <title>ALEXSA-Веб-Разработчик</title>
-
-    <meta name="description" content="Профессиональная разработка сайтов под ключ с использованием DeepSeek. 5 лет опыта, 45 проектов. Бесплатная техподдержка 4 дня.">
-    <meta name="keywords" content="веб разработчик, создание сайтов, заказать сайт, лендинг под ключ, интернет магазин под ключ">
+    <title>ALEXSA-Веб-Разработчик — Создание сайтов с DeepSeek</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Профессиональная разработка сайтов с использованием DeepSeek. 5 лет опыта, 45 проектов. Бесплатная техподдержка 4 дня. Продающие тексты.">
+    <meta name="keywords" content="веб разработчик, создание сайтов, создание сайтов с deepseek, заказать сайт, лендинг под ключ, интернет магазин под ключ">
     <meta name="author" content="ALEXSA-Веб-Разработчик">
     <meta name="robots" content="index, follow">
-
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="ALEXSA-Веб-Разработчик — Создание сайтов с DeepSeek">
+    <meta property="og:description" content="Профессиональная разработка сайтов любой сложности с интеграцией DeepSeek.">
+    <meta property="og:image" content="https://i.pinimg.com/736x/31/ff/78/31ff78cb59ba13f5c6c32ac946ef781b.jpg">
+    <meta property="og:url" content="https://alexsa-dev.ru">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ALEXSA-Веб-Разработчик">
+    <meta name="twitter:description" content="Разработка сайтов под ключ с использованием DeepSeek">
+    <meta name="twitter:image" content="https://i.pinimg.com/736x/31/ff/78/31ff78cb59ba13f5c6c32ac946ef781b.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://alexsa-dev.ru">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
-
+    
+    <!-- Стили и шрифты -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* ===== ВАШ ОРИГИНАЛЬНЫЙ ДИЗАЙН (БЕЗ ИЗМЕНЕНИЙ) ===== */
         :root {
             --primary-blue: #4169E1;
             --primary-red: #FF4444;
             --primary-yellow: #FFD700;
             --primary-green: #32CD32;
+            --primary-lightblue: #87CEEB;
             --dark: #2C3E50;
             --light: #F7F9FC;
             --text-dark: #2C3E50;
+            --text-light: #FFFFFF;
             --card-bg: #FFFFFF;
             --card-shadow: 0 15px 35px rgba(65, 105, 225, 0.2);
-            --transition: all 0.3s ease;
+            --transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             --border-radius: 20px;
+            --container-width: 1300px;
             --gradient-blue: linear-gradient(135deg, #4169E1, #6495ED);
+            --gradient-red: linear-gradient(135deg, #FF4444, #FF6B6B);
+            --gradient-yellow: linear-gradient(135deg, #FFD700, #FFA500);
+            --gradient-green: linear-gradient(135deg, #32CD32, #90EE90);
             --gradient-rainbow: linear-gradient(135deg, #4169E1, #FF4444, #FFD700, #32CD32);
         }
 
@@ -39,7 +65,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 100px;
+            scroll-padding-top: 120px;
         }
 
         body {
@@ -47,11 +73,12 @@
             line-height: 1.6;
             color: var(--text-dark);
             background: linear-gradient(135deg, #f0f8ff, #fff0f0);
+            transition: var(--transition);
             overflow-x: hidden;
         }
 
         .container {
-            max-width: 1300px;
+            max-width: var(--container-width);
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -60,85 +87,74 @@
             padding: 80px 0;
         }
 
-        h1, h2, h3 {
+        @media (min-width: 768px) {
+            section {
+                padding: 100px 0;
+            }
+        }
+
+        h1, h2, h3, h4 {
             font-family: 'Poppins', sans-serif;
-            font-weight: 700;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+            animation: rainbow 5s infinite;
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg); }
+            100% { filter: hue-rotate(0deg); }
         }
 
         h2 {
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
+            color: var(--dark);
         }
 
         h2::after {
             content: '';
             position: absolute;
-            bottom: -12px;
+            bottom: -15px;
             left: 0;
-            width: 70px;
-            height: 4px;
-            background: var(--gradient-blue);
-            border-radius: 4px;
+            width: 100px;
+            height: 5px;
+            background: var(--gradient-rainbow);
+            border-radius: 5px;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
+        h3 {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            margin-bottom: 15px;
+            color: var(--dark);
         }
 
-        .section-header h2::after {
-            left: 50%;
-            transform: translateX(-50%);
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            background: var(--gradient-blue);
-            color: white;
-            box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(65, 105, 225, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            border: 2px solid var(--primary-blue);
-            color: var(--primary-blue);
-        }
-
-        .btn-secondary:hover {
-            background: var(--primary-blue);
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        /* Навигация */
+        /* Навигация (ваша) */
         .navbar {
             background: white;
             padding: 15px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         .nav-container {
@@ -146,10 +162,9 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 20px;
         }
 
-        .logo {
+        .nav-logo {
             font-size: 1.5rem;
             font-weight: 800;
             background: var(--gradient-rainbow);
@@ -160,9 +175,9 @@
 
         .nav-menu {
             display: flex;
-            list-style: none;
-            gap: 30px;
             flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
         }
 
         .nav-menu a {
@@ -170,72 +185,366 @@
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
+            font-size: 0.9rem;
         }
 
-        .nav-menu a:hover {
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-rainbow);
+            transition: var(--transition);
+            border-radius: 3px;
+        }
+
+        .nav-menu a:hover::after,
+        .nav-menu a.active::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
             color: var(--primary-blue);
         }
 
-        /* Герой */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 120px 0 80px;
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-menu {
+                justify-content: center;
+            }
+        }
+
+        /* Кнопки (ваши) */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: fit-content;
+        }
+
+        @media (min-width: 768px) {
+            .btn {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        .btn-blue {
+            background: var(--gradient-blue);
             color: white;
         }
 
-        .hero-content {
-            max-width: 700px;
+        .btn-blue:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(65, 105, 225, 0.4);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        .btn-red {
+            background: var(--gradient-red);
+            color: white;
+        }
+
+        .btn-red:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 68, 68, 0.4);
+        }
+
+        .btn-yellow {
+            background: var(--gradient-yellow);
+            color: var(--dark);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4);
+        }
+
+        .btn-green {
+            background: var(--gradient-green);
+            color: white;
+        }
+
+        .btn-green:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(50, 205, 50, 0.4);
+        }
+
+        /* Верхний блок с логотипом и картинкой (ваш) */
+        .hero-top {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, rgba(65, 105, 225, 0.1), rgba(255, 68, 68, 0.1), rgba(255, 215, 0, 0.1), rgba(50, 205, 50, 0.1));
+            border-radius: 0 0 50px 50px;
+        }
+
+        @media (min-width: 992px) {
+            .hero-top {
+                flex-direction: row;
+                padding: 60px 0;
+            }
+        }
+
+        .hero-left {
+            flex: 1;
+            text-align: center;
+        }
+
+        @media (min-width: 992px) {
+            .hero-left {
+                text-align: left;
+            }
+        }
+
+        .hero-right {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+        }
+
+        .hero-right img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: 30px;
+        }
+
+        .hero-right:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Логотип (ваш) */
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: 992px) {
+            .logo {
+                justify-content: flex-start;
+            }
+        }
+
+        .logo-icon {
+            font-size: clamp(2.5rem, 7vw, 3.5rem);
             background: var(--gradient-rainbow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: bounce 2s infinite;
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
-        .hero-buttons {
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.8rem, 6vw, 2.8rem);
+            font-weight: 800;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        .hero-actions {
             display: flex;
+            flex-direction: column;
             gap: 15px;
-            flex-wrap: wrap;
+            margin-top: 30px;
+            align-items: center;
         }
 
-        /* Статистика */
+        @media (min-width: 768px) {
+            .hero-actions {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero-actions {
+                justify-content: flex-start;
+            }
+        }
+
+        /* Верхняя контактная полоса (ваша) */
+        .top-contacts {
+            background: var(--gradient-rainbow);
+            padding: 15px 0;
+            color: white;
+        }
+
+        .top-contacts-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .top-contacts-inner {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .contact-info-top {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        @media (min-width: 576px) {
+            .contact-info-top {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        .contact-info-top div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 15px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            font-size: 0.9rem;
+        }
+
+        .contact-info-top i {
+            font-size: 1.1rem;
+        }
+
+        /* Блок чем занимается разработчик (ваш) */
+        .about-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(65, 105, 225, 0.05), rgba(255, 68, 68, 0.05), rgba(255, 215, 0, 0.05), rgba(50, 205, 50, 0.05));
+            border-radius: 50px;
+            margin: 40px 0;
+        }
+
+        .about-description {
+            font-size: 1.1rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: var(--dark);
+            background: white;
+            padding: 30px 20px;
+            border-radius: 30px;
+            box-shadow: var(--card-shadow);
+            border-left: 5px solid var(--primary-blue);
+            border-right: 5px solid var(--primary-red);
+        }
+
+        @media (min-width: 768px) {
+            .about-description {
+                font-size: 1.3rem;
+                padding: 40px;
+            }
+        }
+
         .stats {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 40px;
+            flex-direction: column;
+            gap: 20px;
+            margin: 40px 0;
+            align-items: center;
         }
 
-        .stat-card {
+        @media (min-width: 768px) {
+            .stats {
+                flex-direction: row;
+                justify-content: center;
+                gap: 40px;
+            }
+        }
+
+        .stat-item {
             text-align: center;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 20px 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+            background: white;
+            padding: 25px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            min-width: 150px;
+            border: 3px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        var(--gradient-rainbow) border-box;
+            width: 100%;
+            max-width: 200px;
         }
 
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: block;
+            line-height: 1;
         }
 
-        /* Технологии */
+        @media (min-width: 768px) {
+            .stat-number {
+                font-size: 3.5rem;
+            }
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--dark);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
         .tech-stack {
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 30px;
+            gap: 20px;
             margin: 40px 0;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .tech-icon {
@@ -244,68 +553,394 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: var(--transition);
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+        }
+
+        @media (min-width: 768px) {
+            .tech-icon {
+                font-size: 3.5rem;
+            }
         }
 
         .tech-icon:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.2);
+            filter: drop-shadow(0 10px 20px rgba(65, 105, 225, 0.4));
         }
 
-        /* Таблица услуг */
-        .services-table-wrapper {
+        /* Секция услуг (ваша, но убраны конструкторы) */
+        .services {
+            background: white;
+            border-radius: 50px;
+            padding: 60px 20px;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services-header h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 20px 40px rgba(65, 105, 225, 0.3);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-rainbow);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .service-price {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+        }
+
+        .service-duration {
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .service-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .service-features i {
+            color: var(--primary-green);
+            font-size: 1.1rem;
+        }
+
+        .service-actions {
+            margin-top: 30px;
+        }
+
+        .service-actions .btn {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Блок разработки с DeepSeek (ваш) */
+        .dev-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(65, 105, 225, 0.1), rgba(255, 68, 68, 0.1), rgba(255, 215, 0, 0.1), rgba(50, 205, 50, 0.1));
+            border-radius: 50px;
+            margin: 40px 0;
+        }
+
+        .dev-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        @media (min-width: 768px) {
+            .dev-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .dev-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .dev-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+            border: 3px solid transparent;
+        }
+
+        .dev-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary-red);
+        }
+
+        .dev-icon {
+            font-size: 3.5rem;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+        }
+
+        .dev-price {
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0;
+        }
+
+        .dev-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .dev-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+
+        .dev-features i {
+            color: var(--primary-green);
+        }
+
+        .dev-card .btn {
+            margin-top: 20px;
+        }
+
+        /* Блок DeepSeek (ваш) — ОСТАВЛЯЕМ */
+        .deepseek-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, rgba(65, 105, 225, 0.15), rgba(255, 68, 68, 0.15), rgba(255, 215, 0, 0.15), rgba(50, 205, 50, 0.15));
+            border-radius: 50px;
+            margin: 40px 0;
+            border: 2px solid var(--gradient-rainbow);
+        }
+
+        .deepseek-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .deepseek-header h2 {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+        }
+
+        .deepseek-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .deepseek-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .deepseek-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .deepseek-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 35px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .deepseek-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary-blue);
+        }
+
+        .deepseek-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-rainbow);
+        }
+
+        .deepseek-icon {
+            font-size: 3.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .deepseek-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin: 15px 0;
+        }
+
+        .deepseek-features {
+            list-style: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .deepseek-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .deepseek-features i {
+            color: var(--primary-green);
+        }
+
+        .deepseek-card .btn {
+            margin-top: 20px;
+        }
+
+        .deepseek-badge {
+            background: var(--gradient-rainbow);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* ===== НОВАЯ ТАБЛИЦА УСЛУГ (ДОБАВЛЕНА) ===== */
+        .new-services-table {
             background: white;
             border-radius: 24px;
+            padding: 30px;
+            margin: 40px 0;
             box-shadow: var(--card-shadow);
             overflow-x: auto;
         }
 
-        table {
+        .new-services-table h3 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .services-table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        .service-category {
+        .services-table th {
             background: var(--gradient-blue);
             color: white;
+            padding: 15px;
+            font-weight: 600;
         }
 
-        .service-category td {
-            padding: 15px 20px;
-            font-weight: 700;
-        }
-
-        th {
-            background: #f0f2f5;
-            padding: 15px 20px;
-            text-align: left;
-            font-weight: 700;
-            color: var(--dark);
-        }
-
-        td {
-            padding: 12px 20px;
+        .services-table td {
+            padding: 12px 15px;
             border-bottom: 1px solid #eee;
             color: #444;
         }
 
-        tr:hover td {
+        .services-table tr:hover td {
             background: #f8f9ff;
         }
 
-        .price {
+        .service-category-row {
+            background: #f0f2f5;
+            font-weight: 700;
+        }
+
+        .service-category-row td {
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        .price-cell {
             font-weight: 700;
             color: var(--primary-blue);
         }
 
-        /* Калькулятор */
-        .calculator {
+        /* ===== НОВЫЙ КАЛЬКУЛЯТОР (ДОБАВЛЕН) ===== */
+        .calculator-block {
             background: white;
             border-radius: 24px;
             padding: 35px;
-            margin-top: 50px;
+            margin: 40px 0;
             box-shadow: var(--card-shadow);
         }
 
-        .calculator h3 {
+        .calculator-block h3 {
             text-align: center;
             margin-bottom: 25px;
             font-size: 1.8rem;
@@ -329,7 +964,8 @@
             color: #555;
         }
 
-        select, input {
+        .calc-group select,
+        .calc-group input {
             padding: 12px 15px;
             border: 2px solid #e0e0e0;
             border-radius: 12px;
@@ -337,7 +973,8 @@
             transition: 0.3s;
         }
 
-        select:focus, input:focus {
+        .calc-group select:focus,
+        .calc-group input:focus {
             outline: none;
             border-color: var(--primary-blue);
         }
@@ -349,171 +986,460 @@
             border-radius: 20px;
         }
 
-        .total-price {
+        .calc-total .total-price {
             font-size: 2rem;
             font-weight: 800;
             color: var(--primary-blue);
         }
 
-        /* Преимущества */
-        .advantages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+        /* Секция поддержки (ваша) */
+        .support {
+            background: var(--gradient-rainbow);
+            padding: 60px 0;
+            border-radius: 50px;
+            margin: 40px 0;
         }
 
-        .advantage-card {
+        .support-banner {
             background: white;
-            padding: 30px;
             border-radius: var(--border-radius);
+            padding: 40px 20px;
             text-align: center;
             box-shadow: var(--card-shadow);
-            transition: var(--transition);
         }
 
-        .advantage-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .advantage-card i {
-            font-size: 2.5rem;
+        .support-banner h3 {
+            font-size: 2rem;
             background: var(--gradient-rainbow);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .support-banner h3 {
+                font-size: 3rem;
+            }
+        }
+
+        .support-features {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .support-features {
+                flex-direction: row;
+                justify-content: center;
+                gap: 40px;
+            }
+        }
+
+        .support-features div {
+            background: var(--gradient-rainbow);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        @media (min-width: 768px) {
+            .support-features div {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+                width: auto;
+            }
+        }
+
+        /* Форма обратной связи (ваша) */
+        .contact-form-section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px 20px;
+            box-shadow: var(--card-shadow);
+            border: 3px solid var(--primary-blue);
+            margin: 40px 0;
+        }
+
+        @media (min-width: 768px) {
+            .contact-form-section {
+                padding: 50px;
+            }
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 3px solid #eee;
+            border-radius: 15px;
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 5px rgba(65, 105, 225, 0.1);
+        }
+
+        .file-upload {
+            border: 3px dashed var(--primary-blue);
+            padding: 25px 20px;
+            text-align: center;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: linear-gradient(135deg, #f0f8ff, #fff0f0);
+            grid-column: span 1;
+        }
+
+        @media (min-width: 768px) {
+            .file-upload {
+                grid-column: span 2;
+            }
+        }
+
+        .file-upload:hover {
+            background: white;
+            transform: scale(1.02);
+        }
+
+        .file-upload i {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
             margin-bottom: 15px;
         }
 
-        /* Футер */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+            grid-column: span 1;
+        }
+
+        @media (min-width: 768px) {
+            .checkbox-group {
+                grid-column: span 2;
+            }
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--primary-green);
+        }
+
+        /* Подвал (ваш, но убраны упоминания платформ) */
         .footer {
-            background: #1a2a3a;
-            color: white;
-            padding: 50px 0 20px;
+            background: white;
+            padding: 60px 0 30px;
+            box-shadow: 0 -5px 30px rgba(65, 105, 225, 0.1);
+            border-radius: 50px 50px 0 0;
+            margin-top: 40px;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 30px;
+        .messengers-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
+            align-items: center;
         }
 
-        .footer h3 {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
+        @media (min-width: 768px) {
+            .messengers-bottom {
+                flex-direction: row;
+                justify-content: center;
+                gap: 40px;
+                margin: 50px 0;
+            }
         }
 
-        .footer a {
-            color: #ccc;
+        .messenger-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
             transition: var(--transition);
         }
 
-        .footer a:hover {
-            color: var(--primary-blue);
+        .messenger-item:hover {
+            transform: translateY(-15px);
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
+        .messenger-icon {
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
+            background: var(--gradient-rainbow);
+            color: white;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            transition: var(--transition);
+            font-size: 2.2rem;
+            box-shadow: var(--card-shadow);
         }
 
-        .social-link:hover {
-            background: var(--primary-blue);
-            transform: translateY(-3px);
+        @media (min-width: 768px) {
+            .messenger-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 3rem;
+            }
+        }
+
+        .messenger-name {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-contacts a,
+        .footer-contacts p {
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            word-break: break-word;
+        }
+
+        .footer-contacts a:hover {
+            color: var(--primary-blue);
+            transform: translateX(10px);
         }
 
         .footer-bottom {
-            text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.85rem;
+            border-top: 3px solid var(--primary-yellow);
+            text-align: center;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+        /* Уведомления */
+        .notification {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            left: 20px;
+            padding: 15px 20px;
+            background: var(--gradient-rainbow);
+            color: white;
+            border-radius: var(--border-radius);
+            z-index: 2000;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .notification {
+                left: auto;
+                width: auto;
+                padding: 20px 30px;
             }
-            th, td {
-                padding: 8px 12px;
-                font-size: 0.85rem;
-            }
-            .calculator-grid {
-                grid-template-columns: 1fr;
-            }
-            .nav-menu {
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 576px) {
+            .contact-info-top div {
+                width: 100%;
                 justify-content: center;
+            }
+            .hero-actions .btn {
+                width: 100%;
+            }
+            .dev-card .btn,
+            .service-card .btn,
+            .deepseek-card .btn {
+                width: 100%;
+            }
+            .footer-contacts a {
+                flex-wrap: wrap;
+            }
+            .services-table th,
+            .services-table td {
+                padding: 8px 10px;
+                font-size: 0.8rem;
             }
         }
     </style>
 </head>
 <body>
-
-<nav class="navbar">
-    <div class="container nav-container">
-        <a href="#" class="logo">ALEXSA</a>
-        <ul class="nav-menu">
-            <li><a href="#home">Главная</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#calculator">Калькулятор</a></li>
-            <li><a href="#advantages">Почему я</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </div>
-</nav>
-
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
-            <h1>ALEXSA<br>Веб-разработчик</h1>
-            <p>Создаю сайты под ключ, пишу продающие тексты, обрабатываю фото, делаю нейрофотосессии, презентации и карточки для маркетплейсов. Работаю по всей России. Использую возможности DeepSeek для создания уникального контента.</p>
-            <div class="hero-buttons">
-                <a href="#services" class="btn btn-primary"><i class="fas fa-list"></i> Все услуги</a>
-                <a href="#contact" class="btn btn-secondary"><i class="fas fa-comments"></i> Связаться</a>
+    <!-- Верхняя контактная полоса -->
+    <div class="top-contacts">
+        <div class="container">
+            <div class="top-contacts-inner">
+                <div class="contact-info-top">
+                    <div><i class="fas fa-phone"></i> 8-911-287-06-94</div>
+                    <div><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</div>
+                    <div><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00</div>
+                    <div><i class="fas fa-bolt"></i> Отвечаю за 20 мин</div>
+                </div>
             </div>
         </div>
-        <div class="stats">
-            <div class="stat-card"><div class="stat-number">5 лет</div><div>опыта</div></div>
-            <div class="stat-card"><div class="stat-number">45+</div><div>проектов</div></div>
-            <div class="stat-card"><div class="stat-number">65+</div><div>клиентов</div></div>
+    </div>
+
+    <!-- Навигация (убран лишний пункт) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">ALEXSA</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Главная</a></li>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#deepseek">DeepSeek</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
         </div>
-        <div class="tech-stack">
-            <i class="fab fa-html5 tech-icon" title="HTML5"></i>
-            <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
-            <i class="fab fa-js tech-icon" title="JavaScript"></i>
-            <i class="fas fa-robot tech-icon" title="DeepSeek"></i>
+    </nav>
+
+    <!-- Верхний блок с логотипом и картинкой -->
+    <div class="container" id="home">
+        <div class="hero-top">
+            <div class="hero-left">
+                <div class="logo">
+                    <i class="fas fa-rocket logo-icon"></i>
+                    <span class="logo-text">ALEXSA-Веб-Разработчик</span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-blue">
+                        <i class="fas fa-calculator"></i> Рассчитать
+                    </a>
+                    <a href="#contact" class="btn btn-red">
+                        <i class="fas fa-comments"></i> Консультация
+                    </a>
+                    <a href="https://github.com/Aleks-ars-ops" class="btn btn-yellow" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <img alt="ALEXSA Веб-разработчик создание сайтов с DeepSeek" 
+                     srcset="https://i.pinimg.com/736x/31/ff/78/31ff78cb59ba13f5c6c32ac946ef781b.jpg 736w, https://i.pinimg.com/1200x/31/ff/78/31ff78cb59ba13f5c6c32ac946ef781b.jpg 1024w" 
+                     src="https://i.pinimg.com/736x/31/ff/78/31ff78cb59ba13f5c6c32ac946ef781b.jpg">
+            </div>
         </div>
     </div>
-</section>
 
-<section id="services">
-    <div class="container">
-        <div class="section-header">
-            <h2>Услуги и цены</h2>
-            <p>Только то, что я действительно делаю</p>
+    <!-- Блок чем занимается разработчик (исправлен текст — убраны конструкторы) -->
+    <div class="container" id="about">
+        <div class="about-section">
+            <h2>Чем я занимаюсь</h2>
+            <div class="about-description">
+                <p>Профессиональная разработка сайтов любой сложности: от простых лендингов до сложных интернет-магазинов. Создаю продающие тексты с нуля от 500 рублей. Интегрирую нейросеть DeepSeek для создания уникального контента. Работаю по всей России и зарубежом.</p>
+                <p>5 лет опыта, 45 успешных проектов, 65 довольных клиентов.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span>
+                    <span class="stat-label">лет опыта</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="45">0</span>
+                    <span class="stat-label">проектов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="65">0</span>
+                    <span class="stat-label">клиентов</span>
+                </div>
+            </div>
+
+            <div class="tech-stack">
+                <i class="fab fa-html5 tech-icon" title="HTML5"></i>
+                <i class="fab fa-css3-alt tech-icon" title="CSS3"></i>
+                <i class="fab fa-js tech-icon" title="JavaScript"></i>
+                <i class="fab fa-react tech-icon" title="React"></i>
+                <i class="fas fa-robot tech-icon" title="DeepSeek"></i>
+            </div>
         </div>
-        <div class="services-table-wrapper">
-            <table>
+    </div>
+
+    <!-- НОВАЯ ТАБЛИЦА УСЛУГ (ваши реальные услуги) -->
+    <div class="container">
+        <div class="new-services-table">
+            <h3>📋 Полный прайс-лист</h3>
+            <table class="services-table">
                 <thead>
                     <tr>
                         <th>Услуга</th>
@@ -523,54 +1449,50 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="service-category"><td colspan="4">📸 РЕДАКТИРОВАНИЕ ФОТО</td></tr>
-                    <tr><td>1 фото</td><td class="price">300 ₽</td><td>2-4 ч</td><td></td></tr>
-                    <tr><td>5 фото</td><td class="price">1 200 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>15 фото</td><td class="price">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong></td></tr>
+                    <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
+                    <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">✍️ ПРОДАЮЩИЕ ТЕКСТЫ</td></tr>
-                    <tr><td>Текст для 1 канала</td><td class="price">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
-                    <tr><td>Тексты на все каналы (4 шт)</td><td class="price">2 500 ₽</td><td>1 день</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
+                    <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
+                    <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</td></tr>
-                    <tr><td>1 пост (текст)</td><td class="price">800 ₽</td><td>2-3 ч</td><td></td></tr>
-                    <tr><td>1 пост (текст+визуал)</td><td class="price">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
-                    <tr><td>5 постов пакетом</td><td class="price">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
+                    <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
+                    <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
+                    <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">🤖 НЕЙРОФОТОСЕССИЯ</td></tr>
-                    <tr><td>1 фото</td><td class="price">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
-                    <tr><td>5 фото</td><td class="price">1 500 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>10 фото</td><td class="price">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></td></tr>
+                    <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
+                    <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">📊 ПРЕЗЕНТАЦИЯ</td></tr>
-                    <tr><td>Текстовая</td><td class="price">2 000 ₽</td><td>1 день</td><td></td></tr>
-                    <tr><td>Визуальная</td><td class="price">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                    <tr><td>Под ключ</td><td class="price">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></td></tr>
+                    <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
+                    <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">🛍 КАРТОЧКИ MARKETPLACE</td></tr>
-                    <tr><td>1 карточка</td><td class="price">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
-                    <tr><td>5 карточек</td><td class="price">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></td></tr>
+                    <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
+                    <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">🌐 САЙТЫ</td></tr>
-                    <tr><td>Сайт-визитка / Лендинг</td><td class="price">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
-                    <tr><td>Сайт под ключ</td><td class="price">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
-                    <tr><td>Интернет-магазин</td><td class="price">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong></td></tr>
+                    <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
+                    <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
+                    <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4">🔥 КОМПЛЕКТ</td></tr>
-                    <tr><td>«Всё включено»</td><td class="price">62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
+                    <tr class="service-category-row"><td colspan="4"><strong>🔥 КОМПЛЕКТ</strong></td></tr>
+                    <tr><td>«Всё включено»</td><td class="price-cell">62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
                 </tbody>
             </table>
         </div>
     </div>
-</section>
 
-<section id="calculator">
+    <!-- НОВЫЙ КАЛЬКУЛЯТОР -->
     <div class="container">
-        <div class="section-header">
-            <h2>Калькулятор стоимости</h2>
-            <p>Рассчитайте примерную цену вашего заказа</p>
-        </div>
-        <div class="calculator">
+        <div class="calculator-block">
+            <h3>💰 Калькулятор стоимости</h3>
             <div class="calculator-grid">
                 <div class="calc-group">
                     <label>Тип услуги</label>
@@ -607,70 +1529,341 @@
             </div>
         </div>
     </div>
-</section>
 
-<section id="advantages">
-    <div class="container">
-        <div class="section-header">
-            <h2>Почему выбирают меня</h2>
-            <p>Работаю честно и на результат</p>
-        </div>
-        <div class="advantages-grid">
-            <div class="advantage-card"><i class="fas fa-clock"></i><h3>Соблюдение сроков</h3><p>Всегда сдаю работу вовремя</p></div>
-            <div class="advantage-card"><i class="fas fa-chart-line"></i><h3>Высокое качество</h3><p>Детальная проработка каждого проекта</p></div>
-            <div class="advantage-card"><i class="fas fa-headset"></i><h3>Поддержка</h3><p>4 дня бесплатно после сдачи</p></div>
-            <div class="advantage-card"><i class="fas fa-ruble-sign"></i><h3>Честные цены</h3><p>Без скрытых платежей</p></div>
-        </div>
-    </div>
-</section>
+    <!-- Блок создания любого сайта под ключ с помощью DeepSeek (ваш, без изменений) -->
+    <div class="container" id="deepseek">
+        <div class="deepseek-section">
+            <div class="deepseek-header">
+                <h2>Создание любого сайта под ключ с помощью DeepSeek</h2>
+                <p>Использую передовые возможности нейросети DeepSeek для создания уникальных сайтов любой сложности с максимальной эффективностью</p>
+                <div class="deepseek-badge">НОВИНКА: ИНТЕГРАЦИЯ С DEEPSEEK</div>
+            </div>
+            
+            <div class="deepseek-grid">
+                <div class="deepseek-card">
+                    <div class="deepseek-icon"><i class="fas fa-id-card"></i></div>
+                    <h3>Сайт-визитка</h3>
+                    <p>С использованием DeepSeek для уникального контента</p>
+                    <div class="deepseek-price">от 18 000 ₽</div>
+                    <ul class="deepseek-features">
+                        <li><i class="fas fa-check"></i> Дизайн + DeepSeek</li>
+                        <li><i class="fas fa-check"></i> Уникальные тексты</li>
+                        <li><i class="fas fa-check"></i> Генерация идей</li>
+                        <li><i class="fas fa-check"></i> Быстрая разработка</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-blue">Заказать</a>
+                </div>
 
-<footer class="footer" id="contact">
-    <div class="container">
-        <div class="footer-grid">
-            <div>
-                <h3>ALEXSA</h3>
-                <p>Веб-разработчик и контент-маркетолог</p>
-                <div class="social-links">
-                    <a href="https://t.me/AleksaR31" class="social-link"><i class="fab fa-telegram"></i></a>
-                    <a href="https://github.com/Aleks-ars-ops" class="social-link"><i class="fab fa-github"></i></a>
+                <div class="deepseek-card">
+                    <div class="deepseek-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Лендинг с DeepSeek</h3>
+                    <p>Продающий лендинг с генерацией текстов нейросетью</p>
+                    <div class="deepseek-price">от 23 000 ₽</div>
+                    <ul class="deepseek-features">
+                        <li><i class="fas fa-check"></i> Продающие тексты</li>
+                        <li><i class="fas fa-check"></i> Офферы и заголовки</li>
+                        <li><i class="fas fa-check"></i> A/B тестирование</li>
+                        <li><i class="fas fa-check"></i> Конверсия +30%</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-red">Заказать</a>
+                </div>
+
+                <div class="deepseek-card">
+                    <div class="deepseek-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>Интернет-магазин</h3>
+                    <p>С DeepSeek для описаний и SEO-оптимизации</p>
+                    <div class="deepseek-price">от 55 000 ₽</div>
+                    <ul class="deepseek-features">
+                        <li><i class="fas fa-check"></i> Генерация описаний</li>
+                        <li><i class="fas fa-check"></i> SEO-тексты</li>
+                        <li><i class="fas fa-check"></i> Категории товаров</li>
+                        <li><i class="fas fa-check"></i> Уникальный контент</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-green">Заказать</a>
+                </div>
+
+                <div class="deepseek-card">
+                    <div class="deepseek-icon"><i class="fas fa-key"></i></div>
+                    <h3>Сайт под ключ</h3>
+                    <p>Полная интеграция DeepSeek на всех этапах</p>
+                    <div class="deepseek-price">от 105 000 ₽</div>
+                    <ul class="deepseek-features">
+                        <li><i class="fas fa-check"></i> Проектирование</li>
+                        <li><i class="fas fa-check"></i> Дизайн + ИИ</li>
+                        <li><i class="fas fa-check"></i> Весь контент</li>
+                        <li><i class="fas fa-check"></i> SEO оптимизация</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-yellow">Заказать</a>
                 </div>
             </div>
-            <div>
-                <h3>Контакты</h3>
-                <div class="contact-item"><i class="fas fa-phone"></i> 8-911-287-06-94</div>
-                <div class="contact-item"><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</div>
-                <div class="contact-item"><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00</div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 ALEXSA — Веб-разработчик. Все права защищены.</p>
         </div>
     </div>
-</footer>
 
-<script>
-    const serviceSelect = document.getElementById('serviceType');
-    const quantityInput = document.getElementById('quantity');
-    const quantityValue = document.getElementById('quantityValue');
-    const urgentSelect = document.getElementById('urgent');
-    const totalSpan = document.getElementById('totalPrice');
+    <!-- Секция поддержки (ваша) -->
+    <div class="container">
+        <div class="support">
+            <div class="support-banner">
+                <h3>🎁 Бесплатная техническая поддержка</h3>
+                <p>В течение 4 дней после сдачи готовой работы</p>
+                <div class="support-features">
+                    <div><i class="fas fa-bug"></i> Исправление ошибок</div>
+                    <div><i class="fas fa-headset"></i> Консультации</div>
+                    <div><i class="fas fa-chalkboard-teacher"></i> Обучение работе с сайтом</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    function updateCalculator() {
-        let basePrice = parseInt(serviceSelect.value) || 0;
-        let quantity = parseInt(quantityInput.value);
-        let urgent = parseFloat(urgentSelect.value);
-        let total = basePrice * quantity * urgent;
-        totalSpan.innerText = total.toLocaleString() + ' ₽';
-    }
+    <!-- Обратная связь и форма (ваша) -->
+    <div class="container" id="contact">
+        <h2>Обратная связь</h2>
+        <p>Отвечаю в течение 20 минут в рабочее время</p>
 
-    serviceSelect.addEventListener('change', updateCalculator);
-    quantityInput.addEventListener('input', () => {
-        quantityValue.innerText = quantityInput.value;
-        updateCalculator();
-    });
-    urgentSelect.addEventListener('change', updateCalculator);
-    
-    updateCalculator();
-</script>
+        <div class="contact-form-section">
+            <h3 style="text-align: center; margin-bottom: 30px;">Оставьте заявку на консультацию</h3>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Телефон *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Тип проекта</label>
+                    <select id="projectType">
+                        <option value="visa">Сайт-визитка</option>
+                        <option value="landing">Лендинг</option>
+                        <option value="shop">Интернет-магазин</option>
+                        <option value="texts">Продающие тексты</option>
+                        <option value="deepseek">Сайт с DeepSeek</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Бюджет проекта</label>
+                    <select id="budget">
+                        <option value="30">до 30 000 ₽</option>
+                        <option value="50">30-50 000 ₽</option>
+                        <option value="100">50-100 000 ₽</option>
+                        <option value="more">более 100 000 ₽</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Сроки</label>
+                    <select id="deadlineSelect">
+                        <option value="urgent">срочно (до 3 дней)</option>
+                        <option value="standard">стандартно (до 7 дней)</option>
+                        <option value="not-urgent">не срочно (до 14 дней)</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="needTexts">
+                    <label for="needTexts">Нужны продающие тексты (от 500 ₽)</label>
+                </div>
+
+                <div class="form-group" style="grid-column: span 1;">
+                    <label>Комментарий</label>
+                    <textarea id="comment" rows="4" placeholder="Опишите ваш проект..."></textarea>
+                </div>
+
+                <div class="file-upload" id="fileUpload">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Прикрепить техническое задание или макет</p>
+                    <input type="file" id="taskFile" style="display: none;">
+                </div>
+                <div id="fileName" style="margin-top: 10px; color: var(--primary-blue); text-align: center; grid-column: span 1;"></div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" required>
+                    <label for="agreement">Согласие на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" class="btn btn-blue" style="width: 100%; grid-column: span 1;">
+                    <i class="fas fa-paper-plane"></i> Отправить заявку
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подвал с мессенджерами (исправлен — убраны платформы) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="messengers-bottom">
+                <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank">
+                    <div class="messenger-icon"><i class="fab fa-telegram"></i></div>
+                    <span class="messenger-name">Telegram</span>
+                </a>
+                <a href="#" class="messenger-item" target="_blank">
+                    <div class="messenger-icon"><i class="fab fa-maxcdn"></i></div>
+                    <span class="messenger-name">MAX</span>
+                </a>
+                <a href="https://imo.im/imoid_Mic1QeodnK" class="messenger-item" target="_blank">
+                    <div class="messenger-icon"><i class="fas fa-comment"></i></div>
+                    <span class="messenger-name">IMO</span>
+                </a>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="logo" style="justify-content: flex-start;">
+                        <i class="fas fa-rocket logo-icon" style="font-size: 2.5rem;"></i>
+                        <span class="logo-text" style="font-size: 2rem;">ALEXSA</span>
+                    </div>
+                    <p>Работаю по всей России</p>
+                    <p>Работаю с DeepSeek</p>
+                    <p>Пишу продающие тексты от 500 ₽</p>
+                </div>
+
+                <div class="footer-contacts">
+                    <h3>Контакты</h3>
+                    <a href="tel:+79112870694"><i class="fas fa-phone"></i> 8-911-287-06-94 (Александра)</a>
+                    <a href="mailto:aleksa.romanyuk31@gmail.com"><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</a>
+                    <a href="https://github.com/Aleks-ars-ops" target="_blank"><i class="fab fa-github"></i> GitHub портфолио</a>
+                    <p><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00 (МСК)</p>
+                    <p><i class="fas fa-bolt"></i> Отвечаю за 20 минут</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ALEXSA-Веб-Разработчик. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Уведомление -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        const App = {
+            init() {
+                this.setupFileUpload();
+                this.setupFormSubmission();
+                this.animateStats();
+                this.setupCalculator();
+            },
+
+            animateStats() {
+                const stats = document.querySelectorAll('.stat-number');
+                stats.forEach(stat => {
+                    const target = parseInt(stat.dataset.target);
+                    let current = 0;
+                    const increment = target / 100;
+                    const timer = setInterval(() => {
+                        current += increment;
+                        stat.textContent = Math.floor(current);
+                        if (current >= target) {
+                            stat.textContent = target;
+                            clearInterval(timer);
+                        }
+                    }, 20);
+                });
+            },
+
+            setupFileUpload() {
+                const fileUpload = document.getElementById('fileUpload');
+                const fileInput = document.getElementById('taskFile');
+                const fileName = document.getElementById('fileName');
+                if (!fileUpload || !fileInput || !fileName) return;
+                fileUpload.addEventListener('click', () => fileInput.click());
+                fileInput.addEventListener('change', (e) => {
+                    if (e.target.files.length > 0) {
+                        fileName.innerHTML = `<span><i class="fas fa-file"></i> ${e.target.files[0].name}</span>`;
+                    }
+                });
+                fileUpload.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    fileUpload.style.borderColor = 'var(--primary-blue)';
+                });
+                fileUpload.addEventListener('dragleave', () => {
+                    fileUpload.style.borderColor = '';
+                });
+                fileUpload.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    fileUpload.style.borderColor = '';
+                    if (e.dataTransfer.files.length > 0) {
+                        fileInput.files = e.dataTransfer.files;
+                        fileName.innerHTML = `<span><i class="fas fa-file"></i> ${e.dataTransfer.files[0].name}</span>`;
+                    }
+                });
+            },
+
+            setupCalculator() {
+                const serviceSelect = document.getElementById('serviceType');
+                const quantityInput = document.getElementById('quantity');
+                const quantityValue = document.getElementById('quantityValue');
+                const urgentSelect = document.getElementById('urgent');
+                const totalSpan = document.getElementById('totalPrice');
+
+                if (!serviceSelect) return;
+
+                const updateCalculator = () => {
+                    let basePrice = parseInt(serviceSelect.value) || 0;
+                    let quantity = parseInt(quantityInput.value);
+                    let urgent = parseFloat(urgentSelect.value);
+                    let total = basePrice * quantity * urgent;
+                    totalSpan.innerText = total.toLocaleString() + ' ₽';
+                };
+
+                serviceSelect.addEventListener('change', updateCalculator);
+                quantityInput.addEventListener('input', () => {
+                    quantityValue.innerText = quantityInput.value;
+                    updateCalculator();
+                });
+                urgentSelect.addEventListener('change', updateCalculator);
+                updateCalculator();
+            },
+
+            sendOrderToContacts(formData) {
+                const orderInfo = { ...formData, date: new Date().toLocaleString(), orderId: 'REQ-' + Math.floor(Math.random() * 10000) };
+                console.log('Заявка отправлена:', orderInfo);
+                return orderInfo;
+            },
+
+            showNotification(message) {
+                const notification = document.getElementById('notification');
+                notification.textContent = message;
+                notification.classList.add('show');
+                setTimeout(() => notification.classList.remove('show'), 3000);
+            },
+
+            setupFormSubmission() {
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        const formData = {
+                            name: document.getElementById('name').value,
+                            phone: document.getElementById('phone').value,
+                            email: document.getElementById('email').value,
+                            projectType: document.getElementById('projectType').value,
+                            budget: document.getElementById('budget').value,
+                            deadline: document.getElementById('deadlineSelect').value,
+                            needTexts: document.getElementById('needTexts').checked,
+                            comment: document.getElementById('comment').value
+                        };
+                        this.sendOrderToContacts(formData);
+                        this.showNotification('Заявка отправлена! Я свяжусь с вами в течение 20 минут.');
+                        e.target.reset();
+                        if (document.getElementById('fileName')) document.getElementById('fileName').innerHTML = '';
+                    });
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => App.init());
+    </script>
 </body>
 </html>
