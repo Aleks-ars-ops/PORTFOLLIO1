@@ -18,13 +18,11 @@
             --primary-red: #FF4444;
             --primary-yellow: #FFD700;
             --primary-green: #32CD32;
-            --primary-lightblue: #87CEEB;
-            --dark: #1a2a3a;
+            --dark: #2C3E50;
             --light: #F7F9FC;
-            --text-dark: #1a2a3a;
-            --text-light: #ffffff;
-            --card-bg: #ffffff;
-            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --text-dark: #2C3E50;
+            --card-bg: #FFFFFF;
+            --card-shadow: 0 15px 35px rgba(65, 105, 225, 0.1);
             --transition: all 0.3s ease;
             --border-radius: 20px;
             --gradient-blue: linear-gradient(135deg, #4169E1, #6495ED);
@@ -214,28 +212,28 @@
             font-weight: 800;
         }
 
-        /* КРАСИВАЯ ТАБЛИЦА УСЛУГ */
+        /* ТАБЛИЦА УСЛУГ */
         .services-table-wrapper {
             background: white;
             border-radius: 24px;
             box-shadow: var(--card-shadow);
-            overflow: hidden;
+            overflow-x: auto;
             margin-top: 20px;
-        }
-
-        .service-category {
-            background: linear-gradient(135deg, #4169E1, #6495ED);
-            color: white;
-        }
-
-        .service-category td {
-            font-weight: 700;
-            padding: 15px 20px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+        }
+
+        .service-category {
+            background: var(--gradient-blue);
+            color: white;
+        }
+
+        .service-category td {
+            padding: 15px 20px;
+            font-weight: 700;
         }
 
         th {
@@ -464,7 +462,7 @@
     <div class="container">
         <div class="section-header">
             <h2>Услуги и цены</h2>
-            <p>Полный спектр услуг для вашего бизнеса</p>
+            <p>Только то, что я действительно делаю</p>
         </div>
         <div class="services-table-wrapper">
             <table>
@@ -477,40 +475,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-camera"></i> 📸 РЕДАКТИРОВАНИЕ ФОТО</td></tr>
+                    <tr class="service-category"><td colspan="4">📸 РЕДАКТИРОВАНИЕ ФОТО</td></tr>
                     <tr><td>1 фото</td><td class="price">300 ₽</td><td>2-4 ч</td><td></td></tr>
                     <tr><td>5 фото</td><td class="price">1 200 ₽</td><td>1 день</td><td></td></tr>
                     <tr><td>15 фото</td><td class="price">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-pen-fancy"></i> ✍️ ПРОДАЮЩИЕ ТЕКСТЫ</td></tr>
+                    <tr class="service-category"><td colspan="4">✍️ ПРОДАЮЩИЕ ТЕКСТЫ</td></tr>
                     <tr><td>Текст для 1 канала</td><td class="price">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
                     <tr><td>Тексты на все каналы (4 шт)</td><td class="price">2 500 ₽</td><td>1 день</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fab fa-instagram"></i> 📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</td></tr>
+                    <tr class="service-category"><td colspan="4">📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</td></tr>
                     <tr><td>1 пост (текст)</td><td class="price">800 ₽</td><td>2-3 ч</td><td></td></tr>
                     <tr><td>1 пост (текст+визуал)</td><td class="price">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
                     <tr><td>5 постов пакетом</td><td class="price">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-robot"></i> 🤖 НЕЙРОФОТОСЕССИЯ</td></tr>
+                    <tr class="service-category"><td colspan="4">🤖 НЕЙРОФОТОСЕССИЯ</td></tr>
                     <tr><td>1 фото</td><td class="price">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
                     <tr><td>5 фото</td><td class="price">1 500 ₽</td><td>1 день</td><td></td></tr>
                     <tr><td>10 фото</td><td class="price">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-chart-line"></i> 📊 ПРЕЗЕНТАЦИЯ</td></tr>
+                    <tr class="service-category"><td colspan="4">📊 ПРЕЗЕНТАЦИЯ</td></tr>
                     <tr><td>Текстовая</td><td class="price">2 000 ₽</td><td>1 день</td><td></td></tr>
                     <tr><td>Визуальная</td><td class="price">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     <tr><td>Под ключ</td><td class="price">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-store"></i> 🛍 КАРТОЧКИ MARKETPLACE</td></tr>
+                    <tr class="service-category"><td colspan="4">🛍 КАРТОЧКИ MARKETPLACE</td></tr>
                     <tr><td>1 карточка</td><td class="price">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
                     <tr><td>5 карточек</td><td class="price">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-globe"></i> 🌐 САЙТЫ</td></tr>
+                    <tr class="service-category"><td colspan="4">🌐 САЙТЫ</td></tr>
                     <tr><td>Сайт-визитка / Лендинг</td><td class="price">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
                     <tr><td>Сайт под ключ</td><td class="price">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
                     <tr><td>Интернет-магазин</td><td class="price">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
                     
-                    <tr class="service-category"><td colspan="4"><i class="fas fa-gem"></i> 🔥 КОМПЛЕКТ</td></tr>
+                    <tr class="service-category"><td colspan="4">🔥 КОМПЛЕКТ</td></tr>
                     <tr><td>«Всё включено»</td><td class="price">62 000 ₽</td><td>7-12 дней</td><td>экономия 8 000 ₽</td></tr>
                 </tbody>
             </table>
