@@ -176,12 +176,28 @@
         }
         
         .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
-        .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
-        .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); display: flex; flex-direction: column; height: 100%; }
+        .examples-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 30px; 
+            margin-top: 40px; 
+            align-items: stretch;
+        }
+        .example-card { 
+            background: var(--light); 
+            border-radius: var(--border-radius); 
+            padding: 25px; 
+            text-align: center; 
+            transition: var(--transition); 
+            box-shadow: var(--card-shadow); 
+            display: flex; 
+            flex-direction: column; 
+            height: 100%;
+        }
         .example-card:hover { transform: translateY(-10px); }
         .example-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
         .example-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
-        .example-card p { font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5; }
+        .example-card p { font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5; flex-grow: 1; }
         .example-link { display: inline-block; margin-top: 15px; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
         .example-price { margin: 15px 0 5px; padding-top: 10px; border-top: 1px solid #e0e0e0; }
         .example-price-line { font-size: 0.85rem; color: #666; margin-bottom: 6px; }
@@ -560,29 +576,29 @@
         <table class="price-table">
             <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr></thead>
             <tbody>
-                <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong>     </td></tr>
                 <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong>     </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong>      </td></tr>
                 <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
                 <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong>     </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong>      </td></tr>
                 <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
                 <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
                 <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong>     </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong>      </td></tr>
                 <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong>     </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong>      </td></tr>
                 <tr><td>Презентация — Базовый пакет</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td>до 10 слайдов, PDF</td></tr>
                 <tr><td>Презентация — Расширенный пакет</td><td class="price-cell">5 000 ₽</td><td>2-3 дня</td><td>до 15 слайдов, калькулятор</td></tr>
                 <tr><td>Презентация — Премиум пакет</td><td class="price-cell">от 6 000 ₽</td><td>3-5 дней</td><td>до 20 слайдов, анимация, 3 формата</td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong>     </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong>      </td></tr>
                 <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
                 <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong>     </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong>      </td></tr>
                 <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
                 <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
                 <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
