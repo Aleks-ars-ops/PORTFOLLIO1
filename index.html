@@ -184,10 +184,9 @@
         .example-card p { font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5; }
         .example-link { display: inline-block; margin-top: 15px; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
         .example-price { margin: 15px 0 5px; padding-top: 10px; border-top: 1px solid #e0e0e0; }
-        .example-price-basic { font-size: 0.85rem; color: #666; margin-bottom: 5px; }
-        .example-price-basic span { font-weight: 700; color: var(--primary-blue); }
-        .example-price-key { font-size: 0.85rem; color: #666; }
-        .example-price-key span { font-weight: 700; color: var(--primary-green); }
+        .example-price-line { font-size: 0.85rem; color: #666; margin-bottom: 6px; }
+        .example-price-line span:first-child { font-weight: 700; color: var(--primary-blue); }
+        .example-price-line span:last-child { font-weight: 700; color: var(--primary-green); }
         
         .price-table-section { background: white; border-radius: 24px; padding: 30px; margin: 40px 0; overflow-x: auto; box-shadow: var(--card-shadow); }
         .price-table { width: 100%; border-collapse: collapse; }
@@ -201,7 +200,7 @@
         .calculator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
         .calc-group { display: flex; flex-direction: column; gap: 8px; }
         .calc-group label { font-weight: 600; color: #555; }
-        select, input { padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 12px; font-family: 'Montserrat', sans-serif; }
+        select, input { padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 12px; font-family: 'Montserrat', sans-serif; background: white; }
         .calc-total { text-align: center; padding: 25px; background: linear-gradient(135deg, #f0f4ff, #e8edff); border-radius: 20px; }
         .calc-total .total-price { font-size: 2rem; font-weight: 800; color: var(--primary-blue); }
         .calc-note { font-size: 0.8rem; color: #666; margin-top: 10px; }
@@ -284,7 +283,13 @@
         .notification { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #0a254e; padding: 12px 24px; border-radius: 50px; z-index: 2000; transform: translateX(200%); transition: 0.3s; font-weight: 600; }
         .notification.show { transform: translateX(0); }
         
-        @media (max-width: 768px) { .stats { gap: 20px; } .stat-item { padding: 15px; min-width: 120px; } .stat-number { font-size: 1.8rem; } }
+        @media (max-width: 768px) { 
+            .stats { gap: 20px; } 
+            .stat-item { padding: 15px; min-width: 120px; } 
+            .stat-number { font-size: 1.8rem; }
+            .examples-grid { gap: 20px; }
+            .example-card { padding: 20px; }
+        }
     </style>
 </head>
 <body>
@@ -397,7 +402,7 @@
     </div>
 </div>
 
-<!-- ПРИМЕРЫ РАБОТ С ЦЕНАМИ + ПРОДАЮЩИЕ ТЕКСТЫ + ПРЕЗЕНТАЦИИ -->
+<!-- ПРИМЕРЫ РАБОТ + ПРОДАЮЩИЕ ТЕКСТЫ + ПРЕЗЕНТАЦИИ -->
 <div class="container" id="portfolio-examples">
     <div class="portfolio-examples">
         <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты с ценами</p></div>
@@ -408,8 +413,8 @@
                 <h3>Юлия — Курсовые работы</h3>
                 <p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 7 000 – 10 000 ₽</div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 12 000 – 15 000 ₽</div>
+                    <div class="example-price-line"><span>🔹 Базовый:</span> <span>7 000 – 10 000 ₽</span></div>
+                    <div class="example-price-line"><span>🔸 Под ключ:</span> <span>12 000 – 15 000 ₽</span></div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -419,8 +424,8 @@
                 <h3>Татьяна — Фоторедактор</h3>
                 <p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 15 000 – 18 000 ₽</div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 28 000 ₽</div>
+                    <div class="example-price-line"><span>🔹 Базовый:</span> <span>15 000 – 18 000 ₽</span></div>
+                    <div class="example-price-line"><span>🔸 Под ключ:</span> <span>25 000 – 28 000 ₽</span></div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -430,8 +435,8 @@
                 <h3>MagicToys — Интернет-магазин</h3>
                 <p>Полноценный интернет-магазин с каталогом, корзиной, фильтрацией и сортировкой.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 50 000 – 70 000 ₽</div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 60 000 – 80 000 ₽</div>
+                    <div class="example-price-line"><span>🔹 Базовый:</span> <span>50 000 – 70 000 ₽</span></div>
+                    <div class="example-price-line"><span>🔸 Под ключ:</span> <span>60 000 – 80 000 ₽</span></div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/internet-magazin/" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -441,8 +446,8 @@
                 <h3>Ресторан «Вкус Итальян»</h3>
                 <p>Сайт для ресторана с меню, галереей интерьеров, формой бронирования и картой.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 30 000 – 40 000 ₽</div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 40 000 – 50 000 ₽</div>
+                    <div class="example-price-line"><span>🔹 Базовый:</span> <span>30 000 – 40 000 ₽</span></div>
+                    <div class="example-price-line"><span>🔸 Под ключ:</span> <span>40 000 – 50 000 ₽</span></div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/Restaurant-Website/" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -452,8 +457,8 @@
                 <h3>Кулинарный мастер-класс</h3>
                 <p>Продающий лендинг с анимацией, таймером обратного отсчёта и формой захвата.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 20 000 – 30 000 ₽</div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 35 000 ₽</div>
+                    <div class="example-price-line"><span>🔹 Базовый:</span> <span>20 000 – 30 000 ₽</span></div>
+                    <div class="example-price-line"><span>🔸 Под ключ:</span> <span>25 000 – 35 000 ₽</span></div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/culinary-masterclass./" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -463,8 +468,8 @@
                 <h3>BCorp — Корпоративный сайт</h3>
                 <p>Строгий корпоративный сайт с ценами в чёрных рамках, картой и формой обратной связи.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 40 000 – 55 000 ₽</div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 50 000 – 65 000 ₽</div>
+                    <div class="example-price-line"><span>🔹 Базовый:</span> <span>40 000 – 55 000 ₽</span></div>
+                    <div class="example-price-line"><span>🔸 Под ключ:</span> <span>50 000 – 65 000 ₽</span></div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/corporate-website./" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -476,8 +481,9 @@
                 <h3>Продающий текст — для любой темы</h3>
                 <p>«Хотите, чтобы клиенты писали первыми? Вот пример текста для стоматологии: "Потеряли пломбу? Боитесь сверлить? Поставим новую за 30 минут. Без боли и очередей. Запишитесь сегодня — скидка 20%". Пишу на любую тему: ремонт, красота, обучение, товары, услуги.»</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>📝 Объём:</span> 1 500–3 000 знаков</div>
-                    <div class="example-price-key"><span>⏱ Срок:</span> 1-2 дня | <span>💰 Цена:</span> от 1 500 ₽</div>
+                    <div class="example-price-line"><span>📝 Объём:</span> <span>1 500–3 000 знаков</span></div>
+                    <div class="example-price-line"><span>⏱ Срок:</span> <span>1-2 дня</span></div>
+                    <div class="example-price-line"><span>💰 Цена:</span> <span>от 1 500 ₽</span></div>
                 </div>
                 <a href="#contact" class="example-link">📝 Заказать текст →</a>
             </div>
@@ -487,8 +493,9 @@
                 <h3>SEO-текст для блога или сайта</h3>
                 <p>«Пишу так, чтобы вас нашли в поиске. Пример для фитнес-клуба: "Как убрать живот за месяц без диет? Реальные советы тренера. Первые 3 тренировки в подарок". Добавляю ключевые фразы, пишу понятно и без воды.»</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>📝 Объём:</span> 2 000–5 000 знаков</div>
-                    <div class="example-price-key"><span>⏱ Срок:</span> 2-3 дня | <span>💰 Цена:</span> от 2 000 ₽</div>
+                    <div class="example-price-line"><span>📝 Объём:</span> <span>2 000–5 000 знаков</span></div>
+                    <div class="example-price-line"><span>⏱ Срок:</span> <span>2-3 дня</span></div>
+                    <div class="example-price-line"><span>💰 Цена:</span> <span>от 2 000 ₽</span></div>
                 </div>
                 <a href="#contact" class="example-link">📝 Заказать текст →</a>
             </div>
@@ -498,8 +505,9 @@
                 <h3>Карточка для Wildberries / Ozon</h3>
                 <p>«Описание, которое продаёт. Пример: "Комбинезон из мягкого флиса — не колется, не линяет. Ребёнку тепло, мама спокойна. Быстро сохнет, легко стирается. В наличии 4 цвета и 6 размеров". Проверяю по требованиям маркетплейса.»</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>📝 Объём:</span> 1 000–2 000 знаков</div>
-                    <div class="example-price-key"><span>⏱ Срок:</span> 1 день | <span>💰 Цена:</span> от 1 500 ₽</div>
+                    <div class="example-price-line"><span>📝 Объём:</span> <span>1 000–2 000 знаков</span></div>
+                    <div class="example-price-line"><span>⏱ Срок:</span> <span>1 день</span></div>
+                    <div class="example-price-line"><span>💰 Цена:</span> <span>от 1 500 ₽</span></div>
                 </div>
                 <a href="#contact" class="example-link">📝 Заказать карточку →</a>
             </div>
@@ -511,8 +519,9 @@
                 <h3>Презентация — Базовый пакет</h3>
                 <p>«Готовая презентация для вашего бизнеса. До 10 слайдов: обложка, о компании, услуги, преимущества, контакты. Формат: PDF. Добавляю логотип и фото. Деловой стиль.»</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>📊 Что входит:</span> структура + тексты + дизайн</div>
-                    <div class="example-price-key"><span>⏱ Срок:</span> 1-2 дня | <span>💰 Цена:</span> 3 000 ₽</div>
+                    <div class="example-price-line"><span>📊 Что входит:</span> <span>структура + тексты + дизайн</span></div>
+                    <div class="example-price-line"><span>⏱ Срок:</span> <span>1-2 дня</span></div>
+                    <div class="example-price-line"><span>💰 Цена:</span> <span>3 000 ₽</span></div>
                 </div>
                 <a href="#contact" class="example-link">📊 Заказать →</a>
             </div>
@@ -522,8 +531,9 @@
                 <h3>Презентация — Расширенный пакет</h3>
                 <p>«Усиленная презентация с калькулятором стоимости. До 15 слайдов: анализ рынка, портфолио, детальные услуги, калькулятор, кейсы, отзывы, 3 варианта сотрудничества.»</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>📊 Что входит:</span> структура + тексты + дизайн + калькулятор</div>
-                    <div class="example-price-key"><span>⏱ Срок:</span> 2-3 дня | <span>💰 Цена:</span> 5 000 ₽</div>
+                    <div class="example-price-line"><span>📊 Что входит:</span> <span>структура + тексты + дизайн + калькулятор</span></div>
+                    <div class="example-price-line"><span>⏱ Срок:</span> <span>2-3 дня</span></div>
+                    <div class="example-price-line"><span>💰 Цена:</span> <span>5 000 ₽</span></div>
                 </div>
                 <a href="#contact" class="example-link">📊 Заказать →</a>
             </div>
@@ -533,8 +543,9 @@
                 <h3>Презентация — Премиум пакет</h3>
                 <p>«Полный пакет презентации. До 20 слайдов: всё из расширенного + анимация, инфографика, 3D-графика, финансовые показатели, дорожная карта. Формат: PDF, PPTX, HTML.»</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>📊 Что входит:</span> всё из расширенного + анимация + 3 формата</div>
-                    <div class="example-price-key"><span>⏱ Срок:</span> 3-5 дней | <span>💰 Цена:</span> от 6 000 ₽</div>
+                    <div class="example-price-line"><span>📊 Что входит:</span> <span>всё из расширенного + анимация + 3 формата</span></div>
+                    <div class="example-price-line"><span>⏱ Срок:</span> <span>3-5 дней</span></div>
+                    <div class="example-price-line"><span>💰 Цена:</span> <span>от 6 000 ₽</span></div>
                 </div>
                 <a href="#contact" class="example-link">📊 Заказать →</a>
             </div>
@@ -553,25 +564,25 @@
                 <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong>     </td></tr>
                 <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
                 <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong>     </td></tr>
                 <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
                 <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
                 <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong>     </td></tr>
                 <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong>     </td></tr>
                 <tr><td>Презентация — Базовый пакет</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td>до 10 слайдов, PDF</td></tr>
                 <tr><td>Презентация — Расширенный пакет</td><td class="price-cell">5 000 ₽</td><td>2-3 дня</td><td>до 15 слайдов, калькулятор</td></tr>
                 <tr><td>Презентация — Премиум пакет</td><td class="price-cell">от 6 000 ₽</td><td>3-5 дней</td><td>до 20 слайдов, анимация, 3 формата</td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong>     </td></tr>
                 <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
                 <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong>    </td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong>     </td></tr>
                 <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
                 <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
                 <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
@@ -587,16 +598,16 @@
             <div class="calc-group">
                 <label>Тип услуги</label>
                 <select id="serviceType">
-                    <option value="300">1 фото (обработка)</option>
-                    <option value="1200">5 фото (обработка)</option>
-                    <option value="3000">15 фото (обработка)</option>
-                    <option value="1000">Текст для 1 канала</option>
-                    <option value="2500">Тексты на 4 канала</option>
-                    <option value="1500">1 пост (текст+визуал)</option>
-                    <option value="6000">5 постов пакетом</option>
-                    <option value="400">1 нейрофото</option>
-                    <option value="25000">Сайт-визитка</option>
-                    <option value="42000">Сайт под ключ</option>
+                    <option value="photo1">1 фото (обработка)</option>
+                    <option value="photo5">5 фото (обработка)</option>
+                    <option value="photo15">15 фото (обработка)</option>
+                    <option value="text1">Текст для 1 канала</option>
+                    <option value="text4">Тексты на 4 канала</option>
+                    <option value="post1">1 пост (текст+визуал)</option>
+                    <option value="post5">5 постов пакетом</option>
+                    <option value="neuro1">1 нейрофото</option>
+                    <option value="site">Сайт-визитка</option>
+                    <option value="sitekey">Сайт под ключ</option>
                 </select>
             </div>
             <div class="calc-group">
@@ -622,7 +633,7 @@
         <div class="calc-total">
             <h4>Примерная стоимость</h4>
             <div class="total-price" id="totalPrice">0 ₽</div>
-            <p id="priceNote" class="calc-note">🔹 Базовый — только файлы сайта / 🔸 Под ключ — домен+хостинг+форма</p>
+            <p id="priceNote" class="calc-note"></p>
         </div>
     </div>
 </div>
