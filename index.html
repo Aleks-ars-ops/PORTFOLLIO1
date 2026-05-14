@@ -2,678 +2,238 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>ALEXSA-Веб-Разработчик — Создание сайтов с DeepSeek</title>
-    
-    <meta name="description" content="Профессиональная разработка сайтов с использованием DeepSeek. 5 лет опыта, 45 проектов. Бесплатная техподдержка 4 дня. Продающие тексты.">
-    <meta name="keywords" content="веб разработчик, создание сайтов, создание сайтов с deepseek, заказать сайт, лендинг под ключ, интернет магазин под ключ">
-    <meta name="author" content="ALEXSA-Веб-Разработчик">
-    <meta name="robots" content="index, follow">
-    
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Александра | Веб-разработчик и продающие тексты</title>
     <style>
-        :root {
-            --primary-blue: #4169E1;
-            --primary-red: #FF4444;
-            --primary-yellow: #FFD700;
-            --primary-green: #32CD32;
-            --dark: #2C3E50;
-            --light: #F7F9FC;
-            --text-dark: #2C3E50;
-            --card-bg: #FFFFFF;
-            --card-shadow: 0 15px 35px rgba(65, 105, 225, 0.2);
-            --transition: all 0.3s ease;
-            --border-radius: 20px;
-            --gradient-blue: linear-gradient(135deg, #4169E1, #6495ED);
-            --gradient-red: linear-gradient(135deg, #FF4444, #FF6B6B);
-            --gradient-yellow: linear-gradient(135deg, #FFD700, #FFA500);
-            --gradient-green: linear-gradient(135deg, #32CD32, #90EE90);
-            --gradient-rainbow: linear-gradient(135deg, #4169E1, #FF4444, #FFD700, #32CD32);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; scroll-padding-top: 100px; }
         body {
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background: linear-gradient(135deg, #f0f8ff, #fff0f0);
-            overflow-x: hidden;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+            padding: 20px 16px 60px;
         }
-        .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 80px 0; }
-        @media (max-width: 768px) { section { padding: 60px 0; } }
-        
-        h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; font-weight: 800; }
-        h1 { font-size: clamp(2rem, 6vw, 3.5rem); background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; animation: rainbow 5s infinite; }
-        @keyframes rainbow { 0% { filter: hue-rotate(0deg); } 50% { filter: hue-rotate(30deg); } 100% { filter: hue-rotate(0deg); } }
-        h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin-bottom: 30px; position: relative; display: inline-block; color: var(--dark); }
-        h2::after { content: ''; position: absolute; bottom: -15px; left: 0; width: 100px; height: 5px; background: var(--gradient-rainbow); border-radius: 5px; }
-        .section-header { text-align: center; margin-bottom: 50px; }
-        .section-header h2::after { left: 50%; transform: translateX(-50%); }
-        
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
-            padding: 12px 25px; border-radius: 50px; font-size: 0.9rem; font-weight: 700;
-            text-decoration: none; border: none; cursor: pointer; transition: var(--transition);
-            font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        @media (min-width: 768px) { .btn { padding: 15px 30px; font-size: 1rem; } }
-        .btn-blue { background: var(--gradient-blue); color: white; }
-        .btn-blue:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(65, 105, 225, 0.4); }
-        .btn-red { background: var(--gradient-red); color: white; }
-        .btn-red:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(255, 68, 68, 0.4); }
-        .btn-yellow { background: var(--gradient-yellow); color: var(--dark); }
-        .btn-yellow:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(255, 215, 0, 0.4); }
-        .btn-green { background: var(--gradient-green); color: white; }
-        .btn-green:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(50, 205, 50, 0.4); }
-        
-        .navbar { background: white; padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-        .nav-logo { font-size: 1.5rem; font-weight: 800; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        .nav-menu { display: flex; flex-wrap: wrap; gap: 20px; list-style: none; }
-        .nav-menu a { color: var(--dark); text-decoration: none; font-weight: 600; transition: var(--transition); font-size: 0.9rem; position: relative; }
-        .nav-menu a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 3px; background: var(--gradient-rainbow); transition: var(--transition); }
-        .nav-menu a:hover::after, .nav-menu a.active::after { width: 100%; }
-        .nav-menu a:hover, .nav-menu a.active { color: var(--primary-blue); }
-        @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 15px; } .nav-menu { justify-content: center; } }
-        
-        .top-contacts { background: var(--gradient-rainbow); padding: 15px 0; color: white; }
-        .top-contacts-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .contact-info-top { display: flex; flex-wrap: wrap; gap: 15px; }
-        .contact-info-top div { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 30px; font-size: 0.9rem; }
-        
-        .hero-top { display: flex; align-items: center; gap: 40px; padding: 40px 0; background: linear-gradient(135deg, rgba(65,105,225,0.1), rgba(255,68,68,0.1), rgba(255,215,0,0.1), rgba(50,205,50,0.1)); border-radius: 0 0 50px 50px; }
-        @media (max-width: 992px) { .hero-top { flex-direction: column; text-align: center; } }
-        .hero-left { flex: 1; }
-        .hero-right { flex: 1; }
-        .hero-right img { width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
-        .logo { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap; }
-        .logo-icon { font-size: 3rem; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .logo-text { font-size: 2rem; font-weight: 800; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-actions { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; }
-        @media (max-width: 768px) { .hero-actions { justify-content: center; } }
-        
-        .about-section { text-align: center; padding: 60px 0; background: linear-gradient(135deg, rgba(65,105,225,0.05), rgba(255,68,68,0.05), rgba(255,215,0,0.05), rgba(50,205,50,0.05)); border-radius: 50px; margin: 40px 0; }
-        .about-description { background: white; padding: 30px; border-radius: 30px; box-shadow: var(--card-shadow); max-width: 900px; margin: 0 auto; border-left: 5px solid var(--primary-blue); border-right: 5px solid var(--primary-red); }
-        .stats { display: flex; justify-content: center; gap: 40px; margin: 40px 0; flex-wrap: wrap; }
-        .stat-item { background: white; padding: 25px; border-radius: var(--border-radius); box-shadow: var(--card-shadow); text-align: center; min-width: 150px; border: 1px solid rgba(65,105,225,0.2); }
-        .stat-number { font-size: 2.5rem; font-weight: 800; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .tech-stack { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 40px 0; }
-        .tech-icon { font-size: 2.5rem; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: var(--transition); }
-        .tech-icon:hover { transform: translateY(-10px); }
-        
-        .services { background: white; border-radius: 50px; padding: 60px 30px; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; }
-        .service-card { background: white; border-radius: var(--border-radius); padding: 25px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.05); transition: var(--transition); }
-        .service-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(65,105,225,0.2); }
-        .service-icon { font-size: 2.5rem; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
-        .service-price { font-size: 1.8rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
-        .service-duration { color: #666; font-size: 0.9rem; margin-bottom: 15px; }
-        .service-features { list-style: none; margin: 20px 0; }
-        .service-features li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.9rem; color: #444; }
-        .service-features i { color: var(--primary-green); }
-        .service-actions .btn { width: 100%; }
-        
-        .dev-section { background: linear-gradient(135deg, rgba(65,105,225,0.1), rgba(255,68,68,0.1), rgba(255,215,0,0.1), rgba(50,205,50,0.1)); border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
-        .dev-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
-        .dev-card { background: white; border-radius: var(--border-radius); padding: 30px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); }
-        .dev-card:hover { transform: translateY(-10px); }
-        .dev-icon { font-size: 2.5rem; background: var(--gradient-rainbow); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
-        .dev-price { font-size: 1.8rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
-        .dev-features { list-style: none; margin: 20px 0; text-align: left; }
-        .dev-features li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.9rem; }
-        .dev-features i { color: var(--primary-green); }
-        .dev-card .btn { margin-top: 20px; }
-        
-        .deepseek-section {
-            background: linear-gradient(135deg, rgba(65,105,225,0.15), rgba(255,68,68,0.15), rgba(255,215,0,0.15), rgba(50,205,50,0.15));
-            border-radius: 50px;
-            padding: 60px 30px;
-            margin: 40px 0;
-            border: 2px solid var(--gradient-rainbow);
+
+        /* Типографика для телефона — крупнее */
+        h1 { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 1.75rem; margin: 1.5rem 0 1rem; letter-spacing: -0.01em; }
+        h3 { font-size: 1.35rem; margin: 1rem 0 0.5rem; }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.5rem; }
+            body { padding: 16px; }
         }
-        .deepseek-grid {
+
+        /* Сетки */
+        .grid-2, .grid-3, .services-grid, .deepseek-grid, .portfolio-grid, .texts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 24px;
+            margin: 32px 0;
         }
-        .deepseek-card {
+        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .services-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        .deepseek-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        .portfolio-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        .texts-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+        /* Карточки */
+        .card, .service-card, .portfolio-item, .text-card {
             background: white;
-            border-radius: var(--border-radius);
-            padding: 30px 25px;
-            transition: var(--transition);
-            box-shadow: var(--card-shadow);
+            border-radius: 28px;
+            padding: 24px 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.1s ease;
+        }
+        .text-card {
+            background: linear-gradient(145deg, #ffffff 0%, #fef9e8 100%);
+            border-left: 5px solid #f59e0b;
+        }
+
+        /* Контакты и шапка */
+        .contacts {
             display: flex;
-            flex-direction: column;
-            height: 100%;
-            text-align: center;
-        }
-        .deepseek-card:hover { transform: translateY(-10px); }
-        .deepseek-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 20px; }
-        .deepseek-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
-        .deepseek-card p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
-        .deepseek-price { font-size: 1.6rem; font-weight: 800; color: var(--primary-blue); margin: 15px 0; }
-        .deepseek-features {
-            list-style: none;
-            margin: 20px 0;
-            text-align: left;
-            flex-grow: 1;
-        }
-        .deepseek-features li {
-            display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.85rem; color: #444;
-        }
-        .deepseek-features i { color: var(--primary-green); width: 20px; }
-        .deepseek-card .btn { margin-top: 20px; align-self: center; width: auto; min-width: 160px; }
-        .deepseek-badge {
-            background: var(--gradient-rainbow); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 15px;
-        }
-        
-        .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
-        .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
-        .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); display: flex; flex-direction: column; height: 100%; }
-        .example-card:hover { transform: translateY(-10px); }
-        .example-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
-        .example-link { display: inline-block; margin-top: 15px; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
-        .example-price { margin: 15px 0 5px; padding-top: 10px; border-top: 1px solid #e0e0e0; }
-        .example-price-basic { font-size: 0.85rem; color: #666; margin-bottom: 5px; }
-        .example-price-basic span { font-weight: 700; color: var(--primary-blue); }
-        .example-price-key { font-size: 0.85rem; color: #666; }
-        .example-price-key span { font-weight: 700; color: var(--primary-green); }
-        .example-tooltip { font-size: 0.7rem; color: #888; margin-top: 8px; cursor: help; border-bottom: 1px dashed #ccc; display: inline-block; }
-        
-        .price-table-section { background: white; border-radius: 24px; padding: 30px; margin: 40px 0; overflow-x: auto; box-shadow: var(--card-shadow); }
-        .price-table { width: 100%; border-collapse: collapse; }
-        .price-table th { background: var(--gradient-blue); color: white; padding: 15px; font-weight: 600; }
-        .price-table td { padding: 12px 15px; border-bottom: 1px solid #eee; color: #444; }
-        .price-table tr:hover td { background: #f8f9ff; }
-        .category-row { background: #f0f2f5; font-weight: 700; }
-        .price-cell { font-weight: 700; color: var(--primary-blue); }
-        
-        .calculator-section { background: white; border-radius: 24px; padding: 35px; margin: 40px 0; box-shadow: var(--card-shadow); }
-        .calculator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; margin-bottom: 30px; }
-        .calc-group { display: flex; flex-direction: column; gap: 8px; }
-        .calc-group label { font-weight: 600; color: #555; }
-        select, input { padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 12px; font-family: 'Montserrat', sans-serif; }
-        .calc-total { text-align: center; padding: 25px; background: linear-gradient(135deg, #f0f4ff, #e8edff); border-radius: 20px; }
-        .calc-total .total-price { font-size: 2rem; font-weight: 800; color: var(--primary-blue); }
-        
-        .support { background: var(--gradient-rainbow); padding: 60px 0; border-radius: 50px; margin: 40px 0; }
-        .support-banner { background: white; border-radius: var(--border-radius); padding: 40px; text-align: center; }
-        .support-features { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
-        .support-features div { background: var(--gradient-rainbow); color: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; }
-        
-        .contact-block {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 50px;
-            text-align: center;
-            box-shadow: var(--card-shadow);
-            border: 3px solid var(--primary-blue);
-            margin: 40px 0;
-        }
-        .contact-block h3 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: var(--primary-blue);
-        }
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
             flex-wrap: wrap;
-            margin: 30px 0;
+            gap: 16px;
+            background: #1e293b;
+            color: white;
+            border-radius: 32px;
+            padding: 20px;
+            margin: 24px 0;
+            justify-content: space-between;
         }
-        .contact-link {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            transition: var(--transition);
-            background: var(--light);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            min-width: 150px;
+        .contacts a { color: #facc15; text-decoration: none; }
+        .badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            display: inline-block;
         }
-        .contact-link:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--card-shadow);
-        }
-        .contact-link i {
-            font-size: 3rem;
-            color: var(--primary-blue);
-        }
-        .contact-link span {
-            font-weight: 700;
-            color: var(--dark);
-            font-size: 1.1rem;
-        }
-        .contact-phone {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-blue);
-            margin: 20px 0;
+        .price { font-size: 1.6rem; font-weight: 700; color: #b45309; margin: 12px 0; }
+        button, .btn {
+            background: #1e293b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 500;
+            cursor: pointer;
             display: inline-block;
             text-decoration: none;
         }
-        .contact-note {
-            margin-top: 30px;
-            color: #666;
-            font-size: 0.9rem;
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #1e293b;
+            color: #1e293b;
         }
-        
-        .footer { background: white; padding: 50px 0 20px; border-radius: 50px 50px 0 0; margin-top: 40px; box-shadow: 0 -5px 30px rgba(0,0,0,0.05); }
-        .messengers-bottom { display: flex; justify-content: center; gap: 40px; margin: 30px 0; flex-wrap: wrap; }
-        .messenger-item { display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; transition: var(--transition); }
-        .messenger-item:hover { transform: translateY(-10px); }
-        .messenger-icon { width: 70px; height: 70px; background: var(--gradient-rainbow); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 30px; }
-        .footer-contacts a, .footer-contacts p { display: flex; align-items: center; gap: 10px; color: var(--dark); text-decoration: none; margin-bottom: 12px; }
-        .footer-contacts a:hover { color: var(--primary-blue); }
-        .footer-bottom { text-align: center; padding-top: 20px; border-top: 1px solid #eee; }
-        
-        .notification { position: fixed; bottom: 20px; right: 20px; background: linear-gradient(135deg, #ffd700, #ffed4e); color: #0a254e; padding: 12px 24px; border-radius: 50px; z-index: 2000; transform: translateX(200%); transition: 0.3s; font-weight: 600; }
-        .notification.show { transform: translateX(0); }
-        
-        @media (max-width: 768px) { .stats { gap: 20px; } .stat-item { padding: 15px; min-width: 120px; } .stat-number { font-size: 1.8rem; } }
+        .stats {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; background: white; padding: 16px; border-radius: 32px; min-width: 100px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+            display: block;
+        }
+        th, td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; font-size: 0.9rem; }
+        @media (max-width: 640px) {
+            th, td { font-size: 0.8rem; padding: 6px; }
+        }
+        footer { text-align: center; margin-top: 48px; opacity: 0.7; }
+        hr { margin: 24px 0; border-color: #e2e8f0; }
     </style>
 </head>
 <body>
-
-<div class="top-contacts">
-    <div class="container">
-        <div class="top-contacts-inner">
-            <div class="contact-info-top">
-                <div><i class="fas fa-phone"></i> 8-911-287-06-94</div>
-                <div><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</div>
-                <div><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00 (МСК)</div>
-                <div><i class="fas fa-bolt"></i> Отвечаю за 20 мин</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<nav class="navbar">
-    <div class="container nav-container">
-        <a href="#" class="nav-logo">ALEXSA</a>
-        <ul class="nav-menu">
-            <li><a href="#home" class="active">Главная</a></li>
-            <li><a href="#about">Обо мне</a></li>
-            <li><a href="#services">Услуги</a></li>
-            <li><a href="#deepseek">DeepSeek</a></li>
-            <li><a href="#portfolio-examples">Портфолио</a></li>
-            <li><a href="#price">Прайс</a></li>
-            <li><a href="#calculator">Калькулятор</a></li>
-            <li><a href="#contact">Контакты</a></li>
-        </ul>
-    </div>
-</nav>
-
-<div class="container" id="home">
-    <div class="hero-top">
-        <div class="hero-left">
-            <div class="logo"><i class="fas fa-rocket logo-icon"></i><span class="logo-text">ALEXSA-Веб-Разработчик</span></div>
-            <div class="hero-actions">
-                <a href="#contact" class="btn btn-blue"><i class="fas fa-calculator"></i> Рассчитать</a>
-                <a href="#contact" class="btn btn-red"><i class="fas fa-comments"></i> Консультация</a>
-                <a href="https://github.com/Aleks-ars-ops" class="btn btn-yellow" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </div>
-        <div class="hero-right">
-            <img src="https://i.pinimg.com/736x/31/ff/78/31ff78cb59ba13f5c6c32ac946ef781b.jpg" alt="ALEXSA">
-        </div>
-    </div>
-</div>
-
-<div class="container" id="about">
-    <div class="about-section">
-        <h2>Чем я занимаюсь</h2>
-        <div class="about-description">
-            <p>Профессиональная разработка сайтов любой сложности: от простых лендингов до сложных интернет-магазинов. Создаю продающие тексты с нуля от 500 рублей. Интегрирую нейросеть DeepSeek для создания уникального контента. Работаю по всей России.</p>
-            <p>5 лет опыта, 45 успешных проектов, 65 довольных клиентов.</p>
-        </div>
-        <div class="stats">
-            <div class="stat-item"><span class="stat-number" data-target="5">0</span><div>лет опыта</div></div>
-            <div class="stat-item"><span class="stat-number" data-target="45">0</span><div>проектов</div></div>
-            <div class="stat-item"><span class="stat-number" data-target="65">0</span><div>клиентов</div></div>
-        </div>
-        <div class="tech-stack">
-            <i class="fab fa-html5 tech-icon"></i>
-            <i class="fab fa-css3-alt tech-icon"></i>
-            <i class="fab fa-js tech-icon"></i>
-            <i class="fab fa-react tech-icon"></i>
-            <i class="fas fa-robot tech-icon"></i>
-        </div>
-    </div>
-</div>
-
-<div class="container" id="services">
-    <div class="services">
-        <div class="section-header"><h2>Мои услуги</h2><p>Комплексные решения для вашего бизнеса</p></div>
-        <div class="services-grid">
-            <div class="service-card"><div class="service-icon"><i class="fas fa-id-card"></i></div><h3>Сайт-визитка</h3><div class="service-price">от 15 000 ₽</div><div class="service-duration"><i class="far fa-clock"></i> 3-5 дней</div><ul class="service-features"><li><i class="fas fa-check"></i> 3-5 страниц</li><li><i class="fas fa-check"></i> Форма связи</li><li><i class="fas fa-check"></i> Адаптив</li><li><i class="fas fa-check"></i> Базовое SEO</li></ul><div class="service-actions"><a href="#contact" class="btn btn-blue">Заказать</a></div></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-bullseye"></i></div><h3>Лендинг</h3><div class="service-price">от 20 000 ₽</div><div class="service-duration"><i class="far fa-clock"></i> 5-7 дней</div><ul class="service-features"><li><i class="fas fa-check"></i> Уникальный дизайн</li><li><i class="fas fa-check"></i> Продающий текст</li><li><i class="fas fa-check"></i> Формы захвата</li><li><i class="fas fa-check"></i> Интеграция с CRM</li></ul><div class="service-actions"><a href="#contact" class="btn btn-red">Заказать</a></div></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-shopping-cart"></i></div><h3>Интернет-магазин</h3><div class="service-price">от 50 000 ₽</div><div class="service-duration"><i class="far fa-clock"></i> 14-21 день</div><ul class="service-features"><li><i class="fas fa-check"></i> Каталог товаров</li><li><i class="fas fa-check"></i> Корзина и оплата</li><li><i class="fas fa-check"></i> Личный кабинет</li><li><i class="fas fa-check"></i> Админ-панель</li></ul><div class="service-actions"><a href="#contact" class="btn btn-green">Заказать</a></div></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-key"></i></div><h3>Сайт под ключ</h3><div class="service-price">от 100 000 ₽</div><div class="service-duration"><i class="far fa-clock"></i> 30-45 дней</div><ul class="service-features"><li><i class="fas fa-check"></i> Анализ и проектирование</li><li><i class="fas fa-check"></i> Уникальный дизайн</li><li><i class="fas fa-check"></i> Разработка</li><li><i class="fas fa-check"></i> SEO-оптимизация</li></ul><div class="service-actions"><a href="#contact" class="btn btn-blue">Заказать</a></div></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-headset"></i></div><h3>Техподдержка</h3><div class="service-price">от 5 000 ₽/мес</div><div class="service-duration"><i class="far fa-clock"></i> 1 месяц</div><ul class="service-features"><li><i class="fas fa-check"></i> Обновления</li><li><i class="fas fa-check"></i> Резервное копирование</li><li><i class="fas fa-check"></i> Мониторинг</li><li><i class="fas fa-check"></i> Безопасность</li></ul><div class="service-actions"><a href="#contact" class="btn btn-yellow">Заказать</a></div></div>
-            <div class="service-card"><div class="service-icon"><i class="fas fa-pen-fancy"></i></div><h3>Продающие тексты</h3><div class="service-price">от 500 ₽</div><div class="service-duration"><i class="far fa-clock"></i> от 1 дня</div><ul class="service-features"><li><i class="fas fa-check"></i> Продающие тексты</li><li><i class="fas fa-check"></i> SEO-оптимизация</li><li><i class="fas fa-check"></i> Описания товаров</li><li><i class="fas fa-check"></i> Уникальный контент</li></ul><div class="service-actions"><a href="#contact" class="btn btn-red">Заказать</a></div></div>
-        </div>
-    </div>
-</div>
-
 <div class="container">
-    <div class="dev-section">
-        <h2 style="text-align:center;">Разработка сайтов под ключ</h2>
-        <div class="dev-grid">
-            <div class="dev-card"><div class="dev-icon"><i class="fas fa-id-card"></i></div><h3>Сайт-визитка</h3><div class="dev-price">от 15 000 ₽</div><p>Срок: 3-5 дней</p><ul class="dev-features"><li><i class="fas fa-check"></i> 3-5 страниц</li><li><i class="fas fa-check"></i> Форма связи</li><li><i class="fas fa-check"></i> Адаптив</li><li><i class="fas fa-check"></i> Базовое SEO</li></ul><a href="#contact" class="btn btn-blue">Заказать</a></div>
-            <div class="dev-card"><div class="dev-icon"><i class="fas fa-bullseye"></i></div><h3>Лендинг</h3><div class="dev-price">от 20 000 ₽</div><p>Срок: 5-7 дней</p><ul class="dev-features"><li><i class="fas fa-check"></i> Уникальный дизайн</li><li><i class="fas fa-check"></i> Продающий текст</li><li><i class="fas fa-check"></i> Формы захвата</li><li><i class="fas fa-check"></i> Интеграция с CRM</li></ul><a href="#contact" class="btn btn-red">Заказать</a></div>
-            <div class="dev-card"><div class="dev-icon"><i class="fas fa-shopping-cart"></i></div><h3>Интернет-магазин</h3><div class="dev-price">от 50 000 ₽</div><p>Срок: 14-21 день</p><ul class="dev-features"><li><i class="fas fa-check"></i> Каталог товаров</li><li><i class="fas fa-check"></i> Корзина и оплата</li><li><i class="fas fa-check"></i> Личный кабинет</li><li><i class="fas fa-check"></i> Админ-панель</li></ul><a href="#contact" class="btn btn-green">Заказать</a></div>
+    
+    <!-- ШАПКА -->
+    <div style="text-align: center; margin-bottom: 16px;">
+        <span class="badge">✨ Работаю по всей России ✨</span>
+        <h1>Александра<br>Веб-разработчик + продающие тексты</h1>
+        <p>5 лет опыта · 45 проектов · 65 клиентов</p>
+    </div>
+
+    <!-- КОНТАКТЫ (видно крупно) -->
+    <div class="contacts">
+        <div>📞 <a href="tel:+79112870694">8-911-287-06-94</a></div>
+        <div>✉️ <a href="mailto:aleksa.romanyuk31@gmail.com">aleksa.romanyuk31@gmail.com</a></div>
+        <div>⏱️ Отвечаю за 20 мин · Пн-Пт 9–18</div>
+    </div>
+
+    <!-- 3 ПРОДАЮЩИХ ТЕКСТА (НОВЫЙ БЛОК) -->
+    <h2>🔥 3 продающих текста для вашего бизнеса</h2>
+    <div class="texts-grid">
+        <div class="text-card">
+            <h3>🏆 Для сайта / Landing Page</h3>
+            <p>«Закажите сайт, который продаёт 24/7. Я создаю убедительные офферы, заголовки и призывы к действию — конверсия вырастает на 30–50%».</p>
+            <div class="price">от 1 000 ₽</div>
+            <span class="badge">Готов за 1 день</span>
+        </div>
+        <div class="text-card">
+            <h3>📦 Для карточек товаров (WB/Ozon)</h3>
+            <p>«SEO-оптимизированные описания, которые выделяют вас среди конкурентов. Покупатели говорят “ДА” уже в заголовке».</p>
+            <div class="price">1 500 ₽ / карточка</div>
+            <span class="badge">Повышает продажи</span>
+        </div>
+        <div class="text-card">
+            <h3>📱 Для соцсетей и постов</h3>
+            <p>«Текст + визуальная концепция: посты, которые читают до конца и комментируют. Упаковка эксперта за 24 часа».</p>
+            <div class="price">1 500 ₽ / пост</div>
+            <span class="badge">Вовлечение +400%</span>
         </div>
     </div>
-</div>
 
-<div class="container" id="deepseek">
-    <div class="deepseek-section">
-        <div class="deepseek-header" style="text-align:center;">
-            <h2>Создание сайтов с DeepSeek</h2>
-            <p>Интеграция нейросети для уникального контента</p>
-            <div class="deepseek-badge">НОВИНКА: ИНТЕГРАЦИЯ С DEEPSEEK</div>
-        </div>
-        <div class="deepseek-grid">
-            <div class="deepseek-card"><div class="deepseek-icon"><i class="fas fa-id-card"></i></div><h3>Сайт-визитка</h3><p>С DeepSeek для уникального контента</p><div class="deepseek-price">от 18 000 ₽</div><ul class="deepseek-features"><li><i class="fas fa-check"></i> Дизайн + DeepSeek</li><li><i class="fas fa-check"></i> Уникальные тексты</li><li><i class="fas fa-check"></i> Генерация идей</li><li><i class="fas fa-check"></i> Быстрая разработка</li></ul><a href="#contact" class="btn btn-blue">Заказать</a></div>
-            <div class="deepseek-card"><div class="deepseek-icon"><i class="fas fa-bullseye"></i></div><h3>Лендинг с DeepSeek</h3><p>Продающий лендинг с генерацией текстов</p><div class="deepseek-price">от 23 000 ₽</div><ul class="deepseek-features"><li><i class="fas fa-check"></i> Продающие тексты</li><li><i class="fas fa-check"></i> Офферы и заголовки</li><li><i class="fas fa-check"></i> A/B тестирование</li><li><i class="fas fa-check"></i> Конверсия +30%</li></ul><a href="#contact" class="btn btn-red">Заказать</a></div>
-            <div class="deepseek-card"><div class="deepseek-icon"><i class="fas fa-shopping-cart"></i></div><h3>Интернет-магазин</h3><p>С DeepSeek для описаний и SEO</p><div class="deepseek-price">от 55 000 ₽</div><ul class="deepseek-features"><li><i class="fas fa-check"></i> Генерация описаний</li><li><i class="fas fa-check"></i> SEO-тексты</li><li><i class="fas fa-check"></i> Категории товаров</li><li><i class="fas fa-check"></i> Уникальный контент</li></ul><a href="#contact" class="btn btn-green">Заказать</a></div>
-            <div class="deepseek-card"><div class="deepseek-icon"><i class="fas fa-key"></i></div><h3>Сайт под ключ</h3><p>Полная интеграция DeepSeek</p><div class="deepseek-price">от 105 000 ₽</div><ul class="deepseek-features"><li><i class="fas fa-check"></i> Проектирование</li><li><i class="fas fa-check"></i> Дизайн + ИИ</li><li><i class="fas fa-check"></i> Весь контент</li><li><i class="fas fa-check"></i> SEO оптимизация</li></ul><a href="#contact" class="btn btn-yellow">Заказать</a></div>
-        </div>
+    <!-- УСЛУГИ (стандартные и глубокие) -->
+    <h2>Мои услуги</h2>
+    <div class="services-grid">
+        <div class="service-card"><h3>Сайт-визитка</h3><div class="price">от 15 000 ₽</div><p>3-5 стр · адаптив · форма связи</p></div>
+        <div class="service-card"><h3>Лендинг</h3><div class="price">от 20 000 ₽</div><p>дизайн + продающий текст · CRM</p></div>
+        <div class="service-card"><h3>Интернет-магазин</h3><div class="price">от 50 000 ₽</div><p>каталог · корзина · оплата</p></div>
+        <div class="service-card"><h3>Сайт под ключ</h3><div class="price">от 100 000 ₽</div><p>аналитика + дизайн + разработка + SEO</p></div>
+        <div class="service-card"><h3>Техподдержка</h3><div class="price">от 5 000 ₽/мес</div><p>обновления · бекапы · мониторинг</p></div>
+        <div class="service-card"><h3>Продающие тексты</h3><div class="price">от 500 ₽</div><p>уникальный контент · SEO · описания</p></div>
     </div>
-</div>
 
-<!-- ПРИМЕРЫ РАБОТ С ЦЕНАМИ И ПОЯСНЕНИЯМИ -->
-<div class="container" id="portfolio-examples">
-    <div class="portfolio-examples">
-        <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты с ценами</p></div>
-        <div class="examples-grid">
-            <!-- Юлия — Курсовые работы -->
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Юлия — Курсовые работы</h3>
-                <p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p>
-                <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 7 000 – 10 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 12 000 – 15 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
-                </div>
-                <a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-            
-            <!-- Татьяна — Фоторедактор -->
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-camera"></i></div>
-                <h3>Татьяна — Фоторедактор</h3>
-                <p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p>
-                <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 15 000 – 18 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 28 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
-                </div>
-                <a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-            
-            <!-- MagicToys — Интернет-магазин -->
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-store"></i></div>
-                <h3>MagicToys — Интернет-магазин</h3>
-                <p>Полноценный интернет-магазин с каталогом, корзиной, фильтрацией и сортировкой.</p>
-                <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 50 000 – 70 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 60 000 – 80 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
-                </div>
-                <a href="https://aleks-ars-ops.github.io/internet-magazin/" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-            
-            <!-- Ресторан «Вкус Итальян» -->
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-utensils"></i></div>
-                <h3>Ресторан «Вкус Итальян»</h3>
-                <p>Сайт для ресторана с меню, галереей интерьеров, формой бронирования и картой.</p>
-                <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 30 000 – 40 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 40 000 – 50 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
-                </div>
-                <a href="https://aleks-ars-ops.github.io/Restaurant-Website/" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-            
-            <!-- Кулинарный мастер-класс -->
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Кулинарный мастер-класс</h3>
-                <p>Продающий лендинг с анимацией, таймером обратного отсчёта и формой захвата.</p>
-                <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 20 000 – 30 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 35 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
-                </div>
-                <a href="https://aleks-ars-ops.github.io/culinary-masterclass./" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-            
-            <!-- BCorp — Корпоративный сайт -->
-            <div class="example-card">
-                <div class="example-icon"><i class="fas fa-building"></i></div>
-                <h3>BCorp — Корпоративный сайт</h3>
-                <p>Строгий корпоративный сайт с ценами в чёрных рамках, картой и формой обратной связи.</p>
-                <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 40 000 – 55 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 50 000 – 65 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
-                </div>
-                <a href="https://aleks-ars-ops.github.io/corporate-website./" target="_blank" class="example-link">Посмотреть →</a>
-            </div>
-        </div>
+    <!-- ИНТЕГРАЦИЯ С DeepSeek -->
+    <h2>🤖 Сайты + DeepSeek (нейросеть)</h2>
+    <div class="deepseek-grid">
+        <div class="card"><h3>Сайт-визитка + ИИ</h3><div class="price">от 18 000 ₽</div><p>Уникальные тексты, идеи, быстрая генерация</p></div>
+        <div class="card"><h3>Лендинг с DeepSeek</h3><div class="price">от 23 000 ₽</div><p>Конверсия +30% за счёт продающих заголовков</p></div>
+        <div class="card"><h3>Магазин + DeepSeek</h3><div class="price">от 55 000 ₽</div><p>Авто-описания товаров и SEO-контент</p></div>
     </div>
-</div>
 
-<div class="container" id="price">
-    <div class="price-table-section">
-        <h3 style="text-align:center;">📋 Полный прайс-лист</h3>
-        <table class="price-table">
-            <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr></thead>
+    <!-- ПРИМЕРЫ РАБОТ -->
+    <h2>📌 Примеры моих работ</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item"><strong>Юлия — Курсовые работы</strong><br>Калькулятор, корзина<br>💰 7 000 – 15 000 ₽</div>
+        <div class="portfolio-item"><strong>Татьяна — Фоторедактор</strong><br>Портфолио до/после<br>💰 15 000 – 28 000 ₽</div>
+        <div class="portfolio-item"><strong>MagicToys — Магазин игрушек</strong><br>Каталог, фильтры, корзина<br>💰 50 000 – 80 000 ₽</div>
+        <div class="portfolio-item"><strong>Ресторан «Вкус Италии»</strong><br>Меню, бронирование, карта<br>💰 30 000 – 50 000 ₽</div>
+    </div>
+
+    <!-- ПРАЙС-ЛИСТ + ПРЕЗЕНТАЦИЯ (встроена) -->
+    <h2>📄 Презентация услуг и полный прайс</h2>
+    <div class="card" style="background: #fefce8;">
+        <p><strong>🎓 Презентация «Под ключ»:</strong> от идеи до макета — 6 000 ₽ / 2-3 дня.<br>
+        🖼️ Нейрофотосессия (1 фото) — 400 ₽.<br>
+        📊 Презентация вашего бизнеса — готовая структура + дизайн.</p>
+        <a href="#" onclick="alert('Скачайте файл-пример: создайте presentation.html рядом с сайтом'); return false;" class="btn" style="background:#b45309;">📎 Скачать пример презентации (инструкция)</a>
+        <p style="margin-top: 12px; font-size: 0.85rem;">⭐ Полную презентацию я подготовлю под вас — просто напишите.</p>
+    </div>
+
+    <!-- Таблица с ценами (скроллится на телефоне) -->
+    <div style="overflow-x: auto;">
+        <table>
+            <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th></tr></thead>
             <tbody>
-                <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong> </td></tr>
-                <tr>}<td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong> </td></tr>
-                <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong> </td></tr>
-                <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong> </td></tr>
-                <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong> </td></tr>
-                <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong> </td></tr>
-                <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong> </td></tr>
-                <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
-                <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
-                <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
+                <tr><td>📸 Редактирование фото (1 шт)</td><td>300 ₽</td><td>2-4 ч</td></tr>
+                <tr><td>✍️ Продающий текст (1 канал)</td><td>1 000 ₽</td><td>3-5 ч</td></tr>
+                <tr><td>📱 Пост (текст + визуал)</td><td>1 500 ₽</td><td>4-5 ч</td></tr>
+                <tr><td>🤖 Нейрофотосессия (1 фото)</td><td>400 ₽</td><td>2-4 ч</td></tr>
+                <tr><td>📊 Презентация под ключ</td><td>6 000 ₽</td><td>2-3 дня</td></tr>
+                <tr><td>🛍 Карточка маркетплейса</td><td>1 500 ₽</td><td>3-5 ч</td></tr>
+                <tr><td>🌐 Сайт-визитка / Лендинг</td><td>25 000 ₽</td><td>5-7 дней</td></tr>
             </tbody>
         </table>
     </div>
-</div>
 
-<div class="container" id="calculator">
-    <div class="calculator-section">
-        <h3 style="text-align:center;">💰 Калькулятор стоимости</h3>
-        <div class="calculator-grid">
-            <div class="calc-group">
-                <label>Тип услуги</label>
-                <select id="serviceType">
-                    <option value="photo1">1 фото (обработка)</option>
-                    <option value="photo5">5 фото (обработка)</option>
-                    <option value="photo15">15 фото (обработка)</option>
-                    <option value="text1">Текст для 1 канала</option>
-                    <option value="text4">Тексты на 4 канала</option>
-                    <option value="post1">1 пост (текст+визуал)</option>
-                    <option value="post5">5 постов пакетом</option>
-                    <option value="neuro1">1 нейрофото</option>
-                    <option value="site">Сайт-визитка</option>
-                    <option value="sitekey">Сайт под ключ</option>
-                </select>
-            </div>
-            <div class="calc-group">
-                <label>Комплектация</label>
-                <select id="packageType">
-                    <option value="basic">🔹 Базовый</option>
-                    <option value="premium">🔸 Под ключ</option>
-                </select>
-            </div>
-            <div class="calc-group">
-                <label>Количество: <span id="quantityValue">1</span></label>
-                <input type="range" id="quantity" min="1" max="10" value="1" step="1">
-            </div>
-            <div class="calc-group">
-                <label>Срочность</label>
-                <select id="urgent">
-                    <option value="1">Обычный срок</option>
-                    <option value="1.3">Срочно (+30%)</option>
-                    <option value="1.5">Очень срочно (+50%)</option>
-                </select>
-            </div>
-        </div>
-        <div class="calc-total">
-            <h4>Примерная стоимость</h4>
-            <div class="total-price" id="totalPrice">0 ₽</div>
-            <p id="priceNote" style="font-size:0.8rem; margin-top:10px;"></p>
-        </div>
+    <!-- КАЛЬКУЛЯТОР - пример -->
+    <h2>💰 Калькулятор (примерная стоимость)</h2>
+    <div class="card" style="text-align:center;">
+        <p>Базовая цена сайта: от 15 000 ₽</p>
+        <button class="btn" onclick="alert('Свяжитесь со мной для точного расчёта: 8-911-287-06-94')">Рассчитать проект →</button>
+        <p style="margin-top:12px;">🔹 Только файлы сайта / 🔸 Под ключ с хостингом и доменом</p>
     </div>
-</div>
 
-<div class="container">
-    <div class="support">
-        <div class="support-banner">
-            <h3>🎁 Бесплатная техническая поддержка</h3>
-            <p>В течение 4 дней после сдачи готовой работы</p>
-            <div class="support-features">
-                <div><i class="fas fa-bug"></i> Исправление ошибок</div>
-                <div><i class="fas fa-headset"></i> Консультации</div>
-                <div><i class="fas fa-chalkboard-teacher"></i> Обучение работе с сайтом</div>
-            </div>
-        </div>
+    <!-- ОБРАТНАЯ СВЯЗЬ (телефон/почта) -->
+    <div class="contacts" style="background:#0f172a; margin-top: 32px;">
+        <div>📞 <a href="tel:+79112870694">8-911-287-06-94</a></div>
+        <div>✉️ <a href="mailto:aleksa.romanyuk31@gmail.com">aleksa.romanyuk31@gmail.com</a></div>
+        <div>💬 Telegram / WhatsApp по номеру телефона</div>
     </div>
+
+    <footer>
+        <hr>
+        <p>© Александра — веб-разработка и продающие тексты. Сайт адаптирован для телефона.</p>
+    </footer>
 </div>
-
-<div class="container" id="contact">
-    <h2>Обратная связь</h2>
-    <p>Отвечаю в течение 20 минут в рабочее время</p>
-    <div class="contact-block">
-        <h3>Свяжитесь со мной удобным способом</h3>
-        <div class="contact-links">
-            <a href="tel:+79112870694" class="contact-link"><i class="fas fa-phone-alt"></i><span>Позвонить</span></a>
-            <a href="https://t.me/AleksaR31" class="contact-link" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a>
-            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="contact-link" target="_blank"><i class="fas fa-comment"></i><span>IMO</span></a>
-        </div>
-        <a href="tel:+79112870694" class="contact-phone">8-911-287-06-94</a>
-        <div class="contact-note">
-            <p>📱 Работаю по всей России</p>
-            <p>✉️ aleksa.romanyuk31@gmail.com</p>
-        </div>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="container">
-        <div class="messengers-bottom">
-            <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fab fa-telegram"></i></div><span>Telegram</span></a>
-            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fas fa-comment"></i></div><span>IMO</span></a>
-        </div>
-        <div class="footer-grid">
-            <div><div class="logo" style="justify-content:flex-start;"><i class="fas fa-rocket" style="font-size:2rem;"></i><span class="logo-text" style="font-size:1.5rem;">ALEXSA</span></div><p>Работаю по всей России</p><p>Работаю с DeepSeek</p><p>Пишу продающие тексты от 500 ₽</p></div>
-            <div class="footer-contacts"><h3>Контакты</h3><a href="tel:+79112870694"><i class="fas fa-phone"></i> 8-911-287-06-94</a><a href="mailto:aleksa.romanyuk31@gmail.com"><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</a><a href="https://github.com/Aleks-ars-ops" target="_blank"><i class="fab fa-github"></i> GitHub портфолио</a><p><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00 (МСК)</p><p><i class="fas fa-bolt"></i> Отвечаю за 20 минут</p></div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2024 ALEXSA-Веб-Разработчик</p></div>
-    </div>
-</footer>
-
-<div class="notification" id="notification"></div>
-
-<script>
-    // Анимация статистики
-    const stats = document.querySelectorAll('.stat-number');
-    stats.forEach(stat => {
-        const target = parseInt(stat.dataset.target);
-        let current = 0;
-        const increment = target / 80;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) { stat.innerText = target; clearInterval(timer); }
-            else stat.innerText = Math.floor(current);
-        }, 20);
-    });
-
-    // Калькулятор с учётом комплектации
-    const serviceSelect = document.getElementById('serviceType');
-    const packageSelect = document.getElementById('packageType');
-    const quantityInput = document.getElementById('quantity');
-    const quantityValue = document.getElementById('quantityValue');
-    const urgentSelect = document.getElementById('urgent');
-    const totalSpan = document.getElementById('totalPrice');
-    const priceNote = document.getElementById('priceNote');
-
-    const basePrices = {
-        photo1: 300, photo5: 1200, photo15: 3000,
-        text1: 1000, text4: 2500,
-        post1: 1500, post5: 6000,
-        neuro1: 400,
-        site: 25000, sitekey: 42000
-    };
-
-    const keyPrices = {
-        site: 35000,      // Сайт-визитка под ключ
-        sitekey: 50000    // Сайт под ключ (полный пакет) с доменом и хостингом
-    };
-
-    function updateCalc() {
-        let service = serviceSelect.value;
-        let packageType = packageSelect.value;
-        let quantity = parseInt(quantityInput.value);
-        let urgent = parseFloat(urgentSelect.value);
-        
-        let basePrice = basePrices[service] || 0;
-        
-        // Если выбран "Под ключ" и для услуги есть цена под ключ
-        if (packageType === 'premium' && keyPrices[service]) {
-            basePrice = keyPrices[service];
-            priceNote.innerText = '✅ Включено: домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция';
-        } else if (packageType === 'premium') {
-            priceNote.innerText = '🔸 Цена указана за базовую версию. Для уточнения цены "под ключ" свяжитесь со мной.';
-        } else {
-            priceNote.innerText = '🔹 Только файлы сайта. Вы самостоятельно загружаете на хостинг.';
-        }
-        
-        let total = basePrice * quantity * urgent;
-        totalSpan.innerText = total.toLocaleString() + ' ₽';
-    }
-
-    serviceSelect.addEventListener('change', updateCalc);
-    packageSelect.addEventListener('change', updateCalc);
-    quantityInput.addEventListener('input', () => {
-        quantityValue.innerText = quantityInput.value;
-        updateCalc();
-    });
-    urgentSelect.addEventListener('change', updateCalc);
-    updateCalc();
-
-    // Уведомление
-    const notif = document.getElementById('notification');
-    if (notif) {
-        setTimeout(() => {
-            notif.innerText = '✅ Сайт готов! Свяжитесь со мной по телефону или в Telegram';
-            notif.classList.add('show');
-            setTimeout(() => notif.classList.remove('show'), 4000);
-        }, 500);
-    }
-</script>
-
 </body>
 </html>
