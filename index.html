@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>ALEXSA-Веб-Разработчик — Создание сайтов с DeepSeek</title>
     
     <meta name="description" content="Профессиональная разработка сайтов с использованием DeepSeek. 5 лет опыта, 45 проектов. Бесплатная техподдержка 4 дня. Продающие тексты.">
@@ -203,62 +203,6 @@
         .support-features { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 30px; }
         .support-features div { background: var(--gradient-rainbow); color: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; }
         
-        /* ОТЗЫВЫ */
-        .reviews-section {
-            background: linear-gradient(135deg, rgba(65,105,225,0.05), rgba(255,68,68,0.05), rgba(255,215,0,0.05), rgba(50,205,50,0.05));
-            border-radius: 50px;
-            padding: 60px 30px;
-            margin: 40px 0;
-        }
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .review-card {
-            background: white;
-            border-radius: var(--border-radius);
-            padding: 30px;
-            transition: var(--transition);
-            box-shadow: var(--card-shadow);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        .review-card:hover {
-            transform: translateY(-5px);
-        }
-        .review-icon {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-        }
-        .review-text {
-            font-style: italic;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #555;
-            margin-bottom: 20px;
-        }
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .review-avatar {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-        }
-        .review-author h4 {
-            font-size: 1rem;
-            margin-bottom: 3px;
-        }
-        .review-author span {
-            font-size: 0.8rem;
-            color: #777;
-        }
-        
-        /* БЛОК КОНТАКТОВ ВМЕСТО ФОРМЫ */
         .contact-block {
             background: white;
             border-radius: var(--border-radius);
@@ -364,7 +308,6 @@
             <li><a href="#portfolio-examples">Портфолио</a></li>
             <li><a href="#price">Прайс</a></li>
             <li><a href="#calculator">Калькулятор</a></li>
-            <li><a href="#reviews">Отзывы</a></li>
             <li><a href="#contact">Контакты</a></li>
         </ul>
     </div>
@@ -375,8 +318,8 @@
         <div class="hero-left">
             <div class="logo"><i class="fas fa-rocket logo-icon"></i><span class="logo-text">ALEXSA-Веб-Разработчик</span></div>
             <div class="hero-actions">
-                <a href="#contact" class="btn btn-blue"><i class="fas fa-phone"></i> Связаться</a>
-                <a href="#contact" class="btn btn-red"><i class="fas fa-comments"></i> Написать</a>
+                <a href="#contact" class="btn btn-blue"><i class="fas fa-calculator"></i> Рассчитать</a>
+                <a href="#contact" class="btn btn-red"><i class="fas fa-comments"></i> Консультация</a>
                 <a href="https://github.com/Aleks-ars-ops" class="btn btn-yellow" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             </div>
         </div>
@@ -449,12 +392,23 @@
     </div>
 </div>
 
+<!-- ПРИМЕРЫ РАБОТ (6 КАРТОЧЕК) -->
 <div class="container" id="portfolio-examples">
     <div class="portfolio-examples">
         <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты, которые я сделала</p></div>
         <div class="examples-grid">
+            <!-- Существующие карточки -->
             <div class="example-card"><div class="example-icon"><i class="fas fa-graduation-cap"></i></div><h3>Юлия — Курсовые работы</h3><p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p><a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a></div>
             <div class="example-card"><div class="example-icon"><i class="fas fa-camera"></i></div><h3>Татьяна — Фоторедактор</h3><p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p><a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a></div>
+            
+            <!-- НОВЫЕ ПРИМЕРЫ РАБОТ -->
+            <div class="example-card"><div class="example-icon"><i class="fas fa-store"></i></div><h3>MagicToys — Интернет-магазин</h3><p>Полноценный интернет-магазин с каталогом товаров, корзиной, фильтрацией по категориям и сортировкой.</p><a href="https://aleks-ars-ops.github.io/internet-magazin/" target="_blank" class="example-link">Посмотреть →</a></div>
+            
+            <div class="example-card"><div class="example-icon"><i class="fas fa-utensils"></i></div><h3>Ресторан «Вкус Итальян»</h3><p>Сайт для ресторана с меню (переключение категорий), галереей интерьеров, формой бронирования столиков и картой.</p><a href="https://aleks-ars-ops.github.io/Restaurant-Website/" target="_blank" class="example-link">Посмотреть →</a></div>
+            
+            <div class="example-card"><div class="example-icon"><i class="fas fa-chart-line"></i></div><h3>Кулинарный мастер-класс</h3><p>Продающий лендинг с анимацией, таймером обратного отсчёта и формой захвата. Высокая конверсия.</p><a href="https://aleks-ars-ops.github.io/culinary-masterclass./" target="_blank" class="example-link">Посмотреть →</a></div>
+            
+            <div class="example-card"><div class="example-icon"><i class="fas fa-building"></i></div><h3>BCorp — Корпоративный сайт</h3><p>Строгий корпоративный сайт с ценами в чёрных рамках, картой, формой обратной связи и профессиональным дизайном.</p><a href="https://aleks-ars-ops.github.io/corporate-website./" target="_blank" class="example-link">Посмотреть →</a></div>
         </div>
     </div>
 </div>
@@ -469,25 +423,25 @@
                 <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong> </td></tr>
                 <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
                 <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong> </td></tr>
                 <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
                 <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
                 <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong> </td></tr>
                 <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
                 <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong> </td></tr>
                 <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
                 <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong> </td></tr>
                 <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
                 <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong> </td></tr>
                 <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
                 <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
                 <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
@@ -522,61 +476,15 @@
     </div>
 </div>
 
-<!-- ОТЗЫВЫ -->
-<div class="container" id="reviews">
-    <div class="reviews-section">
-        <div class="section-header">
-            <h2>Отзывы клиентов</h2>
-            <p>Что говорят обо мне те, кому я помогла</p>
-        </div>
-        <div class="reviews-grid">
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Заказывала сайт-визитку для своего салона. Алекса сделала всё быстро, качественно, учла все пожелания. Сайт работает отлично, клиенты хвалят. Рекомендую!"</p>
-                <div class="review-author">
-                    <i class="fas fa-user-circle review-avatar"></i>
-                    <div><h4>Екатерина С.</h4><span>Салон красоты «Лаванда»</span></div>
-                </div>
-            </div>
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Нужен был лендинг для интернет-магазина. Алекса сделала всё в срок, помогла с текстами. Очень довольна результатом, продажи выросли!"</p>
-                <div class="review-author">
-                    <i class="fas fa-user-circle review-avatar"></i>
-                    <div><h4>Михаил П.</h4><span>Интернет-магазин подарков</span></div>
-                </div>
-            </div>
-            <div class="review-card">
-                <div class="review-icon"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p class="review-text">"Алекса написала продающие тексты для моего блога. Тексты цепляют, аудитория растёт. Приятно работать с профессионалом!"</p>
-                <div class="review-author">
-                    <i class="fas fa-user-circle review-avatar"></i>
-                    <div><h4>Анна В.</h4><span>Блогер, эксперт по питанию</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- КОНТАКТЫ ВМЕСТО ФОРМЫ -->
 <div class="container" id="contact">
     <h2>Обратная связь</h2>
     <p>Отвечаю в течение 20 минут в рабочее время</p>
     <div class="contact-block">
         <h3>Свяжитесь со мной удобным способом</h3>
         <div class="contact-links">
-            <a href="tel:+79112870694" class="contact-link">
-                <i class="fas fa-phone-alt"></i>
-                <span>Позвонить</span>
-            </a>
-            <a href="https://t.me/AleksaR31" class="contact-link" target="_blank">
-                <i class="fab fa-telegram"></i>
-                <span>Telegram</span>
-            </a>
-            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="contact-link" target="_blank">
-                <i class="fas fa-comment"></i>
-                <span>IMO</span>
-            </a>
+            <a href="tel:+79112870694" class="contact-link"><i class="fas fa-phone-alt"></i><span>Позвонить</span></a>
+            <a href="https://t.me/AleksaR31" class="contact-link" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a>
+            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="contact-link" target="_blank"><i class="fas fa-comment"></i><span>IMO</span></a>
         </div>
         <a href="tel:+79112870694" class="contact-phone">8-911-287-06-94</a>
         <div class="contact-note">
