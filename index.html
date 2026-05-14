@@ -483,16 +483,26 @@
             <tbody>
                 <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong> </td></tr>
                 <tr>}<td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
+                <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
+                <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong> </td></tr>
                 <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
+                <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong> </td></tr>
+                <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
                 <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
+                <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong> </td></tr>
                 <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
+                <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
+                <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong> </td></tr>
+                <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
+                <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong> </td></tr>
                 <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
+                <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong> </td></tr>
                 <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
                 <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
@@ -506,46 +516,11 @@
     <div class="calculator-section">
         <h3 style="text-align:center;">💰 Калькулятор стоимости</h3>
         <div class="calculator-grid">
-            <div class="calc-group">
-                <label>Тип услуги</label>
-                <select id="serviceType">
-                    <option value="photo1">1 фото (обработка)</option>
-                    <option value="photo5">5 фото (обработка)</option>
-                    <option value="photo15">15 фото (обработка)</option>
-                    <option value="text1">Текст для 1 канала</option>
-                    <option value="text4">Тексты на 4 канала</option>
-                    <option value="post1">1 пост (текст+визуал)</option>
-                    <option value="post5">5 постов пакетом</option>
-                    <option value="neuro1">1 нейрофото</option>
-                    <option value="site">Сайт-визитка</option>
-                    <option value="sitekey">Сайт под ключ</option>
-                </select>
-            </div>
-            <div class="calc-group">
-                <label>Комплектация</label>
-                <select id="packageType">
-                    <option value="basic">🔹 Базовый</option>
-                    <option value="premium">🔸 Под ключ</option>
-                </select>
-            </div>
-            <div class="calc-group">
-                <label>Количество: <span id="quantityValue">1</span></label>
-                <input type="range" id="quantity" min="1" max="10" value="1" step="1">
-            </div>
-            <div class="calc-group">
-                <label>Срочность</label>
-                <select id="urgent">
-                    <option value="1">Обычный срок</option>
-                    <option value="1.3">Срочно (+30%)</option>
-                    <option value="1.5">Очень срочно (+50%)</option>
-                </select>
-            </div>
+            <div class="calc-group"><label>Тип услуги</label><select id="serviceType"><option value="300">1 фото (обработка)</option><option value="1200">5 фото (обработка)</option><option value="3000">15 фото (обработка)</option><option value="1000">Текст для 1 канала</option><option value="2500">Тексты на 4 канала</option><option value="1500">1 пост (текст+визуал)</option><option value="6000">5 постов пакетом</option><option value="400">1 нейрофото</option><option value="25000">Сайт-визитка</option><option value="42000">Сайт под ключ</option></select></div>
+            <div class="calc-group"><label>Количество: <span id="quantityValue">1</span></label><input type="range" id="quantity" min="1" max="10" value="1" step="1"></div>
+            <div class="calc-group"><label>Срочность</label><select id="urgent"><option value="1">Обычный срок</option><option value="1.3">Срочно (+30%)</option><option value="1.5">Очень срочно (+50%)</option></select></div>
         </div>
-        <div class="calc-total">
-            <h4>Примерная стоимость</h4>
-            <div class="total-price" id="totalPrice">0 ₽</div>
-            <p id="priceNote" style="font-size:0.8rem; margin-top:10px;"></p>
-        </div>
+        <div class="calc-total"><h4>Примерная стоимость</h4><div class="total-price" id="totalPrice">300 ₽</div><p>Точная стоимость после обсуждения деталей</p></div>
     </div>
 </div>
 
@@ -611,58 +586,22 @@
         }, 20);
     });
 
-    // Калькулятор с учётом комплектации
+    // Калькулятор
     const serviceSelect = document.getElementById('serviceType');
-    const packageSelect = document.getElementById('packageType');
     const quantityInput = document.getElementById('quantity');
     const quantityValue = document.getElementById('quantityValue');
     const urgentSelect = document.getElementById('urgent');
     const totalSpan = document.getElementById('totalPrice');
-    const priceNote = document.getElementById('priceNote');
-
-    const basePrices = {
-        photo1: 300, photo5: 1200, photo15: 3000,
-        text1: 1000, text4: 2500,
-        post1: 1500, post5: 6000,
-        neuro1: 400,
-        site: 25000, sitekey: 42000
-    };
-
-    const keyPrices = {
-        site: 35000,      // Сайт-визитка под ключ
-        sitekey: 50000    // Сайт под ключ (полный пакет) с доменом и хостингом
-    };
-
     function updateCalc() {
-        let service = serviceSelect.value;
-        let packageType = packageSelect.value;
-        let quantity = parseInt(quantityInput.value);
-        let urgent = parseFloat(urgentSelect.value);
-        
-        let basePrice = basePrices[service] || 0;
-        
-        // Если выбран "Под ключ" и для услуги есть цена под ключ
-        if (packageType === 'premium' && keyPrices[service]) {
-            basePrice = keyPrices[service];
-            priceNote.innerText = '✅ Включено: домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция';
-        } else if (packageType === 'premium') {
-            priceNote.innerText = '🔸 Цена указана за базовую версию. Для уточнения цены "под ключ" свяжитесь со мной.';
-        } else {
-            priceNote.innerText = '🔹 Только файлы сайта. Вы самостоятельно загружаете на хостинг.';
-        }
-        
-        let total = basePrice * quantity * urgent;
+        let total = parseInt(serviceSelect.value) * parseInt(quantityInput.value) * parseFloat(urgentSelect.value);
         totalSpan.innerText = total.toLocaleString() + ' ₽';
     }
-
-    serviceSelect.addEventListener('change', updateCalc);
-    packageSelect.addEventListener('change', updateCalc);
-    quantityInput.addEventListener('input', () => {
-        quantityValue.innerText = quantityInput.value;
+    if (serviceSelect) {
+        serviceSelect.addEventListener('change', updateCalc);
+        quantityInput.addEventListener('input', () => { quantityValue.innerText = quantityInput.value; updateCalc(); });
+        urgentSelect.addEventListener('change', updateCalc);
         updateCalc();
-    });
-    urgentSelect.addEventListener('change', updateCalc);
-    updateCalc();
+    }
 
     // Уведомление
     const notif = document.getElementById('notification');
