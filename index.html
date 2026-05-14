@@ -175,8 +175,9 @@
             background: var(--gradient-rainbow); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 15px;
         }
         
+        /* Стили для карточек портфолио с ценами */
         .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
-        .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; margin-top: 40px; }
         .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); display: flex; flex-direction: column; height: 100%; }
         .example-card:hover { transform: translateY(-10px); }
         .example-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
@@ -186,7 +187,6 @@
         .example-price-basic span { font-weight: 700; color: var(--primary-blue); }
         .example-price-key { font-size: 0.85rem; color: #666; }
         .example-price-key span { font-weight: 700; color: var(--primary-green); }
-        .example-tooltip { font-size: 0.7rem; color: #888; margin-top: 8px; cursor: help; border-bottom: 1px dashed #ccc; display: inline-block; }
         
         .price-table-section { background: white; border-radius: 24px; padding: 30px; margin: 40px 0; overflow-x: auto; box-shadow: var(--card-shadow); }
         .price-table { width: 100%; border-collapse: collapse; }
@@ -263,6 +263,9 @@
             display: inline-block;
             text-decoration: none;
         }
+        .contact-phone:hover {
+            color: var(--primary-red);
+        }
         .contact-note {
             margin-top: 30px;
             color: #666;
@@ -293,7 +296,7 @@
             <div class="contact-info-top">
                 <div><i class="fas fa-phone"></i> 8-911-287-06-94</div>
                 <div><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</div>
-                <div><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00 (МСК)</div>
+                <div><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00</div>
                 <div><i class="fas fa-bolt"></i> Отвечаю за 20 мин</div>
             </div>
         </div>
@@ -395,7 +398,7 @@
     </div>
 </div>
 
-<!-- ПРИМЕРЫ РАБОТ С ЦЕНАМИ И ПОЯСНЕНИЯМИ -->
+<!-- ПРИМЕРЫ РАБОТ С ЦЕНАМИ -->
 <div class="container" id="portfolio-examples">
     <div class="portfolio-examples">
         <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты с ценами</p></div>
@@ -406,8 +409,8 @@
                 <h3>Юлия — Курсовые работы</h3>
                 <p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 7 000 – 10 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 12 000 – 15 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 7 000 – 10 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 12 000 – 15 000 ₽</div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -418,8 +421,8 @@
                 <h3>Татьяна — Фоторедактор</h3>
                 <p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 15 000 – 18 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 28 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 15 000 – 18 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 28 000 ₽</div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -430,8 +433,8 @@
                 <h3>MagicToys — Интернет-магазин</h3>
                 <p>Полноценный интернет-магазин с каталогом, корзиной, фильтрацией и сортировкой.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 50 000 – 70 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 60 000 – 80 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 50 000 – 70 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 60 000 – 80 000 ₽</div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/internet-magazin/" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -442,8 +445,8 @@
                 <h3>Ресторан «Вкус Итальян»</h3>
                 <p>Сайт для ресторана с меню, галереей интерьеров, формой бронирования и картой.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 30 000 – 40 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 40 000 – 50 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 30 000 – 40 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 40 000 – 50 000 ₽</div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/Restaurant-Website/" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -454,8 +457,8 @@
                 <h3>Кулинарный мастер-класс</h3>
                 <p>Продающий лендинг с анимацией, таймером обратного отсчёта и формой захвата.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 20 000 – 30 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 35 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 20 000 – 30 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 35 000 ₽</div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/culinary-masterclass./" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -466,8 +469,8 @@
                 <h3>BCorp — Корпоративный сайт</h3>
                 <p>Строгий корпоративный сайт с ценами в чёрных рамках, картой и формой обратной связи.</p>
                 <div class="example-price">
-                    <div class="example-price-basic"><span>🔹 Базовый:</span> 40 000 – 55 000 ₽ <span class="example-tooltip" title="Только файлы сайта. Вы сами загружаете на хостинг.">ⓘ</span></div>
-                    <div class="example-price-key"><span>🔸 Под ключ:</span> 50 000 – 65 000 ₽ <span class="example-tooltip" title="Домен .ru, хостинг на год, отправка форм на почту/Telegram, загрузка на сервер, инструкция.">ⓘ</span></div>
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 40 000 – 55 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 50 000 – 65 000 ₽</div>
                 </div>
                 <a href="https://aleks-ars-ops.github.io/corporate-website./" target="_blank" class="example-link">Посмотреть →</a>
             </div>
@@ -482,14 +485,137 @@
             <thead><tr><th>Услуга</th><th>Цена</th><th>Срок</th><th>Примечание</th></tr></thead>
             <tbody>
                 <tr class="category-row"><td colspan="4"><strong>📸 РЕДАКТИРОВАНИЕ ФОТО</strong> </td></tr>
-                <tr>}<td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
-                <tr>}<td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
-                <tr>}<td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong></td></tr>
-                <tr>}<td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
-                <tr>}<td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong></td></tr>
+                <tr><td>1 фото</td><td class="price-cell">300 ₽</td><td>2-4 ч</td><td></td></tr>
+                <tr><td>5 фото</td><td class="price-cell">1 200 ₽</td><td>1 день</td><td></td></tr>
+                <tr><td>15 фото</td><td class="price-cell">3 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>✍️ ПРОДАЮЩИЕ ТЕКСТЫ</strong> </td></tr>
+                <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
+                <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong> </td></tr>
                 <tr>}<td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
                 <tr>}<td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
                 <tr>}<td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
-                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong>
+                <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong> </td></tr>
+                <tr>}<td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
+                <tr>}<td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
+                <tr>}<td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong> </td></tr>
+                <tr>}<td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
+                <tr>}<td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr>}<td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong> </td></tr>
+                <tr>}<td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
+                <tr>}<td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong> </td></tr>
+                <tr>}<td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
+                <tr>}<td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
+                <tr>}<td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container" id="calculator">
+    <div class="calculator-section">
+        <h3 style="text-align:center;">💰 Калькулятор стоимости</h3>
+        <div class="calculator-grid">
+            <div class="calc-group"><label>Тип услуги</label><select id="serviceType"><option value="300">1 фото (обработка)</option><option value="1200">5 фото (обработка)</option><option value="3000">15 фото (обработка)</option><option value="1000">Текст для 1 канала</option><option value="2500">Тексты на 4 канала</option><option value="1500">1 пост (текст+визуал)</option><option value="6000">5 постов пакетом</option><option value="400">1 нейрофото</option><option value="25000">Сайт-визитка</option><option value="42000">Сайт под ключ</option></select></div>
+            <div class="calc-group"><label>Количество: <span id="quantityValue">1</span></label><input type="range" id="quantity" min="1" max="10" value="1" step="1"></div>
+            <div class="calc-group"><label>Срочность</label><select id="urgent"><option value="1">Обычный срок</option><option value="1.3">Срочно (+30%)</option><option value="1.5">Очень срочно (+50%)</option></select></div>
+        </div>
+        <div class="calc-total"><h4>Примерная стоимость</h4><div class="total-price" id="totalPrice">300 ₽</div><p>Точная стоимость после обсуждения деталей</p></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="support">
+        <div class="support-banner">
+            <h3>🎁 Бесплатная техническая поддержка</h3>
+            <p>В течение 4 дней после сдачи готовой работы</p>
+            <div class="support-features">
+                <div><i class="fas fa-bug"></i> Исправление ошибок</div>
+                <div><i class="fas fa-headset"></i> Консультации</div>
+                <div><i class="fas fa-chalkboard-teacher"></i> Обучение работе с сайтом</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="contact">
+    <h2>Обратная связь</h2>
+    <p>Отвечаю в течение 20 минут в рабочее время</p>
+    <div class="contact-block">
+        <h3>Свяжитесь со мной удобным способом</h3>
+        <div class="contact-links">
+            <a href="tel:+79112870694" class="contact-link"><i class="fas fa-phone-alt"></i><span>Позвонить</span></a>
+            <a href="https://t.me/AleksaR31" class="contact-link" target="_blank"><i class="fab fa-telegram"></i><span>Telegram</span></a>
+            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="contact-link" target="_blank"><i class="fas fa-comment"></i><span>IMO</span></a>
+        </div>
+        <a href="tel:+79112870694" class="contact-phone">8-911-287-06-94</a>
+        <div class="contact-note">
+            <p>📱 Звоните или пишите в любое время</p>
+            <p>✉️ aleksa.romanyuk31@gmail.com</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="messengers-bottom">
+            <a href="https://t.me/AleksaR31" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fab fa-telegram"></i></div><span>Telegram</span></a>
+            <a href="https://imo.im/chat/imoid_Mic1QeodnK" class="messenger-item" target="_blank"><div class="messenger-icon"><i class="fas fa-comment"></i></div><span>IMO</span></a>
+        </div>
+        <div class="footer-grid">
+            <div><div class="logo" style="justify-content:flex-start;"><i class="fas fa-rocket" style="font-size:2rem;"></i><span class="logo-text" style="font-size:1.5rem;">ALEXSA</span></div><p>Работаю по всей России</p><p>Работаю с DeepSeek</p><p>Пишу продающие тексты от 500 ₽</p></div>
+            <div class="footer-contacts"><h3>Контакты</h3><a href="tel:+79112870694"><i class="fas fa-phone"></i> 8-911-287-06-94</a><a href="mailto:aleksa.romanyuk31@gmail.com"><i class="fas fa-envelope"></i> aleksa.romanyuk31@gmail.com</a><a href="https://github.com/Aleks-ars-ops" target="_blank"><i class="fab fa-github"></i> GitHub портфолио</a><p><i class="fas fa-clock"></i> Пн-Пт 9:00-18:00</p><p><i class="fas fa-bolt"></i> Отвечаю за 20 минут</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2024 ALEXSA-Веб-Разработчик</p></div>
+    </div>
+</footer>
+
+<div class="notification" id="notification"></div>
+
+<script>
+    // Анимация статистики
+    const stats = document.querySelectorAll('.stat-number');
+    stats.forEach(stat => {
+        const target = parseInt(stat.dataset.target);
+        let current = 0;
+        const increment = target / 80;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) { stat.innerText = target; clearInterval(timer); }
+            else stat.innerText = Math.floor(current);
+        }, 20);
+    });
+
+    // Калькулятор
+    const serviceSelect = document.getElementById('serviceType');
+    const quantityInput = document.getElementById('quantity');
+    const quantityValue = document.getElementById('quantityValue');
+    const urgentSelect = document.getElementById('urgent');
+    const totalSpan = document.getElementById('totalPrice');
+    function updateCalc() {
+        let total = parseInt(serviceSelect.value) * parseInt(quantityInput.value) * parseFloat(urgentSelect.value);
+        totalSpan.innerText = total.toLocaleString() + ' ₽';
+    }
+    if (serviceSelect) {
+        serviceSelect.addEventListener('change', updateCalc);
+        quantityInput.addEventListener('input', () => { quantityValue.innerText = quantityInput.value; updateCalc(); });
+        urgentSelect.addEventListener('change', updateCalc);
+        updateCalc();
+    }
+
+    // Уведомление
+    const notif = document.getElementById('notification');
+    if (notif) {
+        setTimeout(() => {
+            notif.innerText = '✅ Сайт готов! Свяжитесь со мной по телефону или в Telegram';
+            notif.classList.add('show');
+            setTimeout(() => notif.classList.remove('show'), 4000);
+        }, 500);
+    }
+</script>
+
+</body>
+</html>
