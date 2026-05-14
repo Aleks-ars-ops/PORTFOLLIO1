@@ -175,12 +175,18 @@
             background: var(--gradient-rainbow); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin-bottom: 15px;
         }
         
+        /* Стили для карточек портфолио с ценами */
         .portfolio-examples { background: white; border-radius: 50px; padding: 60px 30px; margin: 40px 0; }
-        .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
-        .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); }
+        .examples-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; margin-top: 40px; }
+        .example-card { background: var(--light); border-radius: var(--border-radius); padding: 25px; text-align: center; transition: var(--transition); box-shadow: var(--card-shadow); display: flex; flex-direction: column; height: 100%; }
         .example-card:hover { transform: translateY(-10px); }
         .example-icon { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; }
         .example-link { display: inline-block; margin-top: 15px; color: var(--primary-blue); text-decoration: none; font-weight: 600; }
+        .example-price { margin: 15px 0 5px; padding-top: 10px; border-top: 1px solid #e0e0e0; }
+        .example-price-basic { font-size: 0.85rem; color: #666; margin-bottom: 5px; }
+        .example-price-basic span { font-weight: 700; color: var(--primary-blue); }
+        .example-price-key { font-size: 0.85rem; color: #666; }
+        .example-price-key span { font-weight: 700; color: var(--primary-green); }
         
         .price-table-section { background: white; border-radius: 24px; padding: 30px; margin: 40px 0; overflow-x: auto; box-shadow: var(--card-shadow); }
         .price-table { width: 100%; border-collapse: collapse; }
@@ -392,23 +398,82 @@
     </div>
 </div>
 
-<!-- ПРИМЕРЫ РАБОТ (6 КАРТОЧЕК) -->
+<!-- ПРИМЕРЫ РАБОТ С ЦЕНАМИ -->
 <div class="container" id="portfolio-examples">
     <div class="portfolio-examples">
-        <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты, которые я сделала</p></div>
+        <div class="section-header"><h2>Примеры моих работ</h2><p>Реальные сайты с ценами</p></div>
         <div class="examples-grid">
-            <!-- Существующие карточки -->
-            <div class="example-card"><div class="example-icon"><i class="fas fa-graduation-cap"></i></div><h3>Юлия — Курсовые работы</h3><p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p><a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a></div>
-            <div class="example-card"><div class="example-icon"><i class="fas fa-camera"></i></div><h3>Татьяна — Фоторедактор</h3><p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p><a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a></div>
+            <!-- Юлия — Курсовые работы -->
+            <div class="example-card">
+                <div class="example-icon"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Юлия — Курсовые работы</h3>
+                <p>Сайт для автора академических работ. Калькулятор стоимости, услуги, портфолио, корзина.</p>
+                <div class="example-price">
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 7 000 – 10 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 12 000 – 15 000 ₽</div>
+                </div>
+                <a href="https://aleks-ars-ops.github.io/kursovaya/" target="_blank" class="example-link">Посмотреть →</a>
+            </div>
             
-            <!-- НОВЫЕ ПРИМЕРЫ РАБОТ -->
-            <div class="example-card"><div class="example-icon"><i class="fas fa-store"></i></div><h3>MagicToys — Интернет-магазин</h3><p>Полноценный интернет-магазин с каталогом товаров, корзиной, фильтрацией по категориям и сортировкой.</p><a href="https://aleks-ars-ops.github.io/internet-magazin/" target="_blank" class="example-link">Посмотреть →</a></div>
+            <!-- Татьяна — Фоторедактор -->
+            <div class="example-card">
+                <div class="example-icon"><i class="fas fa-camera"></i></div>
+                <h3>Татьяна — Фоторедактор</h3>
+                <p>Сайт для профессионального фоторедактора. Услуги, калькулятор, портфолио до/после.</p>
+                <div class="example-price">
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 15 000 – 18 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 28 000 ₽</div>
+                </div>
+                <a href="https://aleks-ars-ops.github.io/Fotoredaktor./" target="_blank" class="example-link">Посмотреть →</a>
+            </div>
             
-            <div class="example-card"><div class="example-icon"><i class="fas fa-utensils"></i></div><h3>Ресторан «Вкус Итальян»</h3><p>Сайт для ресторана с меню (переключение категорий), галереей интерьеров, формой бронирования столиков и картой.</p><a href="https://aleks-ars-ops.github.io/Restaurant-Website/" target="_blank" class="example-link">Посмотреть →</a></div>
+            <!-- MagicToys — Интернет-магазин -->
+            <div class="example-card">
+                <div class="example-icon"><i class="fas fa-store"></i></div>
+                <h3>MagicToys — Интернет-магазин</h3>
+                <p>Полноценный интернет-магазин с каталогом, корзиной, фильтрацией и сортировкой.</p>
+                <div class="example-price">
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 50 000 – 70 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 60 000 – 80 000 ₽</div>
+                </div>
+                <a href="https://aleks-ars-ops.github.io/internet-magazin/" target="_blank" class="example-link">Посмотреть →</a>
+            </div>
             
-            <div class="example-card"><div class="example-icon"><i class="fas fa-chart-line"></i></div><h3>Кулинарный мастер-класс</h3><p>Продающий лендинг с анимацией, таймером обратного отсчёта и формой захвата. Высокая конверсия.</p><a href="https://aleks-ars-ops.github.io/culinary-masterclass./" target="_blank" class="example-link">Посмотреть →</a></div>
+            <!-- Ресторан «Вкус Итальян» -->
+            <div class="example-card">
+                <div class="example-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Ресторан «Вкус Итальян»</h3>
+                <p>Сайт для ресторана с меню, галереей интерьеров, формой бронирования и картой.</p>
+                <div class="example-price">
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 30 000 – 40 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 40 000 – 50 000 ₽</div>
+                </div>
+                <a href="https://aleks-ars-ops.github.io/Restaurant-Website/" target="_blank" class="example-link">Посмотреть →</a>
+            </div>
             
-            <div class="example-card"><div class="example-icon"><i class="fas fa-building"></i></div><h3>BCorp — Корпоративный сайт</h3><p>Строгий корпоративный сайт с ценами в чёрных рамках, картой, формой обратной связи и профессиональным дизайном.</p><a href="https://aleks-ars-ops.github.io/corporate-website./" target="_blank" class="example-link">Посмотреть →</a></div>
+            <!-- Кулинарный мастер-класс -->
+            <div class="example-card">
+                <div class="example-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Кулинарный мастер-класс</h3>
+                <p>Продающий лендинг с анимацией, таймером обратного отсчёта и формой захвата.</p>
+                <div class="example-price">
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 20 000 – 30 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 25 000 – 35 000 ₽</div>
+                </div>
+                <a href="https://aleks-ars-ops.github.io/culinary-masterclass./" target="_blank" class="example-link">Посмотреть →</a>
+            </div>
+            
+            <!-- BCorp — Корпоративный сайт -->
+            <div class="example-card">
+                <div class="example-icon"><i class="fas fa-building"></i></div>
+                <h3>BCorp — Корпоративный сайт</h3>
+                <p>Строгий корпоративный сайт с ценами в чёрных рамках, картой и формой обратной связи.</p>
+                <div class="example-price">
+                    <div class="example-price-basic"><span>🔹 Базовый:</span> 40 000 – 55 000 ₽</div>
+                    <div class="example-price-key"><span>🔸 Под ключ:</span> 50 000 – 65 000 ₽</div>
+                </div>
+                <a href="https://aleks-ars-ops.github.io/corporate-website./" target="_blank" class="example-link">Посмотреть →</a>
+            </div>
         </div>
     </div>
 </div>
@@ -427,24 +492,24 @@
                 <tr><td>Текст для 1 канала</td><td class="price-cell">1 000 ₽</td><td>3-5 ч</td><td></td></tr>
                 <tr><td>Тексты на все каналы (4 шт)</td><td class="price-cell">2 500 ₽</td><td>1 день</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>📱 ПОСТЫ ДЛЯ СОЦСЕТЕЙ</strong> </td></tr>
-                <tr><td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
-                <tr><td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
-                <tr><td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                <tr>}<td>1 пост (текст)</td><td class="price-cell">800 ₽</td><td>2-3 ч</td><td></td></tr>
+                <tr>}<td>1 пост (текст+визуал)</td><td class="price-cell">1 500 ₽</td><td>4-5 ч</td><td></td></tr>
+                <tr>}<td>5 постов пакетом</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>🤖 НЕЙРОФОТОСЕССИЯ</strong> </td></tr>
-                <tr><td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
-                <tr><td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
-                <tr><td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr>}<td>1 фото</td><td class="price-cell">400 ₽</td><td>2-4 ч</td><td>по описанию или вашему фото</td></tr>
+                <tr>}<td>5 фото</td><td class="price-cell">1 500 ₽</td><td>1 день</td><td></td></tr>
+                <tr>}<td>10 фото</td><td class="price-cell">2 500 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>📊 ПРЕЗЕНТАЦИЯ</strong> </td></tr>
-                <tr><td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
-                <tr><td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
-                <tr><td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
+                <tr>}<td>Текстовая</td><td class="price-cell">2 000 ₽</td><td>1 день</td><td></td></tr>
+                <tr>}<td>Визуальная</td><td class="price-cell">4 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr>}<td>Под ключ</td><td class="price-cell">6 000 ₽</td><td>2-3 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>🛍 КАРТОЧКИ MARKETPLACE</strong> </td></tr>
-                <tr><td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
-                <tr><td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
+                <tr>}<td>1 карточка</td><td class="price-cell">1 500 ₽</td><td>3-5 ч</td><td>WB, OZON, Яндекс</td></tr>
+                <tr>}<td>5 карточек</td><td class="price-cell">6 000 ₽</td><td>1-2 дня</td><td></td></tr>
                 <tr class="category-row"><td colspan="4"><strong>🌐 САЙТЫ</strong> </td></tr>
-                <tr><td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
-                <tr><td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
-                <tr><td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
+                <tr>}<td>Сайт-визитка / Лендинг</td><td class="price-cell">25 000 ₽</td><td>5-7 дней</td><td>без домена и хостинга</td></tr>
+                <tr>}<td>Сайт под ключ</td><td class="price-cell">42 000 ₽</td><td>7-10 дней</td><td>домен+хостинг+форма</td></tr>
+                <tr>}<td>Интернет-магазин</td><td class="price-cell">от 50 000 ₽</td><td>14-21 день</td><td></td></tr>
             </tbody>
         </table>
     </div>
